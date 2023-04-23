@@ -1,0 +1,3929 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Home Page</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,wght@0,300;0,400;0,600;0,700;0,800;0,900;1,400&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css"
+    />
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body class="font-nunito_sans font-normal">
+    <!-- start coding for header  -->
+    <header class="overflow-x-clip" data-block="main-header" id="main-header">
+      <div class="bg-brand-gray pt-3 px-4">
+        <div class="container mx-auto">
+          <div class="flex items-center gap-6 justify-between lg:justify-start">
+            <a href="#" class="xl:w-[280px] shrink-0">
+              <figure>
+                <img src="./images/logo.png" alt="logo" />
+              </figure>
+            </a>
+            <nav class="group w-full" id="navbar">
+              <div
+                class="-right-[999px] lg:w-full fixed lg:static group-[.active]:right-0 transition-all duration-200 top-0 bottom-0 z-40 bg-white shadow-xl lg:shadow-none lg:bg-transparent w-[330px] px-4 lg:px-0"
+              >
+                <button
+                  id="close"
+                  type="button"
+                  class="absolute lg:hidden -left-6 top-0 w-8 h-8 bg-white"
+                >
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    class="feather feather-x"
+                  >
+                    <line x1="18" y1="6" x2="6" y2="18"></line>
+                    <line x1="6" y1="6" x2="18" y2="18"></line>
+                  </svg>
+                </button>
+                <div
+                  class="flex justify-start lg:justify-between items-center lg:-ml-10 xl:ml-0 pt-14 lg:pt-0"
+                >
+                  <ul class="hidden lg:flex gap-3 xl:gap-7 items-center">
+                    <li class="text-sm text-dark flex gap-1.5 items-center">
+                      <img
+                        src="./images/check-orange.png"
+                        alt="check-orange.png"
+                      />
+                      <span class="">De nummer 1 in NL!</span>
+                    </li>
+                    <li class="text-sm text-dark flex gap-1.5 items-center">
+                      <img
+                        src="./images/check-orange.png"
+                        alt="check-orange.png"
+                      />
+                      <span>Laagste prijsgarantie </span>
+                    </li>
+                    <li class="text-sm text-dark flex gap-1.5 items-center">
+                      <img
+                        src="./images/check-orange.png"
+                        alt="check-orange.png"
+                      /><span>Showroom</span>
+                    </li>
+                    <li class="text-sm text-dark flex gap-1.5 items-center">
+                      <img
+                        src="./images/check-orange.png"
+                        alt="check-orange.png"
+                      />
+                      <span>Tot 5 jaar garantie</span>
+                    </li>
+                    <li class="text-sm text-dark flex gap-1.5 items-center">
+                      <img
+                        src="./images/check-orange.png"
+                        alt="check-orange.png"
+                      />
+                      <span>Eigen montagedienst</span>
+                    </li>
+                  </ul>
+                  <div class="">
+                    <select
+                      name="lang"
+                      class="border-none bg-transparent focus:outline-none py-1 focus:ring-0 focus:border-none"
+                      id=""
+                    >
+                      <option value="NL">NL</option>
+                      <option value="BD">BD</option>
+                      <option value="ML">ML</option>
+                    </select>
+                  </div>
+                </div>
+                <div
+                  id="search-parent"
+                  class="group flex flex-col lg:flex-row xl:pl-10 items-center gap-8 xl:gap-12"
+                >
+                  <div
+                    class="group-[.active]:top-0 transition-all duration-150 lg:relative w-full fixed -top-[999px] lg:top-0 left-0 z-30 bg-brand-gray pt-10 pb-3 px-8 lg:bg-transparent lg:py-0 lg:px-0"
+                  >
+                    <button
+                      type="button"
+                      id="search-close"
+                      class="absolute right-4 top-2"
+                    >
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="24"
+                        height="24"
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-width="2"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        class="feather feather-x"
+                      >
+                        <line x1="18" y1="6" x2="6" y2="18"></line>
+                        <line x1="6" y1="6" x2="18" y2="18"></line>
+                      </svg>
+                    </button>
+                    <div class="group relative" id="autocomplete-search">
+                      <div class="relative">
+                        <input
+                          id="myInput"
+                          type="text"
+                          class="px-6 py-3 rounded-md border-none focus:ring-0 focus:outline-none w-full"
+                          placeholder="waar ben je naar op zoek?"
+                        />
+                        <img
+                          class="absolute right-6 top-3.5"
+                          src="./images/search.png"
+                          alt="search"
+                        />
+                      </div>
+                      <div
+                        class="group-[.active]:opacity-100 group-[.active]:visible opacity-0 invisible group-[.active]:translate-y-0 translate-y-10 bg-white absolute left-0 top-full w-full border-t border-brand-gray shadow-md h-[calc(100vh-100px)] overflow-y-auto"
+                      >
+                        <div
+                          class="px-4 lg:px-6 py-4 border-b space-y-2 border-brand-gray"
+                        >
+                          <h3 class="text-base font-extrabold text-dark">
+                            Categorieën
+                          </h3>
+                          <ul class="grid gap-1">
+                            <li>
+                              <a href="#"
+                                ><span class="uppercase font-extrabold"
+                                  >VELUX</span
+                                >
+                                Restanten</a
+                              >
+                            </li>
+                            <li>
+                              <a href="#"
+                                ><span class="uppercase font-extrabold"
+                                  >VELUX</span
+                                >
+                                Rolgordijnen</a
+                              >
+                            </li>
+                            <li>
+                              <a href="#"
+                                ><span class="uppercase font-extrabold"
+                                  >VELUX</span
+                                >
+                                Verduistering</a
+                              >
+                            </li>
+                            <li>
+                              <a href="#"
+                                ><span class="uppercase font-extrabold"
+                                  >VELUX</span
+                                >
+                                Plissegordijnen</a
+                              >
+                            </li>
+                            <li>
+                              <a href="#"
+                                ><span class="uppercase font-extrabold"
+                                  >VELUX</span
+                                >
+                                Jaloezieën</a
+                              >
+                            </li>
+                            <li>
+                              <a href="#"
+                                ><span class="uppercase font-extrabold"
+                                  >VELUX</span
+                                >
+                                Buitenzonwering</a
+                              >
+                            </li>
+                          </ul>
+                        </div>
+                        <div class="px-4 lg:px-6 py-4 space-y-2">
+                          <h3 class="text-base font-extrabold text-dark">
+                            Producten
+                          </h3>
+                          <div
+                            class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-1 2xl:grid-cols-2 gap-6"
+                          >
+                            <div class="flex gap-3">
+                              <img
+                                class="w-[132px] h-[100px] object-cover"
+                                src="./images/search-img-1.png"
+                                alt="search-img"
+                              />
+                              <div class="space-y-1">
+                                <h3
+                                  class="text-base text-dark h-[72px] line-clamp-3"
+                                >
+                                  <strong>VELUX</strong> Elektrisch Solar plissé
+                                  gordijn (FSL)
+                                </h3>
+                                <p class="text-brand-orange text-base">
+                                  Vanaf <strong>166.-</strong>
+                                </p>
+                              </div>
+                            </div>
+                            <div class="flex gap-3">
+                              <img
+                                class="w-[132px] h-[100px] object-cover"
+                                src="./images/search-img-1.png"
+                                alt="search-img"
+                              />
+                              <div class="space-y-1">
+                                <h3
+                                  class="text-base text-dark h-[72px] line-clamp-3"
+                                >
+                                  <strong>VELUX</strong> lichtdoorlatend
+                                  handbediend gordijn met zijgeleiding (RFL)
+                                </h3>
+                                <p class="text-brand-orange text-base">
+                                  Vanaf <strong>166.-</strong>
+                                </p>
+                              </div>
+                            </div>
+                            <div class="flex gap-3">
+                              <img
+                                class="w-[132px] h-[100px] object-cover"
+                                src="./images/search-img-1.png"
+                                alt="search-img"
+                              />
+                              <div class="space-y-1">
+                                <h3
+                                  class="text-base text-dark h-[72px] line-clamp-3"
+                                >
+                                  <strong>VELUX</strong> lichtdoorlatend
+                                  elektrisch bediend rolgordijn (RML)
+                                </h3>
+                                <p class="text-brand-orange text-base">
+                                  Vanaf <strong>166.-</strong>
+                                </p>
+                              </div>
+                            </div>
+                            <div class="flex gap-3">
+                              <img
+                                class="w-[132px] h-[100px] object-cover"
+                                src="./images/search-img-1.png"
+                                alt="search-img"
+                              />
+                              <div class="space-y-1">
+                                <h3
+                                  class="text-base text-dark h-[72px] line-clamp-3"
+                                >
+                                  <strong>VELUX</strong> Elektrisch Solar plissé
+                                  gordijn (FSL)
+                                </h3>
+                                <p class="text-brand-orange text-base">
+                                  Vanaf <strong>166.-</strong>
+                                </p>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="px-4 lg:px-6 py-4 space-y-2">
+                          <h3 class="text-base font-extrabold text-dark">
+                            Inspiratie
+                          </h3>
+                          <ul class="grid gap-1">
+                            <li>
+                              <a href="#" class="text-dark text-base"
+                                >De beste <strong>VELUX</strong> zonwering voor
+                                je badkamer</a
+                              >
+                            </li>
+                            <li>
+                              <a href="#" class="text-dark text-base"
+                                >De beste <strong>VELUX</strong> zonwering voor
+                                je badkamer</a
+                              >
+                            </li>
+                            <li>
+                              <a href="#" class="text-dark text-base"
+                                >De beste <strong>VELUX</strong> zonwering voor
+                                je badkamer</a
+                              >
+                            </li>
+                          </ul>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="w-[300px] shrink-0">
+                    <div class="flex items-end">
+                      <a
+                        href="#"
+                        class="flex px-3 pt-3 pb-4 h-[95px] flex-col gap-2 justify-end items-center"
+                      >
+                        <img src="./images/user.png" alt="user.png" />
+                        <p class="text-center text-sm text-dark">Account</p>
+                      </a>
+                      <a
+                        href="#"
+                        class="flex flex-col gap-2 h-[95px] px-3 pt-3 pb-4 justify-end items-center"
+                      >
+                        <img src="./images/help.png" alt="help.png" />
+                        <p class="text-center text-sm text-dark">
+                          Klantenservice
+                        </p>
+                      </a>
+                      <div class="group relative" id="cart-body">
+                        <button
+                          id="cart"
+                          type="button"
+                          class="flex justify-end h-[95px] px-3 pt-3 pb-4 transition-all duration-200 group-[.active-cart]:bg-brand-gray lg:group-[.active-cart]:bg-white items-center gap-2 flex-col"
+                        >
+                          <figure class="relative">
+                            <div class="absolute -top-2 -right-2">
+                              <span
+                                class="w-5 h-5 rounded-full bg-brand-orange text-sm font-bold text-white flex justify-center items-center"
+                                >2</span
+                              >
+                            </div>
+                            <img src="./images/cart.png" alt="cart" />
+                          </figure>
+                          <p class="text-center text-dark text-sm">
+                            Winkelwagen
+                          </p>
+                        </button>
+                        <div>
+                          <div
+                            class="fixed top-0 w-[330px] bottom-0 lg:bottom-auto lg:opacity-0 lg:invisible lg:group-[.active-cart]:opacity-100 lg:group-[.active-cart]:visible transition-all duration-200 group-[.active-cart]:right-0 -right-[999px] pt-12 lg:pt-6 lg:absolute lg:right-0 z-30 lg:top-full p-6 bg-white lg:w-[555px] space-y-5"
+                          >
+                            <h2 class="text-dark text-[19px] font-extrabold">
+                              Winkelwagen
+                            </h2>
+                            <div class="space-y-4 border-b">
+                              <div
+                                class="flex justify-between items-center lg:items-start gap-4"
+                              >
+                                <div
+                                  class="flex gap-3 flex-col lg:flex-row lg:items-start"
+                                >
+                                  <div class="w-[85px]">
+                                    <img
+                                      src="./images/cart-img.png"
+                                      alt=".png"
+                                    />
+                                  </div>
+                                  <div class="space-y-1">
+                                    <h3
+                                      class="font-extrabold text-sm lg:text-base text-dark"
+                                    >
+                                      Knikarmscherm Compact Aktie
+                                    </h3>
+                                    <p class="text-xs lg:text-sm text-dark">
+                                      <strong>Afmetingen:</strong> Breedte: 500
+                                      Uitval: 300
+                                    </p>
+                                  </div>
+                                </div>
+                                <p class="text-dark font-extrabold text-base">
+                                  €1475,00
+                                </p>
+                              </div>
+                              <div
+                                class="flex justify-between items-center lg:items-start gap-4 pb-10"
+                              >
+                                <div
+                                  class="flex gap-3 flex-col lg:flex-row items-center lg:items-start"
+                                >
+                                  <div class="w-[85px]"></div>
+                                  <div class="space-y-1">
+                                    <h3
+                                      class="font-extrabold text-sm lg:text-base text-dark"
+                                    >
+                                      Ontgrendeling type (ZOZ 011)
+                                    </h3>
+                                  </div>
+                                </div>
+                                <p
+                                  class="text-dark font-extrabold text-base pt-3 lg:pt-0"
+                                >
+                                  €10,00
+                                </p>
+                              </div>
+                            </div>
+                            <div class="flex justify-end">
+                              <div class="flex gap-10">
+                                <h2 class="text-base text-dark font-extrabold">
+                                  Totaalbedrag
+                                </h2>
+                                <p class="text-base text-dark font-extrabold">
+                                  €1485,00
+                                </p>
+                              </div>
+                            </div>
+                            <div class="flex justify-end">
+                              <div
+                                class="flex gap-4 lg:gap-10 items-end lg:items-center flex-col-reverse lg:flex-row"
+                              >
+                                <button
+                                  type="button"
+                                  class="text-brand-orange text-base"
+                                >
+                                  Winkelwagen wijzigen
+                                </button>
+                                <button
+                                  type="button"
+                                  class="px-8 lg:px-12 py-3 rounded-md bg-brand-orange font-extrabold text-base text-white hover:bg-opacity-90"
+                                >
+                                  Bestellen
+                                </button>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <!-- mega menu mobile -->
+                <div class="pt-6 lg:hidden">
+                  <ul class="flex gap-4 flex-col">
+                    <li class="">
+                      <button
+                        type="button"
+                        class="menu-button text-base font-extrabold text-dark flex items-center justify-between w-full"
+                      >
+                        <span> Binnenzonwering</span>
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          width="24"
+                          height="24"
+                          viewBox="0 0 24 24"
+                          fill="none"
+                          stroke="currentColor"
+                          stroke-width="2"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                          class="feather feather-chevron-right"
+                        >
+                          <polyline points="9 18 15 12 9 6"></polyline>
+                        </svg>
+                      </button>
+                      <div class="group/menu parent">
+                        <div
+                          class="fixed w-[330px] top-0 bottom-0 pt-8 lg:pt-0 lg:w-full transition-all duration-200 z-30 group-[.active]/menu:right-0 -right-[999px]"
+                        >
+                          <button class="close-mega-menu px-6" type="button">
+                            <svg
+                              xmlns="http://www.w3.org/2000/svg"
+                              width="24"
+                              height="24"
+                              viewBox="0 0 24 24"
+                              fill="none"
+                              stroke="currentColor"
+                              stroke-width="2"
+                              stroke-linecap="round"
+                              stroke-linejoin="round"
+                              class="feather feather-arrow-left"
+                            >
+                              <line x1="19" y1="12" x2="5" y2="12"></line>
+                              <polyline points="12 19 5 12 12 5"></polyline>
+                            </svg>
+                          </button>
+                          <div
+                            class="w-full h-[calc(100vh-60px)] overflow-y-scroll"
+                          >
+                            <div
+                              class="px-10 pb-10 pt-3 grid grid-cols-1 lg:grid-cols-4 xl:grid-cols-5 gap-3 bg-white"
+                            >
+                              <div class="group/item relative">
+                                <a href="#" class="inset-0 absolute"></a>
+                                <div
+                                  class="border border-brand-gray-100 group-hover/item:border-brand-orange"
+                                >
+                                  <img
+                                    src="./images/image-1.png"
+                                    alt="image-1"
+                                  />
+                                  <div
+                                    class="flex justify-between items-center pl-5 pr-2 py-2 bg-white group-hover/item:bg-brand-orange"
+                                  >
+                                    <h2
+                                      class="text-dark font-extrabold text-base group-hover/item:text-white"
+                                    >
+                                      Binnenzonwering
+                                    </h2>
+                                    <svg
+                                      xmlns="http://www.w3.org/2000/svg"
+                                      width="24"
+                                      height="24"
+                                      viewBox="0 0 24 24"
+                                      fill="none"
+                                      stroke-width="2"
+                                      stroke-linecap="round"
+                                      stroke-linejoin="round"
+                                      class="stroke-dark group-hover/item:stroke-white"
+                                    >
+                                      <polyline
+                                        points="9 18 15 12 9 6"
+                                      ></polyline>
+                                    </svg>
+                                  </div>
+                                </div>
+                              </div>
+                              <div class="group/item relative">
+                                <div
+                                  class="p-1.5 bg-brand-orange absolute right-5 top-0"
+                                >
+                                  <h3
+                                    class="text-[10px] font-extrabold text-white"
+                                  >
+                                    Tot wel
+                                  </h3>
+                                  <h2
+                                    class="text-[26px] leading-none font-extrabold text-white"
+                                  >
+                                    40<sub class="text-base">%</sub>
+                                  </h2>
+                                  <p
+                                    class="text-[10px] font-extrabold text-white"
+                                  >
+                                    Goedkoper
+                                  </p>
+                                </div>
+                                <a href="#" class="inset-0 absolute"></a>
+                                <div
+                                  class="border border-brand-gray-100 group-hover/item:border-brand-orange"
+                                >
+                                  <img
+                                    src="./images/image-1.png"
+                                    alt="image-1"
+                                  />
+                                  <div
+                                    class="flex justify-between items-center pl-5 pr-2 py-2 bg-white group-hover/item:bg-brand-orange"
+                                  >
+                                    <h2
+                                      class="text-dark font-extrabold text-base group-hover/item:text-white"
+                                    >
+                                      Plissegordijnen
+                                    </h2>
+                                    <svg
+                                      xmlns="http://www.w3.org/2000/svg"
+                                      width="24"
+                                      height="24"
+                                      viewBox="0 0 24 24"
+                                      fill="none"
+                                      stroke-width="2"
+                                      stroke-linecap="round"
+                                      stroke-linejoin="round"
+                                      class="stroke-dark group-hover/item:stroke-white"
+                                    >
+                                      <polyline
+                                        points="9 18 15 12 9 6"
+                                      ></polyline>
+                                    </svg>
+                                  </div>
+                                </div>
+                              </div>
+                              <div class="group/item relative">
+                                <a href="#" class="inset-0 absolute"></a>
+                                <div
+                                  class="border border-brand-gray-100 group-hover/item:border-brand-orange"
+                                >
+                                  <img
+                                    src="./images/image-2.png"
+                                    alt="image-2"
+                                  />
+                                  <div
+                                    class="flex justify-between items-center pl-5 pr-2 py-2 bg-white group-hover/item:bg-brand-orange"
+                                  >
+                                    <h2
+                                      class="text-dark font-extrabold text-base group-hover/item:text-white"
+                                    >
+                                      Vouwgordijnen
+                                    </h2>
+                                    <svg
+                                      xmlns="http://www.w3.org/2000/svg"
+                                      width="24"
+                                      height="24"
+                                      viewBox="0 0 24 24"
+                                      fill="none"
+                                      stroke-width="2"
+                                      stroke-linecap="round"
+                                      stroke-linejoin="round"
+                                      class="stroke-dark group-hover/item:stroke-white"
+                                    >
+                                      <polyline
+                                        points="9 18 15 12 9 6"
+                                      ></polyline>
+                                    </svg>
+                                  </div>
+                                </div>
+                              </div>
+                              <div class="group/item relative">
+                                <a href="#" class="inset-0 absolute"></a>
+                                <div
+                                  class="border border-brand-gray-100 group-hover/item:border-brand-orange"
+                                >
+                                  <img
+                                    src="./images/image-2.png"
+                                    alt="image-2"
+                                  />
+                                  <div
+                                    class="flex justify-between items-center pl-5 pr-2 py-2 bg-white group-hover/item:bg-brand-orange"
+                                  >
+                                    <h2
+                                      class="text-dark font-extrabold text-base group-hover/item:text-white"
+                                    >
+                                      Aluminium jaloezieen
+                                    </h2>
+                                    <svg
+                                      xmlns="http://www.w3.org/2000/svg"
+                                      width="24"
+                                      height="24"
+                                      viewBox="0 0 24 24"
+                                      fill="none"
+                                      stroke-width="2"
+                                      stroke-linecap="round"
+                                      stroke-linejoin="round"
+                                      class="stroke-dark group-hover/item:stroke-white"
+                                    >
+                                      <polyline
+                                        points="9 18 15 12 9 6"
+                                      ></polyline>
+                                    </svg>
+                                  </div>
+                                </div>
+                              </div>
+                              <div class="group/item relative">
+                                <a href="#" class="inset-0 absolute"></a>
+                                <div
+                                  class="border border-brand-gray-100 group-hover/item:border-brand-orange"
+                                >
+                                  <img
+                                    src="./images/image-2.png"
+                                    alt="image-2"
+                                  />
+                                  <div
+                                    class="flex justify-between items-center pl-5 pr-2 py-2 bg-white group-hover/item:bg-brand-orange"
+                                  >
+                                    <h2
+                                      class="text-dark font-extrabold text-base group-hover/item:text-white"
+                                    >
+                                      Rolgordijnen
+                                    </h2>
+                                    <svg
+                                      xmlns="http://www.w3.org/2000/svg"
+                                      width="24"
+                                      height="24"
+                                      viewBox="0 0 24 24"
+                                      fill="none"
+                                      stroke-width="2"
+                                      stroke-linecap="round"
+                                      stroke-linejoin="round"
+                                      class="stroke-dark group-hover/item:stroke-white"
+                                    >
+                                      <polyline
+                                        points="9 18 15 12 9 6"
+                                      ></polyline>
+                                    </svg>
+                                  </div>
+                                </div>
+                              </div>
+                              <div class="group/item relative">
+                                <a href="#" class="inset-0 absolute"></a>
+                                <div
+                                  class="border border-brand-gray-100 group-hover/item:border-brand-orange"
+                                >
+                                  <img
+                                    src="./images/image-2.png"
+                                    alt="image-2"
+                                  />
+                                  <div
+                                    class="flex justify-between items-center pl-5 pr-2 py-2 bg-white group-hover/item:bg-brand-orange"
+                                  >
+                                    <h2
+                                      class="text-dark font-extrabold text-base group-hover/item:text-white"
+                                    >
+                                      Vouwgordijnen
+                                    </h2>
+                                    <svg
+                                      xmlns="http://www.w3.org/2000/svg"
+                                      width="24"
+                                      height="24"
+                                      viewBox="0 0 24 24"
+                                      fill="none"
+                                      stroke-width="2"
+                                      stroke-linecap="round"
+                                      stroke-linejoin="round"
+                                      class="stroke-dark group-hover/item:stroke-white"
+                                    >
+                                      <polyline
+                                        points="9 18 15 12 9 6"
+                                      ></polyline>
+                                    </svg>
+                                  </div>
+                                </div>
+                              </div>
+                              <div class="group/item relative">
+                                <a href="#" class="inset-0 absolute"></a>
+                                <div
+                                  class="border border-brand-gray-100 group-hover/item:border-brand-orange"
+                                >
+                                  <img
+                                    src="./images/image-2.png"
+                                    alt="image-2"
+                                  />
+                                  <div
+                                    class="flex justify-between items-center pl-5 pr-2 py-2 bg-white group-hover/item:bg-brand-orange"
+                                  >
+                                    <h2
+                                      class="text-dark font-extrabold text-base group-hover/item:text-white"
+                                    >
+                                      Aluminium jaloezieen
+                                    </h2>
+                                    <svg
+                                      xmlns="http://www.w3.org/2000/svg"
+                                      width="24"
+                                      height="24"
+                                      viewBox="0 0 24 24"
+                                      fill="none"
+                                      stroke-width="2"
+                                      stroke-linecap="round"
+                                      stroke-linejoin="round"
+                                      class="stroke-dark group-hover/item:stroke-white"
+                                    >
+                                      <polyline
+                                        points="9 18 15 12 9 6"
+                                      ></polyline>
+                                    </svg>
+                                  </div>
+                                </div>
+                              </div>
+                              <div class="group/item relative">
+                                <a href="#" class="inset-0 absolute"></a>
+                                <div
+                                  class="border border-brand-gray-100 group-hover/item:border-brand-orange"
+                                >
+                                  <img
+                                    src="./images/image-2.png"
+                                    alt="image-2"
+                                  />
+                                  <div
+                                    class="flex justify-between items-center pl-5 pr-2 py-2 bg-white group-hover/item:bg-brand-orange"
+                                  >
+                                    <h2
+                                      class="text-dark font-extrabold text-base group-hover/item:text-white"
+                                    >
+                                      Rolgordijnen
+                                    </h2>
+                                    <svg
+                                      xmlns="http://www.w3.org/2000/svg"
+                                      width="24"
+                                      height="24"
+                                      viewBox="0 0 24 24"
+                                      fill="none"
+                                      stroke-width="2"
+                                      stroke-linecap="round"
+                                      stroke-linejoin="round"
+                                      class="stroke-dark group-hover/item:stroke-white"
+                                    >
+                                      <polyline
+                                        points="9 18 15 12 9 6"
+                                      ></polyline>
+                                    </svg>
+                                  </div>
+                                </div>
+                              </div>
+                              <div class="group/item relative">
+                                <a href="#" class="inset-0 absolute"></a>
+                                <div
+                                  class="border border-brand-gray-100 group-hover/item:border-brand-orange"
+                                >
+                                  <img
+                                    src="./images/image-2.png"
+                                    alt="image-2"
+                                  />
+                                  <div
+                                    class="flex justify-between items-center pl-5 pr-2 py-2 bg-white group-hover/item:bg-brand-orange"
+                                  >
+                                    <h2
+                                      class="text-dark font-extrabold text-base group-hover/item:text-white"
+                                    >
+                                      Rolgordijnen
+                                    </h2>
+                                    <svg
+                                      xmlns="http://www.w3.org/2000/svg"
+                                      width="24"
+                                      height="24"
+                                      viewBox="0 0 24 24"
+                                      fill="none"
+                                      stroke-width="2"
+                                      stroke-linecap="round"
+                                      stroke-linejoin="round"
+                                      class="stroke-dark group-hover/item:stroke-white"
+                                    >
+                                      <polyline
+                                        points="9 18 15 12 9 6"
+                                      ></polyline>
+                                    </svg>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </li>
+                    <li>
+                      <a href="#" class="text-base font-extrabold text-dark"
+                        >Buitenzonwering
+                      </a>
+                    </li>
+                    <li>
+                      <a href="#" class="text-base font-extrabold text-dark"
+                        >VELUX zonwering
+                      </a>
+                    </li>
+                    <li>
+                      <a href="#" class="text-base font-extrabold text-dark"
+                        >Rolluiken
+                      </a>
+                    </li>
+                    <li>
+                      <a href="#" class="text-base font-extrabold text-dark"
+                        >Horren
+                      </a>
+                    </li>
+                    <li>
+                      <a href="#" class="text-base font-extrabold text-dark"
+                        >Garagedeuren
+                      </a>
+                    </li>
+                    <li>
+                      <a href="#" class="text-base font-extrabold text-dark"
+                        >Terrasoverkappingen
+                      </a>
+                    </li>
+                    <li>
+                      <a href="#" class="text-base font-extrabold text-dark"
+                        >Onderdelen
+                      </a>
+                    </li>
+                    <li>
+                      <a href="#" class="text-base font-extrabold text-dark"
+                        >Outlet
+                      </a>
+                    </li>
+                  </ul>
+                </div>
+                <!--end mega menu mobile-->
+              </div>
+            </nav>
+            <button type="button" class="open-search lg:hidden">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                class="feather feather-search"
+              >
+                <circle cx="11" cy="11" r="8"></circle>
+                <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+              </svg>
+            </button>
+            <button type="button" class="lg:hidden" id="burger-menu-button">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                class="feather feather-menu"
+              >
+                <line x1="3" y1="12" x2="21" y2="12"></line>
+                <line x1="3" y1="6" x2="21" y2="6"></line>
+                <line x1="3" y1="18" x2="21" y2="18"></line>
+              </svg>
+            </button>
+          </div>
+        </div>
+      </div>
+      <!-- start coding for desktop mega menu  -->
+      <div
+        class="group relative hidden lg:block pl-4 pr-12"
+        id="cart-overlay-menu"
+      >
+        <div
+          class="hidden lg:block group-[.overlay-active]:visible group-[.overlay-active]:bg-dark/25 transition-all duration-200 z-20 opacity-0 invisible group-[.overlay-active]:opacity-100 absolute inset-0"
+        >
+          <span class="sr-only">Overlay mega menu</span>
+        </div>
+        <div class="bg-white relative border-b py-3 px-4">
+          <div class="container mx-auto">
+            <ul class="flex gap-x-10 gap-y-3 flex-wrap items-center">
+              <li class=" ">
+                <button
+                  type="button"
+                  class="menu-button text-base font-extrabold text-dark"
+                >
+                  Binnenzonwering
+                </button>
+                <div class="group/menu parent">
+                  <div
+                    class="absolute top-full left-0 w-full transition-all duration-200 z-30 opacity-0 invisible translate-y-10 group-[.active]/menu:opacity-100 group-[.active]/menu:visible group-[.active]/menu:translate-y-0"
+                  >
+                    <div class="max-w-[1490px] mx-auto relative">
+                      <button
+                        type="button"
+                        class="close-mega-menu absolute -right-9 xl:-right-10 2xl:-right-12 top-3"
+                      >
+                        <img
+                          class="w-8 2xl:w-auto"
+                          src="./images/times.png"
+                          alt="times"
+                        />
+                      </button>
+                      <div
+                        class="px-10 pb-10 pt-3 grid grid-cols-4 xl:grid-cols-5 gap-3 bg-white"
+                      >
+                        <div class="group/item relative">
+                          <a href="#" class="inset-0 absolute"></a>
+                          <div
+                            class="border border-brand-gray-100 group-hover/item:border-brand-orange"
+                          >
+                            <img
+                              class="w-full"
+                              src="./images/image-1.png"
+                              alt="image-1"
+                            />
+                            <div
+                              class="flex justify-between items-center pl-5 pr-2 py-2 bg-white group-hover/item:bg-brand-orange"
+                            >
+                              <h2
+                                class="text-dark font-extrabold text-base group-hover/item:text-white"
+                              >
+                                Binnenzonwering
+                              </h2>
+                              <svg
+                                xmlns="http://www.w3.org/2000/svg"
+                                width="24"
+                                height="24"
+                                viewBox="0 0 24 24"
+                                fill="none"
+                                stroke-width="2"
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                                class="stroke-dark group-hover/item:stroke-white"
+                              >
+                                <polyline points="9 18 15 12 9 6"></polyline>
+                              </svg>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="group/item relative">
+                          <div
+                            class="p-1.5 bg-brand-orange absolute right-5 top-0"
+                          >
+                            <h3 class="text-[10px] font-extrabold text-white">
+                              Tot wel
+                            </h3>
+                            <h2
+                              class="text-[26px] leading-none font-extrabold text-white"
+                            >
+                              40<sub class="text-base">%</sub>
+                            </h2>
+                            <p class="text-[10px] font-extrabold text-white">
+                              Goedkoper
+                            </p>
+                          </div>
+                          <a href="#" class="inset-0 absolute"></a>
+                          <div
+                            class="border border-brand-gray-100 group-hover/item:border-brand-orange"
+                          >
+                            <img
+                              class="w-full"
+                              src="./images/image-1.png"
+                              alt="image-1"
+                            />
+                            <div
+                              class="flex justify-between items-center pl-5 pr-2 py-2 bg-white group-hover/item:bg-brand-orange"
+                            >
+                              <h2
+                                class="text-dark font-extrabold text-base group-hover/item:text-white"
+                              >
+                                Plissegordijnen
+                              </h2>
+                              <svg
+                                xmlns="http://www.w3.org/2000/svg"
+                                width="24"
+                                height="24"
+                                viewBox="0 0 24 24"
+                                fill="none"
+                                stroke-width="2"
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                                class="stroke-dark group-hover/item:stroke-white"
+                              >
+                                <polyline points="9 18 15 12 9 6"></polyline>
+                              </svg>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="group/item relative">
+                          <a href="#" class="inset-0 absolute"></a>
+                          <div
+                            class="border border-brand-gray-100 group-hover/item:border-brand-orange"
+                          >
+                            <img
+                              class="w-full"
+                              src="./images/image-2.png"
+                              alt="image-2"
+                            />
+                            <div
+                              class="flex justify-between items-center pl-5 pr-2 py-2 bg-white group-hover/item:bg-brand-orange"
+                            >
+                              <h2
+                                class="text-dark font-extrabold text-base group-hover/item:text-white"
+                              >
+                                Vouwgordijnen
+                              </h2>
+                              <svg
+                                xmlns="http://www.w3.org/2000/svg"
+                                width="24"
+                                height="24"
+                                viewBox="0 0 24 24"
+                                fill="none"
+                                stroke-width="2"
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                                class="stroke-dark group-hover/item:stroke-white"
+                              >
+                                <polyline points="9 18 15 12 9 6"></polyline>
+                              </svg>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="group/item relative">
+                          <a href="#" class="inset-0 absolute"></a>
+                          <div
+                            class="border border-brand-gray-100 group-hover/item:border-brand-orange"
+                          >
+                            <img
+                              class="w-full"
+                              src="./images/image-2.png"
+                              alt="image-2"
+                            />
+                            <div
+                              class="flex justify-between items-center pl-5 pr-2 py-2 bg-white group-hover/item:bg-brand-orange"
+                            >
+                              <h2
+                                class="text-dark font-extrabold text-base group-hover/item:text-white"
+                              >
+                                Aluminium jaloezieen
+                              </h2>
+                              <svg
+                                xmlns="http://www.w3.org/2000/svg"
+                                width="24"
+                                height="24"
+                                viewBox="0 0 24 24"
+                                fill="none"
+                                stroke-width="2"
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                                class="stroke-dark group-hover/item:stroke-white"
+                              >
+                                <polyline points="9 18 15 12 9 6"></polyline>
+                              </svg>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="group/item relative">
+                          <a href="#" class="inset-0 absolute"></a>
+                          <div
+                            class="border border-brand-gray-100 group-hover/item:border-brand-orange"
+                          >
+                            <img
+                              class="w-full"
+                              src="./images/image-2.png"
+                              alt="image-2"
+                            />
+                            <div
+                              class="flex justify-between items-center pl-5 pr-2 py-2 bg-white group-hover/item:bg-brand-orange"
+                            >
+                              <h2
+                                class="text-dark font-extrabold text-base group-hover/item:text-white"
+                              >
+                                Rolgordijnen
+                              </h2>
+                              <svg
+                                xmlns="http://www.w3.org/2000/svg"
+                                width="24"
+                                height="24"
+                                viewBox="0 0 24 24"
+                                fill="none"
+                                stroke-width="2"
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                                class="stroke-dark group-hover/item:stroke-white"
+                              >
+                                <polyline points="9 18 15 12 9 6"></polyline>
+                              </svg>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="group/item relative">
+                          <a href="#" class="inset-0 absolute"></a>
+                          <div
+                            class="border border-brand-gray-100 group-hover/item:border-brand-orange"
+                          >
+                            <img
+                              class="w-full"
+                              src="./images/image-2.png"
+                              alt="image-2"
+                            />
+                            <div
+                              class="flex justify-between items-center pl-5 pr-2 py-2 bg-white group-hover/item:bg-brand-orange"
+                            >
+                              <h2
+                                class="text-dark font-extrabold text-base group-hover/item:text-white"
+                              >
+                                Vouwgordijnen
+                              </h2>
+                              <svg
+                                xmlns="http://www.w3.org/2000/svg"
+                                width="24"
+                                height="24"
+                                viewBox="0 0 24 24"
+                                fill="none"
+                                stroke-width="2"
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                                class="stroke-dark group-hover/item:stroke-white"
+                              >
+                                <polyline points="9 18 15 12 9 6"></polyline>
+                              </svg>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="group/item relative">
+                          <a href="#" class="inset-0 absolute"></a>
+                          <div
+                            class="border border-brand-gray-100 group-hover/item:border-brand-orange"
+                          >
+                            <img
+                              class="w-full"
+                              src="./images/image-2.png"
+                              alt="image-2"
+                            />
+                            <div
+                              class="flex justify-between items-center pl-5 pr-2 py-2 bg-white group-hover/item:bg-brand-orange"
+                            >
+                              <h2
+                                class="text-dark font-extrabold text-base group-hover/item:text-white"
+                              >
+                                Aluminium jaloezieen
+                              </h2>
+                              <svg
+                                xmlns="http://www.w3.org/2000/svg"
+                                width="24"
+                                height="24"
+                                viewBox="0 0 24 24"
+                                fill="none"
+                                stroke-width="2"
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                                class="stroke-dark group-hover/item:stroke-white"
+                              >
+                                <polyline points="9 18 15 12 9 6"></polyline>
+                              </svg>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="group/item relative">
+                          <a href="#" class="inset-0 absolute"></a>
+                          <div
+                            class="border border-brand-gray-100 group-hover/item:border-brand-orange"
+                          >
+                            <img
+                              class="w-full"
+                              src="./images/image-2.png"
+                              alt="image-2"
+                            />
+                            <div
+                              class="flex justify-between items-center pl-5 pr-2 py-2 bg-white group-hover/item:bg-brand-orange"
+                            >
+                              <h2
+                                class="text-dark font-extrabold text-base group-hover/item:text-white"
+                              >
+                                Rolgordijnen
+                              </h2>
+                              <svg
+                                xmlns="http://www.w3.org/2000/svg"
+                                width="24"
+                                height="24"
+                                viewBox="0 0 24 24"
+                                fill="none"
+                                stroke-width="2"
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                                class="stroke-dark group-hover/item:stroke-white"
+                              >
+                                <polyline points="9 18 15 12 9 6"></polyline>
+                              </svg>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="group/item relative">
+                          <a href="#" class="inset-0 absolute"></a>
+                          <div
+                            class="border border-brand-gray-100 group-hover/item:border-brand-orange"
+                          >
+                            <img
+                              class="w-full"
+                              src="./images/image-2.png"
+                              alt="image-2"
+                            />
+                            <div
+                              class="flex justify-between items-center pl-5 pr-2 py-2 bg-white group-hover/item:bg-brand-orange"
+                            >
+                              <h2
+                                class="text-dark font-extrabold text-base group-hover/item:text-white"
+                              >
+                                Rolgordijnen
+                              </h2>
+                              <svg
+                                xmlns="http://www.w3.org/2000/svg"
+                                width="24"
+                                height="24"
+                                viewBox="0 0 24 24"
+                                fill="none"
+                                stroke-width="2"
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                                class="stroke-dark group-hover/item:stroke-white"
+                              >
+                                <polyline points="9 18 15 12 9 6"></polyline>
+                              </svg>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </li>
+              <li>
+                <a href="#" class="text-base font-extrabold text-dark"
+                  >Buitenzonwering
+                </a>
+              </li>
+              <li>
+                <a href="#" class="text-base font-extrabold text-dark"
+                  >VELUX zonwering
+                </a>
+              </li>
+              <li>
+                <a href="#" class="text-base font-extrabold text-dark"
+                  >Rolluiken
+                </a>
+              </li>
+              <li>
+                <a href="#" class="text-base font-extrabold text-dark"
+                  >Horren
+                </a>
+              </li>
+              <li>
+                <a href="#" class="text-base font-extrabold text-dark"
+                  >Garagedeuren
+                </a>
+              </li>
+              <li>
+                <a href="#" class="text-base font-extrabold text-dark"
+                  >Terrasoverkappingen
+                </a>
+              </li>
+              <li>
+                <a href="#" class="text-base font-extrabold text-dark"
+                  >Onderdelen
+                </a>
+              </li>
+              <li>
+                <a href="#" class="text-base font-extrabold text-dark"
+                  >Outlet
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <!-- mobile  overlay   -->
+      <div class="group overlay-area">
+        <div
+          class="group-[.active]:bg-dark/25 z-30 absolute inset-0 invisible opacity-0 lg:hidden group-[.active]:opacity-100 group-[.active]:visible"
+        >
+          <span class="sr-only">overlay</span>
+        </div>
+      </div>
+    </header>
+    <!--end header-->
+    <!-- start coding for main area section wise  -->
+    <main id="main-area-overlay" class="group relative">
+      <div
+        class="group-[.overlay-active]:visible hidden lg:block group-[.overlay-active]:bg-dark/25 transition-all duration-200 z-20 opacity-0 invisible group-[.overlay-active]:opacity-100 absolute inset-0"
+      >
+        <span class="sr-only">overlay</span>
+      </div>
+      <!-- start coding for main sections  -->
+      <section
+        class="pt-8 sm:pt-10 lg:pt-14 pb-4 lg:pb-6 px-4"
+        data-block="header-big"
+        id="header-big"
+      >
+        <div class="container mx-auto">
+          <div
+            class="w-full bg-[url(../images/banner-img.png)] bg-cover bg-no-repeat bg-center"
+          >
+            <div class="w-full bg-dark bg-opacity-30 sm:bg-opacity-5">
+              <div class="flex justify-end mr-4 sm:mr-10 lg:mr-20">
+                <div
+                  class="p-1.5 bg-brand-orange w-[150px] flex-col flex items-center"
+                >
+                  <h3 class="text-xl font-normal text-white">Tot wel</h3>
+                  <h2
+                    class="text-[72px] leading-none font-extrabold text-white"
+                  >
+                    40<sub class="text-2xl">%</sub>
+                  </h2>
+                  <p class="text-xl font-normal text-white">Goedkoper</p>
+                </div>
+              </div>
+              <div class="px-5 md:px-12 lg:px-16 pt-8 sm:pt-14 pb-16">
+                <div class="space-y-4 max-w-[440px]">
+                  <h1
+                    class="text-[36px] font-extrabold xl:text-[50px] leading-[1.1] text-white"
+                  >
+                    VELUX Zonwering
+                  </h1>
+                  <p
+                    class="text-white text-[20px] md:text-[30px] leading-[1.1]"
+                  >
+                    Ben jij al klaar voor de zomer? <br />
+                    Zorg voor een prettig<br />
+                    binnenklimaat met VELUX.
+                  </p>
+                  <div class="group/button pt-6 max-w-[250px]">
+                    <a
+                      href="#"
+                      class="px-4 lg:px-6 inline-flex gap-4 py-2.5 bg-white rounded-md font-extrabold text-base group-hover/button:bg-brand-orange group-hover/button:text-white transition-all"
+                    >
+                      <span>Bekijk de collectie</span>
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="24"
+                        height="24"
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-width="2"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        class="stroke-dark group-hover/button:stroke-white"
+                      >
+                        <polyline points="9 18 15 12 9 6"></polyline>
+                      </svg>
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="px-4 py-10 sm:py-14" data-block="usps" id="usps">
+        <div class="container mx-auto">
+          <div class="max-w-[1137px] mx-auto">
+            <div class="w-full space-y-6 lg:space-y-8">
+              <div class="space-y-1">
+                <h2
+                  class="text-[32px] lg:text-[40px] leading-[1.2] text-dark font-extrabold"
+                >
+                  Zonweringstunter.nl
+                </h2>
+                <p class="text-dark text-lg lg:text-2xl">
+                  Kies voor de grootste en goedkoopste!
+                </p>
+              </div>
+              <div
+                class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-x-10 gap-y-4 lg:gap-14"
+              >
+                <div class="flex gap-3 items-center">
+                  <figure>
+                    <img
+                      class="xl:w-auto w-7 shrink-0"
+                      src="./images/check-big.png"
+                      alt="check-big"
+                    />
+                  </figure>
+                  <p
+                    class="text-brand-orange text-base sm:text-lg xl:text-xl !leading-[1.2] xl:leading-normal"
+                  >
+                    De nummer 1 <br />
+                    in Nederland!
+                  </p>
+                </div>
+                <div class="flex gap-3 items-center">
+                  <figure>
+                    <img
+                      class="xl:w-auto w-7 shrink-0"
+                      src="./images/check-big.png"
+                      alt="check-big"
+                    />
+                  </figure>
+                  <p
+                    class="text-brand-orange text-base sm:text-lg xl:text-xl !leading-[1.2] xl:leading-normal"
+                  >
+                    Laagste <br />
+                    prijsgarantie
+                  </p>
+                </div>
+                <div class="flex gap-3 items-center">
+                  <figure>
+                    <img
+                      class="xl:w-auto w-7 shrink-0"
+                      src="./images/check-big.png"
+                      alt="check-big"
+                    />
+                  </figure>
+                  <p
+                    class="text-brand-orange text-base sm:text-lg xl:text-xl !leading-[1.2] xl:leading-normal"
+                  >
+                    Showroom in <br />
+                    Purmerend
+                  </p>
+                </div>
+                <div class="flex gap-3 items-center">
+                  <figure>
+                    <img
+                      class="xl:w-auto w-7 shrink-0"
+                      src="./images/check-big.png"
+                      alt="check-big"
+                    />
+                  </figure>
+                  <p
+                    class="text-brand-orange text-base sm:text-lg xl:text-xl !leading-[1.2] xl:leading-normal"
+                  >
+                    Tot 5 jaar <br />
+                    garantie
+                  </p>
+                </div>
+                <div class="flex gap-3 items-center">
+                  <figure>
+                    <img
+                      class="xl:w-auto w-7 shrink-0"
+                      src="./images/check-big.png"
+                      alt="check-big"
+                    />
+                  </figure>
+                  <p
+                    class="text-brand-orange text-base sm:text-lg xl:text-xl !leading-[1.2] xl:leading-normal"
+                  >
+                    Eigen <br />
+                    montagedienst
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="px-4 py-6 sm:py-8" data-block="specials" id="specials">
+        <div class="container mx-auto">
+          <div class="grid grid-cols-1 md:grid-cols-12 gap-4 lg:gap-7">
+            <div
+              class="bg-[url(../images/image-3.png)] bg-no-repeat bg-cover sm:col-span-8"
+            >
+              <div
+                class="bg-dark bg-opacity-20 pt-40 pb-6 lg:pb-8 px-4 lg:px-16 flex items-end"
+              >
+                <div class="space-y-2 max-w-[475px]">
+                  <h1
+                    class="text-[36px] font-extrabold xl:text-[50px] leading-none text-white"
+                  >
+                    Moderne showroom
+                  </h1>
+                  <p
+                    class="text-white text-lg lg:text-[20px] xl:text-[30px] !leading-[1.1]"
+                  >
+                    Kom langs in Purmerend en bekijk meer dan 150 artikelen!
+                  </p>
+                  <div class="group/button pt-6 max-w-[250px]">
+                    <a
+                      href="#"
+                      class="px-4 lg:px-6 inline-flex gap-4 py-2.5 bg-white rounded-md font-extrabold text-base group-hover/button:bg-brand-orange group-hover/button:text-white transition-all"
+                    >
+                      <span>Bezoek de showroom</span>
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="24"
+                        height="24"
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-width="2"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        class="stroke-dark group-hover/button:stroke-white"
+                      >
+                        <polyline points="9 18 15 12 9 6"></polyline>
+                      </svg>
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div
+              class="md:col-span-4 bg-[url(../images/image-3.png)] bg-no-repeat bg-cover px-4 lg:px-6 pt-36 flex items-end pb-8"
+            >
+              <div class="space-y-2 max-w-[300px]">
+                <h1
+                  class="text-[36px] font-extrabold xl:text-[50px] leading-none text-white"
+                >
+                  VELUX restanten
+                </h1>
+                <p class="text-white text-[20px] md:text-[30px] leading-[1.1]">
+                  OP = OP
+                </p>
+                <div class="group/button pt-3 max-w-[250px]">
+                  <a
+                    href="#"
+                    class="px-4 lg:px-6 inline-flex gap-4 py-2.5 bg-white rounded-md font-extrabold text-base group-hover/button:bg-brand-orange group-hover/button:text-white transition-all"
+                  >
+                    <span>Bekijk restanten</span>
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="24"
+                      height="24"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      class="stroke-dark group-hover/button:stroke-white"
+                    >
+                      <polyline points="9 18 15 12 9 6"></polyline>
+                    </svg>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section
+        class="px-4 py-10 lg:py-20"
+        data-block="category-slider-one"
+        id="category-slider-one"
+      >
+        <div class="container mx-auto">
+          <div
+            class="flex flex-col lg:flex-row lg:justify-between items-start gap-10 lg:gap-20"
+          >
+            <div class="w-[272px] shrink-0 space-y-4 lg:pt-10 lg:sticky top-0">
+              <h2 class="font-extrabold text-dark text-2xl lg:text-[30px]">
+                Binnenzonwering
+              </h2>
+              <p class="text-base text-dark">
+                Ontdek alle binnenzonwering die we aanbieden. Rechtstreeks van
+                de fabrikant en hoge kortingen!
+              </p>
+              <a
+                href="#"
+                class="inline-block text-brand-orange rounded-md px-10 py-2 bg-white border hover:bg-brand-orange hover:text-white border-brand-orange"
+                >Shop nu</a
+              >
+            </div>
+            <div
+              class="w-full lg:w-[640px] xl:w-[890px] 2xl:w-[1050px] space-y-4"
+            >
+              <div class="flex justify-end">
+                <div class="flex gap-3 items-center">
+                  <button
+                    type="button"
+                    class="swiper-prev-1 group w-[31px] h-[33px] border flex justify-center items-center border-brand-gray"
+                  >
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="24"
+                      height="24"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      class="group-[.swiper-button-disabled]:opacity-50"
+                    >
+                      <polyline points="15 18 9 12 15 6"></polyline>
+                    </svg>
+                  </button>
+                  <button
+                    type="button"
+                    class="swiper-next-1 group w-[31px] h-[33px] border flex justify-center items-center border-brand-gray"
+                  >
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="24"
+                      height="24"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      class="group-[.swiper-button-disabled]:opacity-50"
+                    >
+                      <polyline points="9 18 15 12 9 6"></polyline>
+                    </svg>
+                  </button>
+                </div>
+              </div>
+              <div class="swiper slider-one -mr-4 sm:-mr-0">
+                <div class="swiper-wrapper">
+                  <div class="swiper-slide space-y-6 py-1">
+                    <div class="group/item relative">
+                      <a href="#" class="inset-0 absolute"></a>
+                      <div
+                        class="border border-brand-gray-100 group-hover/item:border-brand-orange"
+                      >
+                        <img
+                          class="w-full"
+                          src="./images/image-1.png"
+                          alt="image-1"
+                        />
+                        <div
+                          class="flex justify-between items-center pl-5 pr-2 py-2 bg-white group-hover/item:bg-brand-orange"
+                        >
+                          <h2
+                            class="text-dark font-extrabold text-base group-hover/item:text-white"
+                          >
+                            Binnenzonwering
+                          </h2>
+                          <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            width="24"
+                            height="24"
+                            viewBox="0 0 24 24"
+                            fill="none"
+                            stroke-width="2"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                            class="stroke-dark group-hover/item:stroke-white"
+                          >
+                            <polyline points="9 18 15 12 9 6"></polyline>
+                          </svg>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="group/item relative">
+                      <a href="#" class="inset-0 absolute"></a>
+                      <div
+                        class="border border-brand-gray-100 group-hover/item:border-brand-orange"
+                      >
+                        <img
+                          class="w-full"
+                          src="./images/image-1.png"
+                          alt="image-1"
+                        />
+                        <div
+                          class="flex justify-between items-center pl-5 pr-2 py-2 bg-white group-hover/item:bg-brand-orange"
+                        >
+                          <h2
+                            class="text-dark font-extrabold text-base group-hover/item:text-white"
+                          >
+                            Plissegordijnen
+                          </h2>
+                          <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            width="24"
+                            height="24"
+                            viewBox="0 0 24 24"
+                            fill="none"
+                            stroke-width="2"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                            class="stroke-dark group-hover/item:stroke-white"
+                          >
+                            <polyline points="9 18 15 12 9 6"></polyline>
+                          </svg>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="swiper-slide space-y-6 py-1">
+                    <div class="group/item relative">
+                      <div class="p-1.5 bg-brand-orange absolute right-5 top-0">
+                        <h3 class="text-[10px] font-extrabold text-white">
+                          Tot wel
+                        </h3>
+                        <h2
+                          class="text-[26px] leading-none font-extrabold text-white"
+                        >
+                          40<sub class="text-base">%</sub>
+                        </h2>
+                        <p class="text-[10px] font-extrabold text-white">
+                          Goedkoper
+                        </p>
+                      </div>
+                      <a href="#" class="inset-0 absolute"></a>
+                      <div
+                        class="border border-brand-gray-100 group-hover/item:border-brand-orange"
+                      >
+                        <img
+                          class="w-full"
+                          src="./images/image-1.png"
+                          alt="image-1"
+                        />
+                        <div
+                          class="flex justify-between items-center pl-5 pr-2 py-2 bg-white group-hover/item:bg-brand-orange"
+                        >
+                          <h2
+                            class="text-dark font-extrabold text-base group-hover/item:text-white"
+                          >
+                            Binnenzonwering
+                          </h2>
+                          <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            width="24"
+                            height="24"
+                            viewBox="0 0 24 24"
+                            fill="none"
+                            stroke-width="2"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                            class="stroke-dark group-hover/item:stroke-white"
+                          >
+                            <polyline points="9 18 15 12 9 6"></polyline>
+                          </svg>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="group/item relative">
+                      <a href="#" class="inset-0 absolute"></a>
+                      <div
+                        class="border border-brand-gray-100 group-hover/item:border-brand-orange"
+                      >
+                        <img
+                          class="w-full"
+                          src="./images/image-1.png"
+                          alt="image-1"
+                        />
+                        <div
+                          class="flex justify-between items-center pl-5 pr-2 py-2 bg-white group-hover/item:bg-brand-orange"
+                        >
+                          <h2
+                            class="text-dark font-extrabold text-base group-hover/item:text-white"
+                          >
+                            Plissegordijnen
+                          </h2>
+                          <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            width="24"
+                            height="24"
+                            viewBox="0 0 24 24"
+                            fill="none"
+                            stroke-width="2"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                            class="stroke-dark group-hover/item:stroke-white"
+                          >
+                            <polyline points="9 18 15 12 9 6"></polyline>
+                          </svg>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="swiper-slide space-y-6 py-1">
+                    <div class="group/item relative">
+                      <a href="#" class="inset-0 absolute"></a>
+                      <div
+                        class="border border-brand-gray-100 group-hover/item:border-brand-orange"
+                      >
+                        <img
+                          class="w-full"
+                          src="./images/image-1.png"
+                          alt="image-1"
+                        />
+                        <div
+                          class="flex justify-between items-center pl-5 pr-2 py-2 bg-white group-hover/item:bg-brand-orange"
+                        >
+                          <h2
+                            class="text-dark font-extrabold text-base group-hover/item:text-white"
+                          >
+                            Binnenzonwering
+                          </h2>
+                          <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            width="24"
+                            height="24"
+                            viewBox="0 0 24 24"
+                            fill="none"
+                            stroke-width="2"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                            class="stroke-dark group-hover/item:stroke-white"
+                          >
+                            <polyline points="9 18 15 12 9 6"></polyline>
+                          </svg>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="group/item relative">
+                      <div class="p-1.5 bg-brand-orange absolute right-5 top-0">
+                        <h3 class="text-[10px] font-extrabold text-white">
+                          Tot wel
+                        </h3>
+                        <h2
+                          class="text-[26px] leading-none font-extrabold text-white"
+                        >
+                          30<sub class="text-base">%</sub>
+                        </h2>
+                        <p class="text-[10px] font-extrabold text-white">
+                          Goedkoper
+                        </p>
+                      </div>
+                      <a href="#" class="inset-0 absolute"></a>
+                      <div
+                        class="border border-brand-gray-100 group-hover/item:border-brand-orange"
+                      >
+                        <img
+                          class="w-full"
+                          src="./images/image-1.png"
+                          alt="image-1"
+                        />
+                        <div
+                          class="flex justify-between items-center pl-5 pr-2 py-2 bg-white group-hover/item:bg-brand-orange"
+                        >
+                          <h2
+                            class="text-dark font-extrabold text-base group-hover/item:text-white"
+                          >
+                            Plissegordijnen
+                          </h2>
+                          <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            width="24"
+                            height="24"
+                            viewBox="0 0 24 24"
+                            fill="none"
+                            stroke-width="2"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                            class="stroke-dark group-hover/item:stroke-white"
+                          >
+                            <polyline points="9 18 15 12 9 6"></polyline>
+                          </svg>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="swiper-slide space-y-6 py-1">
+                    <div class="group/item relative">
+                      <a href="#" class="inset-0 absolute"></a>
+                      <div
+                        class="border border-brand-gray-100 group-hover/item:border-brand-orange"
+                      >
+                        <img
+                          class="w-full"
+                          src="./images/image-1.png"
+                          alt="image-1"
+                        />
+                        <div
+                          class="flex justify-between items-center pl-5 pr-2 py-2 bg-white group-hover/item:bg-brand-orange"
+                        >
+                          <h2
+                            class="text-dark font-extrabold text-base group-hover/item:text-white"
+                          >
+                            Binnenzonwering
+                          </h2>
+                          <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            width="24"
+                            height="24"
+                            viewBox="0 0 24 24"
+                            fill="none"
+                            stroke-width="2"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                            class="stroke-dark group-hover/item:stroke-white"
+                          >
+                            <polyline points="9 18 15 12 9 6"></polyline>
+                          </svg>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="group/item relative">
+                      <div class="p-1.5 bg-brand-orange absolute right-5 top-0">
+                        <h3 class="text-[10px] font-extrabold text-white">
+                          Tot wel
+                        </h3>
+                        <h2
+                          class="text-[26px] leading-none font-extrabold text-white"
+                        >
+                          30<sub class="text-base">%</sub>
+                        </h2>
+                        <p class="text-[10px] font-extrabold text-white">
+                          Goedkoper
+                        </p>
+                      </div>
+                      <a href="#" class="inset-0 absolute"></a>
+                      <div
+                        class="border border-brand-gray-100 group-hover/item:border-brand-orange"
+                      >
+                        <img
+                          class="w-full"
+                          src="./images/image-1.png"
+                          alt="image-1"
+                        />
+                        <div
+                          class="flex justify-between items-center pl-5 pr-2 py-2 bg-white group-hover/item:bg-brand-orange"
+                        >
+                          <h2
+                            class="text-dark font-extrabold text-base group-hover/item:text-white"
+                          >
+                            Plissegordijnen
+                          </h2>
+                          <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            width="24"
+                            height="24"
+                            viewBox="0 0 24 24"
+                            fill="none"
+                            stroke-width="2"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                            class="stroke-dark group-hover/item:stroke-white"
+                          >
+                            <polyline points="9 18 15 12 9 6"></polyline>
+                          </svg>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section
+        class="relative py-10 lg:py-20 px-4"
+        data-block="category-slider-two"
+        id="category-slider-two"
+      >
+        <div
+          class="absolute top-0 bottom-0 right-0 w-[1750px] bg-brand-gray"
+        ></div>
+        <div class="container relative mx-auto">
+          <div
+            class="flex flex-col lg:flex-row-reverse lg:justify-between items-start gap-10 2xl:gap-20"
+          >
+            <div class="w-[272px] shrink-0 space-y-4 lg:sticky top-0">
+              <h2 class="font-extrabold text-dark text-2xl lg:text-[30px]">
+                Binnenzonwering
+              </h2>
+              <p class="text-base text-dark">
+                Ontdek alle binnenzonwering die we aanbieden. Rechtstreeks van
+                de fabrikant en hoge kortingen!
+              </p>
+              <a
+                href="#"
+                class="inline-block text-brand-orange rounded-md px-10 py-2 bg-white border hover:bg-brand-orange hover:text-white border-brand-orange"
+                >Shop nu</a
+              >
+            </div>
+            <div
+              class="w-full lg:w-[640px] xl:w-[890px] 2xl:w-[1050px] space-y-4"
+            >
+              <div class="swiper slider-two -mr-4 sm:-mr-0">
+                <div class="swiper-wrapper">
+                  <div class="swiper-slide space-y-6 py-1">
+                    <div class="group/item relative">
+                      <div class="p-1.5 bg-brand-orange absolute right-5 top-0">
+                        <h3 class="text-[10px] font-extrabold text-white">
+                          Tot wel
+                        </h3>
+                        <h2
+                          class="text-[26px] leading-none font-extrabold text-white"
+                        >
+                          40<sub class="text-base">%</sub>
+                        </h2>
+                        <p class="text-[10px] font-extrabold text-white">
+                          Goedkoper
+                        </p>
+                      </div>
+                      <a href="#" class="inset-0 absolute"></a>
+                      <div
+                        class="border border-brand-gray-100 group-hover/item:border-brand-orange"
+                      >
+                        <img
+                          class="w-full"
+                          src="./images/image-5.png"
+                          alt="image-5"
+                        />
+                        <div
+                          class="flex justify-between items-center pl-5 pr-2 py-2 bg-white group-hover/item:bg-brand-orange"
+                        >
+                          <h2
+                            class="text-dark font-extrabold text-base group-hover/item:text-white"
+                          >
+                            Binnenzonwering
+                          </h2>
+                          <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            width="24"
+                            height="24"
+                            viewBox="0 0 24 24"
+                            fill="none"
+                            stroke-width="2"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                            class="stroke-dark group-hover/item:stroke-white"
+                          >
+                            <polyline points="9 18 15 12 9 6"></polyline>
+                          </svg>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="group/item relative">
+                      <a href="#" class="inset-0 absolute"></a>
+                      <div
+                        class="border border-brand-gray-100 group-hover/item:border-brand-orange"
+                      >
+                        <img
+                          class="w-full"
+                          src="./images/image-2.png"
+                          alt="image-2"
+                        />
+                        <div
+                          class="flex justify-between items-center pl-5 pr-2 py-2 bg-white group-hover/item:bg-brand-orange"
+                        >
+                          <h2
+                            class="text-dark font-extrabold text-base group-hover/item:text-white"
+                          >
+                            Plissegordijnen
+                          </h2>
+                          <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            width="24"
+                            height="24"
+                            viewBox="0 0 24 24"
+                            fill="none"
+                            stroke-width="2"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                            class="stroke-dark group-hover/item:stroke-white"
+                          >
+                            <polyline points="9 18 15 12 9 6"></polyline>
+                          </svg>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="swiper-slide space-y-6 py-1">
+                    <div class="group/item relative">
+                      <a href="#" class="inset-0 absolute"></a>
+                      <div
+                        class="border border-brand-gray-100 group-hover/item:border-brand-orange"
+                      >
+                        <img
+                          class="w-full"
+                          src="./images/image-1.png"
+                          alt="image-1"
+                        />
+                        <div
+                          class="flex justify-between items-center pl-5 pr-2 py-2 bg-white group-hover/item:bg-brand-orange"
+                        >
+                          <h2
+                            class="text-dark font-extrabold text-base group-hover/item:text-white"
+                          >
+                            Binnenzonwering
+                          </h2>
+                          <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            width="24"
+                            height="24"
+                            viewBox="0 0 24 24"
+                            fill="none"
+                            stroke-width="2"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                            class="stroke-dark group-hover/item:stroke-white"
+                          >
+                            <polyline points="9 18 15 12 9 6"></polyline>
+                          </svg>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="group/item relative">
+                      <a href="#" class="inset-0 absolute"></a>
+                      <div
+                        class="border border-brand-gray-100 group-hover/item:border-brand-orange"
+                      >
+                        <img
+                          class="w-full"
+                          src="./images/image-1.png"
+                          alt="image-1"
+                        />
+                        <div
+                          class="flex justify-between items-center pl-5 pr-2 py-2 bg-white group-hover/item:bg-brand-orange"
+                        >
+                          <h2
+                            class="text-dark font-extrabold text-base group-hover/item:text-white"
+                          >
+                            Plissegordijnen
+                          </h2>
+                          <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            width="24"
+                            height="24"
+                            viewBox="0 0 24 24"
+                            fill="none"
+                            stroke-width="2"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                            class="stroke-dark group-hover/item:stroke-white"
+                          >
+                            <polyline points="9 18 15 12 9 6"></polyline>
+                          </svg>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="swiper-slide space-y-6 py-1">
+                    <div class="group/item relative">
+                      <a href="#" class="inset-0 absolute"></a>
+                      <div
+                        class="border border-brand-gray-100 group-hover/item:border-brand-orange"
+                      >
+                        <img
+                          class="w-full"
+                          src="./images/image-1.png"
+                          alt="image-1"
+                        />
+                        <div
+                          class="flex justify-between items-center pl-5 pr-2 py-2 bg-white group-hover/item:bg-brand-orange"
+                        >
+                          <h2
+                            class="text-dark font-extrabold text-base group-hover/item:text-white"
+                          >
+                            Binnenzonwering
+                          </h2>
+                          <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            width="24"
+                            height="24"
+                            viewBox="0 0 24 24"
+                            fill="none"
+                            stroke-width="2"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                            class="stroke-dark group-hover/item:stroke-white"
+                          >
+                            <polyline points="9 18 15 12 9 6"></polyline>
+                          </svg>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="group/item relative">
+                      <div class="p-1.5 bg-brand-orange absolute right-5 top-0">
+                        <h3 class="text-[10px] font-extrabold text-white">
+                          Tot wel
+                        </h3>
+                        <h2
+                          class="text-[26px] leading-none font-extrabold text-white"
+                        >
+                          30<sub class="text-base">%</sub>
+                        </h2>
+                        <p class="text-[10px] font-extrabold text-white">
+                          Goedkoper
+                        </p>
+                      </div>
+                      <a href="#" class="inset-0 absolute"></a>
+                      <div
+                        class="border border-brand-gray-100 group-hover/item:border-brand-orange"
+                      >
+                        <img
+                          class="w-full"
+                          src="./images/image-1.png"
+                          alt="image-1"
+                        />
+                        <div
+                          class="flex justify-between items-center pl-5 pr-2 py-2 bg-white group-hover/item:bg-brand-orange"
+                        >
+                          <h2
+                            class="text-dark font-extrabold text-base group-hover/item:text-white"
+                          >
+                            Plissegordijnen
+                          </h2>
+                          <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            width="24"
+                            height="24"
+                            viewBox="0 0 24 24"
+                            fill="none"
+                            stroke-width="2"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                            class="stroke-dark group-hover/item:stroke-white"
+                          >
+                            <polyline points="9 18 15 12 9 6"></polyline>
+                          </svg>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="swiper-slide space-y-6 py-1">
+                    <div class="group/item relative">
+                      <a href="#" class="inset-0 absolute"></a>
+                      <div
+                        class="border border-brand-gray-100 group-hover/item:border-brand-orange"
+                      >
+                        <img
+                          class="w-full"
+                          src="./images/image-1.png"
+                          alt="image-1"
+                        />
+                        <div
+                          class="flex justify-between items-center pl-5 pr-2 py-2 bg-white group-hover/item:bg-brand-orange"
+                        >
+                          <h2
+                            class="text-dark font-extrabold text-base group-hover/item:text-white"
+                          >
+                            Binnenzonwering
+                          </h2>
+                          <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            width="24"
+                            height="24"
+                            viewBox="0 0 24 24"
+                            fill="none"
+                            stroke-width="2"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                            class="stroke-dark group-hover/item:stroke-white"
+                          >
+                            <polyline points="9 18 15 12 9 6"></polyline>
+                          </svg>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="group/item relative">
+                      <div class="p-1.5 bg-brand-orange absolute right-5 top-0">
+                        <h3 class="text-[10px] font-extrabold text-white">
+                          Tot wel
+                        </h3>
+                        <h2
+                          class="text-[26px] leading-none font-extrabold text-white"
+                        >
+                          30<sub class="text-base">%</sub>
+                        </h2>
+                        <p class="text-[10px] font-extrabold text-white">
+                          Goedkoper
+                        </p>
+                      </div>
+                      <a href="#" class="inset-0 absolute"></a>
+                      <div
+                        class="border border-brand-gray-100 group-hover/item:border-brand-orange"
+                      >
+                        <img
+                          class="w-full"
+                          src="./images/image-1.png"
+                          alt="image-1"
+                        />
+                        <div
+                          class="flex justify-between items-center pl-5 pr-2 py-2 bg-white group-hover/item:bg-brand-orange"
+                        >
+                          <h2
+                            class="text-dark font-extrabold text-base group-hover/item:text-white"
+                          >
+                            Plissegordijnen
+                          </h2>
+                          <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            width="24"
+                            height="24"
+                            viewBox="0 0 24 24"
+                            fill="none"
+                            stroke-width="2"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                            class="stroke-dark group-hover/item:stroke-white"
+                          >
+                            <polyline points="9 18 15 12 9 6"></polyline>
+                          </svg>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section
+        class="relative py-10 lg:py-20 px-4 bg-brand-gray"
+        data-block="category-slider-two"
+        id="category-slider-two"
+      >
+        <div class="container relative mx-auto space-y-4">
+          <div class="flex justify-between items-center">
+            <h2 class="font-extrabold text-dark text-2xl lg:text-[30px]">
+              Bestsellers
+            </h2>
+            <div class="flex gap-3 items-center">
+              <button
+                type="button"
+                class="swiper-prev-3 group w-[31px] h-[33px] border flex justify-center items-center bg-white border-brand-gray"
+              >
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  class="group-[.swiper-button-disabled]:opacity-50"
+                >
+                  <polyline points="15 18 9 12 15 6"></polyline>
+                </svg>
+              </button>
+              <button
+                type="button"
+                class="swiper-next-3 group w-[31px] h-[33px] border flex justify-center items-center bg-white border-brand-gray"
+              >
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  class="group-[.swiper-button-disabled]:opacity-50"
+                >
+                  <polyline points="9 18 15 12 9 6"></polyline>
+                </svg>
+              </button>
+            </div>
+          </div>
+          <div class="w-full">
+            <div class="swiper slider-three -mr-4 xl:-mr-0">
+              <div class="swiper-wrapper">
+                <div class="swiper-slide space-y-6 py-1">
+                  <div class="bg-white border border-brand-gray p-4">
+                    <div class="relative h-[260px]">
+                      <img
+                        class="w-full h-[260px] object-cover"
+                        src="./images/image-6.png"
+                        alt="image-6"
+                      />
+                      <div
+                        class="p-2 absolute bottom-0 w-[77px] h-[67px] flex flex-col justify-center items-center right-4 bg-brand-orange"
+                      >
+                        <h2
+                          class="font-extrabold text-white text-[30px] leading-none"
+                        >
+                          40<sub class="text-xl">%</sub>
+                        </h2>
+                        <p class="text-[17px] text-white">Korting</p>
+                      </div>
+                    </div>
+                    <div class="space-y-2 pt-3">
+                      <h2 class="h-12">
+                        <a
+                          href="#"
+                          class="text-lg leading-[1.3] text-dark line-clamp-2"
+                          >Knikarmscherm Ipanema
+                        </a>
+                      </h2>
+                      <div class="flex gap-8">
+                        <p class="text-brand-orange text-[19px]">
+                          Vanaf <strong> 2340.-</strong>
+                        </p>
+                        <p class="line-through text-brand-gray-200">3250.-</p>
+                      </div>
+                    </div>
+                    <div class="p-3 space-y-6">
+                      <ul class="grid gap-1.5">
+                        <li class="flex gap-2 items-center">
+                          <img
+                            class="shrink-0"
+                            src="./images/check.png"
+                            alt="check.png"
+                          />
+                          <p class="text-sm text-dark">
+                            Volledig gesloten cassette
+                          </p>
+                        </li>
+                        <li class="flex gap-2 items-center">
+                          <img
+                            class="shrink-0"
+                            src="./images/check.png"
+                            alt="check.png"
+                          />
+                          <p class="text-sm text-dark">250 tot 600 cm breed</p>
+                        </li>
+                        <li class="flex gap-2 items-center">
+                          <img
+                            class="shrink-0"
+                            src="./images/check.png"
+                            alt="check.png"
+                          />
+                          <p class="text-sm text-dark">200 tot 300 cm uitval</p>
+                        </li>
+                        <li class="flex gap-2 items-center">
+                          <img
+                            class="shrink-0"
+                            src="./images/check.png"
+                            alt="check.png"
+                          />
+                          <p class="text-sm text-dark">
+                            maatwerk zonder meerprijs
+                          </p>
+                        </li>
+                      </ul>
+                      <a
+                        href="#"
+                        class="text-white text-base font-extrabold py-2 px-4 bg-brand-orange text-center hover:bg-opacity-90 rounded-md inline-block w-full"
+                        >Samenstellen
+                      </a>
+                    </div>
+                  </div>
+                </div>
+                <div class="swiper-slide space-y-6 py-1">
+                  <div class="bg-white border border-brand-gray p-4">
+                    <div class="relative h-[260px]">
+                      <img
+                        class="w-full h-[260px] object-cover"
+                        src="./images/image-7.png"
+                        alt="image-7"
+                      />
+                      <div
+                        class="py-3 px-2 w-[77px] h-[67px] flex justify-center flex-col items-center absolute bottom-0 right-4 bg-brand-orange"
+                      >
+                        <h2
+                          class="font-extrabold text-white py-1 border-y border-white uppercase"
+                        >
+                          AKTIE
+                        </h2>
+                      </div>
+                    </div>
+                    <div class="space-y-2 pt-3">
+                      <h2 class="h-12">
+                        <a
+                          href="#"
+                          class="text-lg leading-[1.3] text-dark line-clamp-2"
+                          >Houten Jaloezie 50mm prijsgroep 0
+                        </a>
+                      </h2>
+                      <div class="flex gap-8">
+                        <p class="text-brand-orange text-[19px]">
+                          Vanaf <strong> 2340.-</strong>
+                        </p>
+                      </div>
+                    </div>
+                    <div class="p-3 space-y-6">
+                      <ul class="grid gap-1.5">
+                        <li class="flex gap-2 items-center">
+                          <img
+                            class="shrink-0"
+                            src="./images/check.png"
+                            alt="check.png"
+                          />
+                          <p class="text-sm text-dark">50mm brede lamellen</p>
+                        </li>
+                        <li class="flex gap-2 items-center">
+                          <img
+                            class="shrink-0"
+                            src="./images/check.png"
+                            alt="check.png"
+                          />
+                          <p class="text-sm text-dark">
+                            Diverse kleuren en ladderband
+                          </p>
+                        </li>
+                        <li class="flex gap-2 items-center">
+                          <img
+                            class="shrink-0"
+                            src="./images/check.png"
+                            alt="check.png"
+                          />
+                          <p class="text-sm text-dark">
+                            Met kantel- en ophaalkoord
+                          </p>
+                        </li>
+                        <li class="flex gap-2 items-center">
+                          <img
+                            class="shrink-0"
+                            src="./images/check.png"
+                            alt="check.png"
+                          />
+                          <p class="text-sm text-dark">
+                            Van 60cm tot 260cm breed
+                          </p>
+                        </li>
+                      </ul>
+                      <a
+                        href="#"
+                        class="text-white text-base font-extrabold py-2 px-4 bg-brand-orange text-center hover:bg-opacity-90 rounded-md inline-block w-full"
+                        >Samenstellen
+                      </a>
+                    </div>
+                  </div>
+                </div>
+                <div class="swiper-slide space-y-6 py-1">
+                  <div class="bg-white border border-brand-gray p-4">
+                    <div class="relative h-[260px]">
+                      <img
+                        class="w-full h-[260px] object-cover"
+                        src="./images/image-8.png"
+                        alt="image-8"
+                      />
+                      <div
+                        class="py-3 px-2 flex justify-start flex-col items-center absolute bottom-0 left-4"
+                      >
+                        <img src="./images/velux.png" alt="velux" />
+                      </div>
+                    </div>
+                    <div class="space-y-2 pt-3">
+                      <h2 class="h-12">
+                        <a
+                          href="#"
+                          class="text-lg leading-[1.3] text-dark line-clamp-2"
+                          >VELUX lichtdoorlatend rolgordijn handmatig bediend
+                          (RFL)
+                        </a>
+                      </h2>
+                      <div class="flex gap-8">
+                        <p class="text-brand-orange text-[19px]">
+                          Vanaf <strong> 72.-</strong>
+                        </p>
+                        <p class="line-through text-brand-gray-200">123.-</p>
+                      </div>
+                    </div>
+                    <div class="p-3 space-y-6">
+                      <ul class="grid gap-1.5">
+                        <li class="flex gap-2 items-center">
+                          <img
+                            class="shrink-0"
+                            src="./images/check.png"
+                            alt="check.png"
+                          />
+                          <p class="text-sm text-dark">
+                            Verduisterend rolgordijn met plissé
+                          </p>
+                        </li>
+                        <li class="flex gap-2 items-center">
+                          <img
+                            class="shrink-0"
+                            src="./images/check.png"
+                            alt="check.png"
+                          />
+                          <p class="text-sm text-dark">
+                            Laat het daglicht door
+                          </p>
+                        </li>
+                        <li class="flex gap-2 items-center">
+                          <img
+                            class="shrink-0"
+                            src="./images/check.png"
+                            alt="check.png"
+                          />
+                          <p class="text-sm text-dark">
+                            Diverse kleuren en designs
+                          </p>
+                        </li>
+                        <li class="flex gap-2 items-center">
+                          <img
+                            class="shrink-0"
+                            src="./images/check.png"
+                            alt="check.png"
+                          />
+                          <p class="text-sm text-dark">
+                            ORIGINEEL VELUX PRODUCT
+                          </p>
+                        </li>
+                      </ul>
+                      <a
+                        href="#"
+                        class="text-white text-base font-extrabold py-2 px-4 bg-brand-orange text-center hover:bg-opacity-90 rounded-md inline-block w-full"
+                        >Samenstellen
+                      </a>
+                    </div>
+                  </div>
+                </div>
+                <div class="swiper-slide space-y-6 py-1">
+                  <div class="bg-white border border-brand-gray p-4">
+                    <div class="relative h-[260px]">
+                      <img
+                        class="w-full h-[260px] object-cover"
+                        src="./images/image-9.png"
+                        alt="image-9"
+                      />
+                      <div
+                        class="p-2 absolute bottom-0 w-[77px] h-[67px] flex flex-col justify-center items-center right-4 bg-brand-orange"
+                      >
+                        <h2
+                          class="font-extrabold text-white text-[17px] leading-none"
+                        >
+                          OP=OP
+                        </h2>
+                      </div>
+                    </div>
+                    <div class="space-y-2 pt-3">
+                      <h2 class="h-12">
+                        <a
+                          href="#"
+                          class="text-lg leading-[1.3] text-dark line-clamp-2"
+                          >Terrasoverkapping ISEO Maatwerk
+                        </a>
+                      </h2>
+                      <div class="flex gap-8">
+                        <p class="text-brand-orange text-[19px]">
+                          Vanaf <strong> 1134.-</strong>
+                        </p>
+                      </div>
+                    </div>
+                    <div class="p-3 space-y-6">
+                      <ul class="grid gap-1.5">
+                        <li class="flex gap-2 items-center">
+                          <img
+                            class="shrink-0"
+                            src="./images/check.png"
+                            alt="check.png"
+                          />
+                          <p class="text-sm text-dark">Aluminium profielen</p>
+                        </li>
+                        <li class="flex gap-2 items-center">
+                          <img
+                            class="shrink-0"
+                            src="./images/check.png"
+                            alt="check.png"
+                          />
+                          <p class="text-sm text-dark">Polycarbonaat platen</p>
+                        </li>
+                        <li class="flex gap-2 items-center">
+                          <img
+                            class="shrink-0"
+                            src="./images/check.png"
+                            alt="check.png"
+                          />
+                          <p class="text-sm text-dark">Maximaal 7m x 3.5m</p>
+                        </li>
+                        <li class="flex gap-2 items-center">
+                          <img
+                            class="shrink-0"
+                            src="./images/check.png"
+                            alt="check.png"
+                          />
+                          <p class="text-sm text-dark">
+                            Zelf installeren of laten monteren
+                          </p>
+                        </li>
+                      </ul>
+                      <a
+                        href="#"
+                        class="text-white text-base font-extrabold py-2 px-4 bg-brand-orange text-center hover:bg-opacity-90 rounded-md inline-block w-full"
+                        >Samenstellen
+                      </a>
+                    </div>
+                  </div>
+                </div>
+                <div class="swiper-slide space-y-6 py-1">
+                  <div class="bg-white border border-brand-gray p-4">
+                    <div class="relative h-[260px]">
+                      <img
+                        class="w-full h-[260px] object-cover"
+                        src="./images/image-8.png"
+                        alt="image-8"
+                      />
+                      <div
+                        class="py-3 px-2 flex justify-start flex-col items-center absolute bottom-0 left-4"
+                      >
+                        <img src="./images/velux.png" alt="velux" />
+                      </div>
+                    </div>
+                    <div class="space-y-2 pt-3">
+                      <h2 class="h-12">
+                        <a
+                          href="#"
+                          class="text-lg leading-[1.3] text-dark line-clamp-2"
+                          >VELUX lichtdoorlatend rolgordijn handmatig bediend
+                          (RFL)
+                        </a>
+                      </h2>
+                      <div class="flex gap-8">
+                        <p class="text-brand-orange text-[19px]">
+                          Vanaf <strong> 72.-</strong>
+                        </p>
+                        <p class="line-through text-brand-gray-200">123.-</p>
+                      </div>
+                    </div>
+                    <div class="p-3 space-y-6">
+                      <ul class="grid gap-1.5">
+                        <li class="flex gap-2 items-center">
+                          <img
+                            class="shrink-0"
+                            src="./images/check.png"
+                            alt="check.png"
+                          />
+                          <p class="text-sm text-dark">
+                            Verduisterend rolgordijn met plissé
+                          </p>
+                        </li>
+                        <li class="flex gap-2 items-center">
+                          <img
+                            class="shrink-0"
+                            src="./images/check.png"
+                            alt="check.png"
+                          />
+                          <p class="text-sm text-dark">
+                            Laat het daglicht door
+                          </p>
+                        </li>
+                        <li class="flex gap-2 items-center">
+                          <img
+                            class="shrink-0"
+                            src="./images/check.png"
+                            alt="check.png"
+                          />
+                          <p class="text-sm text-dark">
+                            Diverse kleuren en designs
+                          </p>
+                        </li>
+                        <li class="flex gap-2 items-center">
+                          <img
+                            class="shrink-0"
+                            src="./images/check.png"
+                            alt="check.png"
+                          />
+                          <p class="text-sm text-dark">
+                            ORIGINEEL VELUX PRODUCT
+                          </p>
+                        </li>
+                      </ul>
+                      <a
+                        href="#"
+                        class="text-white text-base font-extrabold py-2 px-4 bg-brand-orange text-center hover:bg-opacity-90 rounded-md inline-block w-full"
+                        >Samenstellen
+                      </a>
+                    </div>
+                  </div>
+                </div>
+                <div class="swiper-slide space-y-6 py-1">
+                  <div class="bg-white border border-brand-gray p-4">
+                    <div class="relative h-[260px]">
+                      <img
+                        class="w-full h-[260px] object-cover"
+                        src="./images/image-9.png"
+                        alt="image-9"
+                      />
+                      <div
+                        class="p-2 absolute bottom-0 w-[77px] h-[67px] flex flex-col justify-center items-center right-4 bg-brand-orange"
+                      >
+                        <h2
+                          class="font-extrabold text-white text-[17px] leading-none"
+                        >
+                          OP=OP
+                        </h2>
+                      </div>
+                    </div>
+                    <div class="space-y-2 pt-3">
+                      <h2 class="h-12">
+                        <a
+                          href="#"
+                          class="text-lg leading-[1.3] text-dark line-clamp-2"
+                          >Terrasoverkapping ISEO Maatwerk
+                        </a>
+                      </h2>
+                      <div class="flex gap-8">
+                        <p class="text-brand-orange text-[19px]">
+                          Vanaf <strong> 1134.-</strong>
+                        </p>
+                      </div>
+                    </div>
+                    <div class="p-3 space-y-6">
+                      <ul class="grid gap-1.5">
+                        <li class="flex gap-2 items-center">
+                          <img
+                            class="shrink-0"
+                            src="./images/check.png"
+                            alt="check.png"
+                          />
+                          <p class="text-sm text-dark">Aluminium profielen</p>
+                        </li>
+                        <li class="flex gap-2 items-center">
+                          <img
+                            class="shrink-0"
+                            src="./images/check.png"
+                            alt="check.png"
+                          />
+                          <p class="text-sm text-dark">Polycarbonaat platen</p>
+                        </li>
+                        <li class="flex gap-2 items-center">
+                          <img
+                            class="shrink-0"
+                            src="./images/check.png"
+                            alt="check.png"
+                          />
+                          <p class="text-sm text-dark">Maximaal 7m x 3.5m</p>
+                        </li>
+                        <li class="flex gap-2 items-center">
+                          <img
+                            class="shrink-0"
+                            src="./images/check.png"
+                            alt="check.png"
+                          />
+                          <p class="text-sm text-dark">
+                            Zelf installeren of laten monteren
+                          </p>
+                        </li>
+                      </ul>
+                      <a
+                        href="#"
+                        class="text-white text-base font-extrabold py-2 px-4 bg-brand-orange text-center hover:bg-opacity-90 rounded-md inline-block w-full"
+                        >Samenstellen
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section
+        class="relative py-10 lg:py-20 px-4 bg-white"
+        data-block="product-slider-one"
+        id="product-slider-one"
+      >
+        <div class="container relative mx-auto space-y-4">
+          <div class="flex justify-between items-center">
+            <h2 class="font-extrabold text-dark text-2xl lg:text-[30px]">
+              Inspiratie
+            </h2>
+            <div class="flex gap-3 items-center">
+              <button
+                type="button"
+                class="swiper-prev-5 group w-[31px] h-[33px] border flex justify-center items-center bg-white border-brand-gray"
+              >
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  class="group-[.swiper-button-disabled]:opacity-50"
+                >
+                  <polyline points="15 18 9 12 15 6"></polyline>
+                </svg>
+              </button>
+              <button
+                type="button"
+                class="swiper-next-4 group w-[31px] h-[33px] border flex justify-center items-center bg-white border-brand-gray"
+              >
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  class="group-[.swiper-button-disabled]:opacity-50"
+                >
+                  <polyline points="9 18 15 12 9 6"></polyline>
+                </svg>
+              </button>
+            </div>
+          </div>
+          <div class="w-full">
+            <div class="swiper slider-three -mr-4 xl:-mr-0">
+              <div class="swiper-wrapper">
+                <div class="swiper-slide space-y-6 py-1">
+                  <div class="bg-white border border-brand-gray p-4">
+                    <div class="relative h-[260px]">
+                      <img
+                        class="w-full h-[260px] object-cover"
+                        src="./images/image-6.png"
+                        alt="image-6"
+                      />
+                      <div
+                        class="p-2 absolute bottom-0 w-[77px] h-[67px] flex flex-col justify-center items-center right-4 bg-brand-orange"
+                      >
+                        <h2
+                          class="font-extrabold text-white text-[30px] leading-none"
+                        >
+                          40<sub class="text-xl">%</sub>
+                        </h2>
+                        <p class="text-[17px] text-white">Korting</p>
+                      </div>
+                    </div>
+                    <div class="space-y-2 pt-3">
+                      <h2 class="h-12">
+                        <a
+                          href="#"
+                          class="text-lg leading-[1.3] text-dark line-clamp-2"
+                          >Knikarmscherm Ipanema
+                        </a>
+                      </h2>
+                      <div class="flex gap-8">
+                        <p class="text-brand-orange text-[19px]">
+                          Vanaf <strong> 2340.-</strong>
+                        </p>
+                        <p class="line-through text-brand-gray-200">3250.-</p>
+                      </div>
+                    </div>
+                    <div class="p-3 space-y-6">
+                      <ul class="grid gap-1.5">
+                        <li class="flex gap-2 items-center">
+                          <img
+                            class="shrink-0"
+                            src="./images/check.png"
+                            alt="check.png"
+                          />
+                          <p class="text-sm text-dark">
+                            Volledig gesloten cassette
+                          </p>
+                        </li>
+                        <li class="flex gap-2 items-center">
+                          <img
+                            class="shrink-0"
+                            src="./images/check.png"
+                            alt="check.png"
+                          />
+                          <p class="text-sm text-dark">250 tot 600 cm breed</p>
+                        </li>
+                        <li class="flex gap-2 items-center">
+                          <img
+                            class="shrink-0"
+                            src="./images/check.png"
+                            alt="check.png"
+                          />
+                          <p class="text-sm text-dark">200 tot 300 cm uitval</p>
+                        </li>
+                        <li class="flex gap-2 items-center">
+                          <img
+                            class="shrink-0"
+                            src="./images/check.png"
+                            alt="check.png"
+                          />
+                          <p class="text-sm text-dark">
+                            maatwerk zonder meerprijs
+                          </p>
+                        </li>
+                      </ul>
+                      <a
+                        href="#"
+                        class="text-white text-base font-extrabold py-2 px-4 bg-brand-orange text-center hover:bg-opacity-90 rounded-md inline-block w-full"
+                        >Samenstellen
+                      </a>
+                    </div>
+                  </div>
+                </div>
+                <div class="swiper-slide space-y-6 py-1">
+                  <div class="bg-white border border-brand-gray p-4">
+                    <div class="relative h-[260px]">
+                      <img
+                        class="w-full h-[260px] object-cover"
+                        src="./images/image-7.png"
+                        alt="image-7"
+                      />
+                      <div
+                        class="py-3 px-2 w-[77px] h-[67px] flex justify-center flex-col items-center absolute bottom-0 right-4 bg-brand-orange"
+                      >
+                        <h2
+                          class="font-extrabold text-white py-1 border-y border-white uppercase"
+                        >
+                          AKTIE
+                        </h2>
+                      </div>
+                    </div>
+                    <div class="space-y-2 pt-3">
+                      <h2 class="h-12">
+                        <a
+                          href="#"
+                          class="text-lg leading-[1.3] text-dark line-clamp-2"
+                          >Houten Jaloezie 50mm prijsgroep 0
+                        </a>
+                      </h2>
+                      <div class="flex gap-8">
+                        <p class="text-brand-orange text-[19px]">
+                          Vanaf <strong> 2340.-</strong>
+                        </p>
+                      </div>
+                    </div>
+                    <div class="p-3 space-y-6">
+                      <ul class="grid gap-1.5">
+                        <li class="flex gap-2 items-center">
+                          <img
+                            class="shrink-0"
+                            src="./images/check.png"
+                            alt="check.png"
+                          />
+                          <p class="text-sm text-dark">50mm brede lamellen</p>
+                        </li>
+                        <li class="flex gap-2 items-center">
+                          <img
+                            class="shrink-0"
+                            src="./images/check.png"
+                            alt="check.png"
+                          />
+                          <p class="text-sm text-dark">
+                            Diverse kleuren en ladderband
+                          </p>
+                        </li>
+                        <li class="flex gap-2 items-center">
+                          <img
+                            class="shrink-0"
+                            src="./images/check.png"
+                            alt="check.png"
+                          />
+                          <p class="text-sm text-dark">
+                            Met kantel- en ophaalkoord
+                          </p>
+                        </li>
+                        <li class="flex gap-2 items-center">
+                          <img
+                            class="shrink-0"
+                            src="./images/check.png"
+                            alt="check.png"
+                          />
+                          <p class="text-sm text-dark">
+                            Van 60cm tot 260cm breed
+                          </p>
+                        </li>
+                      </ul>
+                      <a
+                        href="#"
+                        class="text-white text-base font-extrabold py-2 px-4 bg-brand-orange text-center hover:bg-opacity-90 rounded-md inline-block w-full"
+                        >Samenstellen
+                      </a>
+                    </div>
+                  </div>
+                </div>
+                <div class="swiper-slide space-y-6 py-1">
+                  <div class="bg-white border border-brand-gray p-4">
+                    <div class="relative h-[260px]">
+                      <img
+                        class="w-full h-[260px] object-cover"
+                        src="./images/image-8.png"
+                        alt="image-8"
+                      />
+                      <div
+                        class="py-3 px-2 flex justify-start flex-col items-center absolute bottom-0 left-4"
+                      >
+                        <img src="./images/velux.png" alt="velux" />
+                      </div>
+                    </div>
+                    <div class="space-y-2 pt-3">
+                      <h2 class="h-12">
+                        <a
+                          href="#"
+                          class="text-lg leading-[1.3] text-dark line-clamp-2"
+                          >VELUX lichtdoorlatend rolgordijn handmatig bediend
+                          (RFL)
+                        </a>
+                      </h2>
+                      <div class="flex gap-8">
+                        <p class="text-brand-orange text-[19px]">
+                          Vanaf <strong> 72.-</strong>
+                        </p>
+                        <p class="line-through text-brand-gray-200">123.-</p>
+                      </div>
+                    </div>
+                    <div class="p-3 space-y-6">
+                      <ul class="grid gap-1.5">
+                        <li class="flex gap-2 items-center">
+                          <img
+                            class="shrink-0"
+                            src="./images/check.png"
+                            alt="check.png"
+                          />
+                          <p class="text-sm text-dark">
+                            Verduisterend rolgordijn met plissé
+                          </p>
+                        </li>
+                        <li class="flex gap-2 items-center">
+                          <img
+                            class="shrink-0"
+                            src="./images/check.png"
+                            alt="check.png"
+                          />
+                          <p class="text-sm text-dark">
+                            Laat het daglicht door
+                          </p>
+                        </li>
+                        <li class="flex gap-2 items-center">
+                          <img
+                            class="shrink-0"
+                            src="./images/check.png"
+                            alt="check.png"
+                          />
+                          <p class="text-sm text-dark">
+                            Diverse kleuren en designs
+                          </p>
+                        </li>
+                        <li class="flex gap-2 items-center">
+                          <img
+                            class="shrink-0"
+                            src="./images/check.png"
+                            alt="check.png"
+                          />
+                          <p class="text-sm text-dark">
+                            ORIGINEEL VELUX PRODUCT
+                          </p>
+                        </li>
+                      </ul>
+                      <a
+                        href="#"
+                        class="text-white text-base font-extrabold py-2 px-4 bg-brand-orange text-center hover:bg-opacity-90 rounded-md inline-block w-full"
+                        >Samenstellen
+                      </a>
+                    </div>
+                  </div>
+                </div>
+                <div class="swiper-slide space-y-6 py-1">
+                  <div class="bg-white border border-brand-gray p-4">
+                    <div class="relative h-[260px]">
+                      <img
+                        class="w-full h-[260px] object-cover"
+                        src="./images/image-9.png"
+                        alt="image-9"
+                      />
+                      <div
+                        class="p-2 absolute bottom-0 w-[77px] h-[67px] flex flex-col justify-center items-center right-4 bg-brand-orange"
+                      >
+                        <h2
+                          class="font-extrabold text-white text-[17px] leading-none"
+                        >
+                          OP=OP
+                        </h2>
+                      </div>
+                    </div>
+                    <div class="space-y-2 pt-3">
+                      <h2 class="h-12">
+                        <a
+                          href="#"
+                          class="text-lg leading-[1.3] text-dark line-clamp-2"
+                          >Terrasoverkapping ISEO Maatwerk
+                        </a>
+                      </h2>
+                      <div class="flex gap-8">
+                        <p class="text-brand-orange text-[19px]">
+                          Vanaf <strong> 1134.-</strong>
+                        </p>
+                      </div>
+                    </div>
+                    <div class="p-3 space-y-6">
+                      <ul class="grid gap-1.5">
+                        <li class="flex gap-2 items-center">
+                          <img
+                            class="shrink-0"
+                            src="./images/check.png"
+                            alt="check.png"
+                          />
+                          <p class="text-sm text-dark">Aluminium profielen</p>
+                        </li>
+                        <li class="flex gap-2 items-center">
+                          <img
+                            class="shrink-0"
+                            src="./images/check.png"
+                            alt="check.png"
+                          />
+                          <p class="text-sm text-dark">Polycarbonaat platen</p>
+                        </li>
+                        <li class="flex gap-2 items-center">
+                          <img
+                            class="shrink-0"
+                            src="./images/check.png"
+                            alt="check.png"
+                          />
+                          <p class="text-sm text-dark">Maximaal 7m x 3.5m</p>
+                        </li>
+                        <li class="flex gap-2 items-center">
+                          <img
+                            class="shrink-0"
+                            src="./images/check.png"
+                            alt="check.png"
+                          />
+                          <p class="text-sm text-dark">
+                            Zelf installeren of laten monteren
+                          </p>
+                        </li>
+                      </ul>
+                      <a
+                        href="#"
+                        class="text-white text-base font-extrabold py-2 px-4 bg-brand-orange text-center hover:bg-opacity-90 rounded-md inline-block w-full"
+                        >Samenstellen
+                      </a>
+                    </div>
+                  </div>
+                </div>
+                <div class="swiper-slide space-y-6 py-1">
+                  <div class="bg-white border border-brand-gray p-4">
+                    <div class="relative h-[260px]">
+                      <img
+                        class="w-full h-[260px] object-cover"
+                        src="./images/image-8.png"
+                        alt="image-8"
+                      />
+                      <div
+                        class="py-3 px-2 flex justify-start flex-col items-center absolute bottom-0 left-4"
+                      >
+                        <img src="./images/velux.png" alt="velux" />
+                      </div>
+                    </div>
+                    <div class="space-y-2 pt-3">
+                      <h2 class="h-12">
+                        <a
+                          href="#"
+                          class="text-lg leading-[1.3] text-dark line-clamp-2"
+                          >VELUX lichtdoorlatend rolgordijn handmatig bediend
+                          (RFL)
+                        </a>
+                      </h2>
+                      <div class="flex gap-8">
+                        <p class="text-brand-orange text-[19px]">
+                          Vanaf <strong> 72.-</strong>
+                        </p>
+                        <p class="line-through text-brand-gray-200">123.-</p>
+                      </div>
+                    </div>
+                    <div class="p-3 space-y-6">
+                      <ul class="grid gap-1.5">
+                        <li class="flex gap-2 items-center">
+                          <img
+                            class="shrink-0"
+                            src="./images/check.png"
+                            alt="check.png"
+                          />
+                          <p class="text-sm text-dark">
+                            Verduisterend rolgordijn met plissé
+                          </p>
+                        </li>
+                        <li class="flex gap-2 items-center">
+                          <img
+                            class="shrink-0"
+                            src="./images/check.png"
+                            alt="check.png"
+                          />
+                          <p class="text-sm text-dark">
+                            Laat het daglicht door
+                          </p>
+                        </li>
+                        <li class="flex gap-2 items-center">
+                          <img
+                            class="shrink-0"
+                            src="./images/check.png"
+                            alt="check.png"
+                          />
+                          <p class="text-sm text-dark">
+                            Diverse kleuren en designs
+                          </p>
+                        </li>
+                        <li class="flex gap-2 items-center">
+                          <img
+                            class="shrink-0"
+                            src="./images/check.png"
+                            alt="check.png"
+                          />
+                          <p class="text-sm text-dark">
+                            ORIGINEEL VELUX PRODUCT
+                          </p>
+                        </li>
+                      </ul>
+                      <a
+                        href="#"
+                        class="text-white text-base font-extrabold py-2 px-4 bg-brand-orange text-center hover:bg-opacity-90 rounded-md inline-block w-full"
+                        >Samenstellen
+                      </a>
+                    </div>
+                  </div>
+                </div>
+                <div class="swiper-slide space-y-6 py-1">
+                  <div class="bg-white border border-brand-gray p-4">
+                    <div class="relative h-[260px]">
+                      <img
+                        class="w-full h-[260px] object-cover"
+                        src="./images/image-9.png"
+                        alt="image-9"
+                      />
+                      <div
+                        class="p-2 absolute bottom-0 w-[77px] h-[67px] flex flex-col justify-center items-center right-4 bg-brand-orange"
+                      >
+                        <h2
+                          class="font-extrabold text-white text-[17px] leading-none"
+                        >
+                          OP=OP
+                        </h2>
+                      </div>
+                    </div>
+                    <div class="space-y-2 pt-3">
+                      <h2 class="h-12">
+                        <a
+                          href="#"
+                          class="text-lg leading-[1.3] text-dark line-clamp-2"
+                          >Terrasoverkapping ISEO Maatwerk
+                        </a>
+                      </h2>
+                      <div class="flex gap-8">
+                        <p class="text-brand-orange text-[19px]">
+                          Vanaf <strong> 1134.-</strong>
+                        </p>
+                      </div>
+                    </div>
+                    <div class="p-3 space-y-6">
+                      <ul class="grid gap-1.5">
+                        <li class="flex gap-2 items-center">
+                          <img
+                            class="shrink-0"
+                            src="./images/check.png"
+                            alt="check.png"
+                          />
+                          <p class="text-sm text-dark">Aluminium profielen</p>
+                        </li>
+                        <li class="flex gap-2 items-center">
+                          <img
+                            class="shrink-0"
+                            src="./images/check.png"
+                            alt="check.png"
+                          />
+                          <p class="text-sm text-dark">Polycarbonaat platen</p>
+                        </li>
+                        <li class="flex gap-2 items-center">
+                          <img
+                            class="shrink-0"
+                            src="./images/check.png"
+                            alt="check.png"
+                          />
+                          <p class="text-sm text-dark">Maximaal 7m x 3.5m</p>
+                        </li>
+                        <li class="flex gap-2 items-center">
+                          <img
+                            class="shrink-0"
+                            src="./images/check.png"
+                            alt="check.png"
+                          />
+                          <p class="text-sm text-dark">
+                            Zelf installeren of laten monteren
+                          </p>
+                        </li>
+                      </ul>
+                      <a
+                        href="#"
+                        class="text-white text-base font-extrabold py-2 px-4 bg-brand-orange text-center hover:bg-opacity-90 rounded-md inline-block w-full"
+                        >Samenstellen
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section
+        class="relative py-10 lg:py-20 px-4 bg-white"
+        data-block="product-slider-two"
+        id="product-slider-two"
+      >
+        <div class="container relative mx-auto space-y-4">
+          <div class="flex justify-between items-center">
+            <h2 class="font-extrabold text-dark text-2xl lg:text-[30px]">
+              Bestsellers
+            </h2>
+            <div class="flex gap-3 items-center">
+              <button
+                type="button"
+                class="swiper-prev-5 group w-[31px] h-[33px] border flex justify-center items-center bg-white border-brand-gray"
+              >
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  class="group-[.swiper-button-disabled]:opacity-50"
+                >
+                  <polyline points="15 18 9 12 15 6"></polyline>
+                </svg>
+              </button>
+              <button
+                type="button"
+                class="swiper-next-4 group w-[31px] h-[33px] border flex justify-center items-center bg-white border-brand-gray"
+              >
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  class="group-[.swiper-button-disabled]:opacity-50"
+                >
+                  <polyline points="9 18 15 12 9 6"></polyline>
+                </svg>
+              </button>
+            </div>
+          </div>
+          <div class="w-full">
+            <div class="swiper slider-five -mr-4 xl:-mr-0">
+              <div class="swiper-wrapper">
+                <div class="swiper-slide py-1">
+                  <figure>
+                    <img
+                      class="h-[250px] object-cover"
+                      src="./images/blog-img-1.png"
+                      alt="blog-img1"
+                    />
+                  </figure>
+                  <div class="p-4 lg:p-6 bg-brand-gray space-y-2">
+                    <h3>
+                      <a
+                        href="#"
+                        class="text-dark text-xl font-extrabold line-clamp-2"
+                        >Welke zonwering is geschikt voor een badkamer?</a
+                      >
+                    </h3>
+                    <p class="text-base line-clamp-2 text-dark">
+                      Er zijn verschillende soorten zonwering die geschikt zijn
+                      voor een badkamer.
+                    </p>
+                    <div class="flex justify-end pt-3">
+                      <a
+                        href="#"
+                        class="flex gap-3 items-center text-dark text-base"
+                      >
+                        <span>lees verder</span>
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          width="24"
+                          height="24"
+                          viewBox="0 0 24 24"
+                          fill="none"
+                          stroke="currentColor"
+                          stroke-width="2"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                          class="feather feather-chevron-right"
+                        >
+                          <polyline points="9 18 15 12 9 6"></polyline>
+                        </svg>
+                      </a>
+                    </div>
+                  </div>
+                </div>
+                <div class="swiper-slide py-1">
+                  <figure>
+                    <img
+                      class="h-[250px] object-cover"
+                      src="./images/blog-img-2.png"
+                      alt="blog-img1"
+                    />
+                  </figure>
+                  <div class="p-4 lg:p-6 bg-brand-gray space-y-2">
+                    <h3>
+                      <a
+                        href="#"
+                        class="text-dark text-xl font-extrabold line-clamp-2"
+                        >Welke soorten bediening zijn er voor zonwering?</a
+                      >
+                    </h3>
+                    <p class="text-base line-clamp-2 text-dark">
+                      Er zijn verschillende soorten bediening voor zonwering.
+                      Van handmatig tot electrisch.
+                    </p>
+                    <div class="flex justify-end pt-3">
+                      <a
+                        href="#"
+                        class="flex gap-3 items-center text-dark text-base"
+                      >
+                        <span>lees verder</span>
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          width="24"
+                          height="24"
+                          viewBox="0 0 24 24"
+                          fill="none"
+                          stroke="currentColor"
+                          stroke-width="2"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                          class="feather feather-chevron-right"
+                        >
+                          <polyline points="9 18 15 12 9 6"></polyline>
+                        </svg>
+                      </a>
+                    </div>
+                  </div>
+                </div>
+                <div class="swiper-slide py-1">
+                  <figure>
+                    <img
+                      class="h-[250px] object-cover"
+                      src="./images/blog-img-3.png"
+                      alt="blog-img3"
+                    />
+                  </figure>
+                  <div class="p-4 lg:p-6 bg-brand-gray space-y-2">
+                    <h3>
+                      <a
+                        href="#"
+                        class="text-dark text-xl font-extrabold line-clamp-2"
+                        >Waar moet je op letten als je zonwering gaat kopen?</a
+                      >
+                    </h3>
+                    <p class="text-base line-clamp-2 text-dark">
+                      Er zijn verschillende soorten zonwering die geschikt zijn
+                      voor een badkamer.
+                    </p>
+                    <div class="flex justify-end pt-3">
+                      <a
+                        href="#"
+                        class="flex gap-3 items-center text-dark text-base"
+                      >
+                        <span>lees verder</span>
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          width="24"
+                          height="24"
+                          viewBox="0 0 24 24"
+                          fill="none"
+                          stroke="currentColor"
+                          stroke-width="2"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                          class="feather feather-chevron-right"
+                        >
+                          <polyline points="9 18 15 12 9 6"></polyline>
+                        </svg>
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+    <!-- start coding for footer  -->
+    <footer>
+      <div class="px-4 pb-10 lg:pb-14">
+        <div class="container mx-auto">
+          <div class="max-w-[930px] mx-auto">
+            <div
+              class="px-4 sm:px-6 lg:px-10 py-4 lg:py-7 flex gap-2 flex-col md:flex-row items-end border border-brand-orange"
+            >
+              <div class="space-y-4 md:w-[300px] lg:w-[380px] shrink-0">
+                <h2 class="text-2xl font-extrabold text-brand-orange">
+                  Ontvang direct 10.- shoptegoed!
+                </h2>
+                <p class="text-base text-dark pr-5">
+                  Schrijf je in voor de maandelijkse nieuwsbrief en ontvang
+                  direct 10.- shoptegoed in je mailbox!
+                </p>
+              </div>
+              <div class="flex items-center w-full">
+                <input
+                  type="text"
+                  class="py-2 px-4 rounded-l-md w-full border border-brand-gray-100"
+                  placeholder="e-mailadres"
+                />
+                <button
+                  class="px-4 sm:px-8 -ml-1 py-2.5 bg-brand-orange text-white font-extrabold rounded-r-md"
+                  type="button"
+                >
+                  Inschrijven
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="bg-brand-gray py-10 lg:py-14 px-4">
+        <div class="container mx-auto">
+          <div
+            class="flex flex-col xl:flex-row gap-10 2xl:gap-20 xl:items-start"
+          >
+            <div class="w-full lg:w-[480px] space-y-4">
+              <h2 class="text-dark font-extrabold text-[25px]">Showroom</h2>
+              <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+                <div class="space-y-6">
+                  <div class="flex gap-3 items-center">
+                    <img
+                      class="shrink-0"
+                      src="./images/call-img.png"
+                      alt="call-img.png"
+                    />
+                    <div class="">
+                      <h3 class="text-[25px] text-dark">0229 295 585</h3>
+                      <p class="text-base text-dark">(tot 16.00u bereikbaar)</p>
+                    </div>
+                  </div>
+                  <div class="flex gap-3 items-center">
+                    <img
+                      class="shrink-0"
+                      src="./images/location-pin.png"
+                      alt="location-pin.png"
+                    />
+                    <div class="">
+                      <h3 class="text-base text-dark">Cantekoogweg 21</h3>
+                      <p class="text-base text-dark">1442 LG Purmerend (NH)</p>
+                    </div>
+                  </div>
+                </div>
+                <ul>
+                  <li class="flex gap-2 items-center">
+                    <p class="text-dark text-base w-24">maandag</p>
+                    <p class="text-dark text-base">gesloten</p>
+                  </li>
+                  <li class="flex gap-2 items-center">
+                    <p class="text-dark text-base w-24">dinsdag</p>
+                    <p class="text-dark text-base">9:00 - 17:00u</p>
+                  </li>
+                  <li class="flex gap-2 items-center">
+                    <p class="text-dark text-base w-24">woensdag</p>
+                    <p class="text-dark text-base">9:00 - 17:00u</p>
+                  </li>
+                  <li class="flex gap-2 items-center">
+                    <p class="text-dark text-base w-24">donderdag</p>
+                    <p class="text-dark text-base">9:00 - 17:00u</p>
+                  </li>
+                  <li class="flex gap-2 items-center">
+                    <p class="text-dark text-base w-24">vrijdag</p>
+                    <p class="text-dark text-base">9:00 - 17:00u</p>
+                  </li>
+                  <li class="flex gap-2 items-center">
+                    <p class="text-dark text-base w-24">zaterdag</p>
+                    <p class="text-dark text-base">9:00 - 17:00u</p>
+                  </li>
+                </ul>
+              </div>
+              <p class="text-base text-dark leading-[25px] sm:pl-10">
+                Al onze prijzen op deze website zijn inclusief BTW.
+                Zonweringstunter.nl is onderdeel van VZR Trading B.V., De
+                Factorij 43, 1689 ZG Zwaag.
+              </p>
+            </div>
+            <div class="w-full lg:w-[830px]">
+              <div
+                class="w-full grid grid-cols-1 gap-8 sm:grid-cols-3 lg:gap-10"
+              >
+                <div class="space-y-5">
+                  <h2
+                    class="text-[25px] font-extrabold leading-[1.1] text-dark"
+                  >
+                    Klantenservic
+                  </h2>
+                  <ul class="grid gap-2">
+                    <li><a href="#" class="text-base text-dark">Betalen</a></li>
+                    <li>
+                      <a href="#" class="text-base text-dark"
+                        >Levertijd & bezorging</a
+                      >
+                    </li>
+                    <li>
+                      <a href="#" class="text-base text-dark">Bestellen</a>
+                    </li>
+                    <li><a href="#" class="text-base text-dark">Afhalen</a></li>
+                    <li>
+                      <a href="#" class="text-base text-dark">Garantie</a>
+                    </li>
+                    <li>
+                      <a href="#" class="text-base text-dark">Retourneren</a>
+                    </li>
+                    <li>
+                      <a href="#" class="text-base text-dark">Montageservice</a>
+                    </li>
+                    <li>
+                      <a href="#" class="text-base text-dark"
+                        >Veel gestelde vragen</a
+                      >
+                    </li>
+                    <li>
+                      <a href="#" class="text-base text-dark">Inloggen</a>
+                    </li>
+                    <li>
+                      <a href="#" class="text-base text-dark">Mijn account</a>
+                    </li>
+                  </ul>
+                </div>
+                <div class="space-y-5">
+                  <h2
+                    class="text-[25px] font-extrabold leading-[1.1] text-dark"
+                  >
+                    Assortiment
+                  </h2>
+
+                  <ul class="grid gap-2">
+                    <li>
+                      <a href="#" class="text-base text-dark"
+                        >Binnenzonwering</a
+                      >
+                    </li>
+                    <li>
+                      <a href="#" class="text-base text-dark"
+                        >Buitenzonwering</a
+                      >
+                    </li>
+                    <li>
+                      <a href="#" class="text-base text-dark"
+                        >VELUX zonwering</a
+                      >
+                    </li>
+                    <li>
+                      <a href="#" class="text-base text-dark">Rolluiken</a>
+                    </li>
+                    <li>
+                      <a href="#" class="text-base text-dark"
+                        >Horren & hordeuren</a
+                      >
+                    </li>
+                    <li>
+                      <a href="#" class="text-base text-dark">Garagedeuren</a>
+                    </li>
+                    <li>
+                      <a href="#" class="text-base text-dark"
+                        >Terrasoverkappingen</a
+                      >
+                    </li>
+                    <li>
+                      <a href="#" class="text-base text-dark">Onderdelen</a>
+                    </li>
+                    <li>
+                      <a href="#" class="text-base text-dark">Outlet</a>
+                    </li>
+                    <li>
+                      <a href="#" class="text-base text-dark">Inspiratie</a>
+                    </li>
+                  </ul>
+                </div>
+                <div class="space-y-5">
+                  <h2
+                    class="text-[25px] font-extrabold leading-[1.1] text-dark"
+                  >
+                    Onze voordelen
+                  </h2>
+
+                  <ul class="grid gap-2">
+                    <li>
+                      <a href="#" class="text-base text-dark"
+                        >De nummer 1 in Nederland!</a
+                      >
+                    </li>
+                    <li>
+                      <a href="#" class="text-base text-dark"
+                        >Laagste prijsgarantie</a
+                      >
+                    </li>
+                    <li>
+                      <a href="#" class="text-base text-dark"
+                        >Uitgebreide showroom</a
+                      >
+                    </li>
+                    <li>
+                      <a href="#" class="text-base text-dark">Montageservice</a>
+                    </li>
+                    <li>
+                      <a href="#" class="text-base text-dark"
+                        >Nederlandse topmerken</a
+                      >
+                    </li>
+                    <li>
+                      <a href="#" class="text-base text-dark"
+                        >Tot 5 jaar garantie</a
+                      >
+                    </li>
+                    <li>
+                      <a href="#" class="text-base text-dark"
+                        >Terrasoverkappingen</a
+                      >
+                    </li>
+                    <li>
+                      <a href="#" class="text-base text-dark"
+                        >Groot inkoopvolume</a
+                      >
+                    </li>
+                    <li>
+                      <a href="#" class="text-base text-dark"
+                        >Hoge beoordelingen</a
+                      >
+                    </li>
+                    <li>
+                      <a href="#" class="text-base text-dark"
+                        >Bezorging in Belgie</a
+                      >
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div
+            class="flex flex-col xl:flex-row xl:justify-between gap-6 2xl:gap-10 items-center mt-12"
+          >
+            <ul
+              class="flex flex-wrap justify-center sm:justify-start gap-3 items-center"
+            >
+              <li>
+                <a href="#" class="text-base text-dark"
+                  >Algemene voorwaarden
+                </a>
+              </li>
+              <li>
+                <a href="#" class="text-base text-dark">Privacy verklaring </a>
+              </li>
+              <li>
+                <a href="#" class="text-base text-dark">Disclaimer </a>
+              </li>
+              <li>
+                <a href="#" class="text-base text-dark"> Cookie verklaring </a>
+              </li>
+            </ul>
+            <ul
+              class="flex flex-wrap justify-center sm:justify-start gap-5 2xl:gap-10 items-center"
+            >
+              <li>
+                <a href="#"
+                  ><img src="./images/card-img-1.png" alt="card-img-1"
+                /></a>
+              </li>
+              <li>
+                <a href="#"
+                  ><img src="./images/card-img-2.png" alt="card-img-2"
+                /></a>
+              </li>
+              <li>
+                <a href="#"
+                  ><img src="./images/card-img-3.png" alt="card-img-3"
+                /></a>
+              </li>
+              <li>
+                <a href="#"
+                  ><img src="./images/card-img-4.png" alt="card-img-4"
+                /></a>
+              </li>
+              <li>
+                <a href="#"
+                  ><img src="./images/card-img-5.png" alt="card-img-5"
+                /></a>
+              </li>
+              <li>
+                <a href="#"
+                  ><img src="./images/card-img-6.png" alt="card-img-6"
+                /></a>
+              </li>
+              <li>
+                <a href="#"
+                  ><img src="./images/card-img-7.png" alt="card-img-7"
+                /></a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+    <script src="./js/custom.js"></script>
+  </body>
+</html>
