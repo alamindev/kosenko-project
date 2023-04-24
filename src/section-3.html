@@ -180,7 +180,7 @@
             <div class="space-y-3 pt-3">
               <div class="flex gap-5 items-center">
                 <div
-                  class="flex w-[108px] items-center rounded-lg py-2 px-3 border border-brand-gray"
+                  class="flex w-[108px] items-center rounded-md py-2 px-3 border border-brand-gray"
                 >
                   <button type="button">-</button>
                   <div class="px-4 shrink-0">
@@ -218,6 +218,1622 @@
         </div>
       </div>
     </section>
+    <section
+      class="lg:px-4 py-12 bg-brand-gray"
+      data-block="product-configurator"
+      id="product-configurator"
+    >
+      <div class="container mx-auto">
+        <div class="max-w-[1170px] mx-auto space-y-5">
+          <div
+            class="flex px-4 lg:px-0 flex-col md:flex-row justify-between gap-2 md:items-center"
+          >
+            <h2 class="font-extrabold text-2xl text-dark">
+              Aluminium Jaloezie 25mm samenstellen
+            </h2>
+            <div class="flex gap-6">
+              <h3 class="text-brand-orange text-2xl">Totaalprijs</h3>
+              <p class="font-extrabold text-brand-orange text-2xl">290,00</p>
+            </div>
+          </div>
+          <div
+            class="bg-white divide-y divide-gray-200 border border-brand-gray-300"
+          >
+            <!-- for Afmetingen -->
+            <div class="group">
+              <div
+                class="accordion flex flex-col md:flex-row gap-4 justify-between items-start py-3 px-4"
+              >
+                <div
+                  class="flex w-[180px] lg:w-[230px] shrink-0 gap-3 items-center"
+                >
+                  <figure>
+                    <img
+                      class="group-[.open]:block hidden"
+                      src="./images/check-round.png"
+                      alt="checkround"
+                    />
+                    <img
+                      class="group-[.open]:hidden block"
+                      src="./images/question-mark.png"
+                      alt="question-mark.png"
+                    />
+                  </figure>
+                  <h2
+                    class="text-[19px] group-[.open]:text-dark text-brand-gray-300 font-extrabold"
+                  >
+                    Afmetingen
+                  </h2>
+                </div>
+                <div class="flex gap-3">
+                  <div class="">
+                    <p class="text-dark text-base">
+                      <a href="#" class="text-brand-orange underline">
+                        Bekijk de meetinstructies</a
+                      >
+                      Tip: Meet altijd op drie plaatsen om breedte- en
+                      hoogteverschillen in het kozijn te ondervangen.
+                    </p>
+                  </div>
+                  <div class="w-[80px] shrink-0">
+                    <p
+                      class="text-brand-orange text-right font-extrabold text-base"
+                    >
+                      + 80,00
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <div class="overflow-hidden transition-all max-h-0">
+                <div class="flex gap-4 pb-4">
+                  <div class="hidden md:block md:w-[180px] lg:w-[230px]"></div>
+                  <div class="px-5 space-y-3">
+                    <div class="space-y-2">
+                      <h4 class="text-base text-dark">
+                        Breedte (min 250, max 400)
+                      </h4>
+                      <div class="flex gap-2 flex-wrap">
+                        <div class="">
+                          <input
+                            type="radio"
+                            class="peer hidden"
+                            name="breedte"
+                            id="one"
+                          />
+                          <label
+                            for="one"
+                            class="h-[36px] select-none cursor-pointer w-[85px] text-dark text-base peer-checked:border-brand-green peer-checked:bg-brand-green-50 border border-brand-gray-300 flex justify-center items-center rounded-md"
+                            >250</label
+                          >
+                        </div>
+                        <div class="">
+                          <input
+                            type="radio"
+                            class="peer hidden"
+                            name="breedte"
+                            id="two"
+                          />
+                          <label
+                            for="two"
+                            class="h-[36px] select-none cursor-pointer w-[85px] text-dark text-base peer-checked:border-brand-green peer-checked:bg-brand-green-50 border border-brand-gray-300 flex justify-center items-center rounded-md"
+                            >300</label
+                          >
+                        </div>
+                        <div class="">
+                          <input
+                            type="radio"
+                            class="peer hidden"
+                            name="breedte"
+                            id="three"
+                          />
+                          <label
+                            for="three"
+                            class="h-[36px] select-none cursor-pointer w-[85px] text-dark text-base peer-checked:border-brand-green peer-checked:bg-brand-green-50 border border-brand-gray-300 flex justify-center items-center rounded-md"
+                            >350</label
+                          >
+                        </div>
+                        <div class="">
+                          <input
+                            type="radio"
+                            class="peer hidden"
+                            name="breedte"
+                            id="four"
+                          />
+                          <label
+                            for="four"
+                            class="h-[36px] select-none cursor-pointer w-[85px] text-dark text-base peer-checked:border-brand-green peer-checked:bg-brand-green-50 border border-brand-gray-300 flex justify-center items-center rounded-md"
+                            >400</label
+                          >
+                        </div>
+                      </div>
+                    </div>
+                    <div class="input-parent group space-y-1.5">
+                      <div
+                        class="group-focus group-[.error]:!border-brand-red group-[.disabled]:border-brand-gray-100 group-[.disabled]:bg-brand-gray-100 bg-white px-5 py-1.5 border border-brand-gray-200 rounded-md group-[.focused]:border-brand-green"
+                      >
+                        <label
+                          for="Hoogte"
+                          class="block text-base text-brand-orange"
+                          >Hoogte (min 20cm, max 260cm)</label
+                        >
+                        <input
+                          type="text"
+                          name="Hoogte"
+                          id="Hoogte"
+                          placeholder="250"
+                          class="input px-0 py-0.5 w-full text-dark text-base outline-none focus:outline-none focus:border-0 focus:ring-0 bg-transparent border-none"
+                        />
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- for Kleur -->
+            <div class="group">
+              <div
+                class="accordion flex flex-col md:flex-row gap-4 items-start py-3 px-4"
+              >
+                <div
+                  class="cursor-pointer flex w-[180px] lg:w-[230px] shrink-0 gap-3 items-center"
+                >
+                  <figure>
+                    <img
+                      class="group-[.open]:block hidden"
+                      src="./images/check-round.png"
+                      alt="checkround"
+                    />
+                    <img
+                      class="group-[.open]:hidden block"
+                      src="./images/question-mark.png"
+                      alt="question-mark.png"
+                    />
+                  </figure>
+                  <h2
+                    class="text-[19px] group-[.open]:text-dark text-brand-gray-300 font-extrabold"
+                  >
+                    Kleur
+                  </h2>
+                </div>
+                <div class="flex gap-3 justify-between w-full">
+                  <div class="flex gap-4 items-center">
+                    <p class="text-base text-dark">pagina 1 van 5</p>
+                    <div class="flex gap-2">
+                      <button
+                        type="button"
+                        class="w-[31px] h-[33px] border border-brand-gray-100 flex justify-center items-center"
+                      >
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          width="24"
+                          height="24"
+                          viewBox="0 0 24 24"
+                          fill="none"
+                          stroke="currentColor"
+                          stroke-width="2"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                          class="stroke-dark"
+                        >
+                          <polyline points="15 18 9 12 15 6"></polyline>
+                        </svg>
+                      </button>
+                      <button
+                        type="button"
+                        class="w-[31px] h-[33px] border border-brand-gray-100 flex justify-center items-center"
+                      >
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          width="24"
+                          height="24"
+                          viewBox="0 0 24 24"
+                          fill="none"
+                          stroke="currentColor"
+                          stroke-width="2"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                          class="-rotate-180 stroke-dark"
+                        >
+                          <polyline points="15 18 9 12 15 6"></polyline>
+                        </svg>
+                      </button>
+                    </div>
+                  </div>
+                  <div class="w-[80px] shrink-0">
+                    <p
+                      class="text-brand-orange text-right font-extrabold text-base"
+                    >
+                      + 10,00
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <div class="overflow-hidden transition-all max-h-0">
+                <div class="flex gap-4">
+                  <div
+                    class="hidden md:block md:w-[180px] lg:w-[230px] shrink-0"
+                  ></div>
+                  <div class="px-5 space-y-3 pb-5 pt-1 w-full">
+                    <div
+                      class="grid max-[400px]:grid-cols-1 grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-2"
+                    >
+                      <div class="w-full">
+                        <input
+                          type="checkbox"
+                          class="peer hidden"
+                          name="typeone"
+                          id="type-1"
+                        />
+                        <label
+                          for="type-1"
+                          class="border-2 cursor-pointer block border-brand-gray-100 peer-checked:border-brand-green peer-checked:bg-brand-green-50"
+                        >
+                          <span
+                            class="py-2 flex justify-end bg-gradient-to-t px-2 from-gray-500 to-gray-200"
+                          >
+                            <img src="./images/expand.png" alt="expand.png" />
+                          </span>
+                          <span
+                            class="px-2 py-3 text-dark text-[13px] flex justify-between items-center"
+                          >
+                            10.2005 Wit
+                          </span>
+                        </label>
+                      </div>
+                      <div class="w-full">
+                        <input
+                          type="checkbox"
+                          class="peer hidden"
+                          name="typeone"
+                          id="type-2"
+                        />
+                        <label
+                          for="type-2"
+                          class="border-2 cursor-pointer block border-brand-gray-100 peer-checked:border-brand-green peer-checked:bg-brand-green-50"
+                        >
+                          <span
+                            class="py-2 flex justify-end bg-gradient-to-t px-2 from-gray-400 to-gray-500"
+                          >
+                            <img src="./images/expand.png" alt="expand.png" />
+                          </span>
+                          <span
+                            class="px-2 py-3 text-dark text-[13px] flex justify-between items-center"
+                          >
+                            10.2005 Wit
+                            <strong
+                              class="text-brand-orange text-base leading-none"
+                              >+ 10,00</strong
+                            >
+                          </span>
+                        </label>
+                      </div>
+                      <div class="w-full">
+                        <input
+                          type="checkbox"
+                          class="peer hidden"
+                          name="typeone"
+                          id="type-3"
+                        />
+                        <label
+                          for="type-3"
+                          class="border-2 cursor-pointer block border-brand-gray-100 peer-checked:border-brand-green peer-checked:bg-brand-green-50"
+                        >
+                          <span
+                            class="py-2 flex justify-end bg-gradient-to-t px-2 from-red-400 to-red-500"
+                          >
+                            <img src="./images/expand.png" alt="expand.png" />
+                          </span>
+                          <span
+                            class="px-2 py-3 text-dark text-[13px] flex justify-between items-center"
+                          >
+                            10.2005 Wit
+                          </span>
+                        </label>
+                      </div>
+                      <div class="w-full">
+                        <input
+                          type="checkbox"
+                          class="peer hidden"
+                          name="typeone"
+                          id="type-4"
+                        />
+                        <label
+                          for="type-4"
+                          class="border-2 cursor-pointer block border-brand-gray-100 peer-checked:border-brand-green peer-checked:bg-brand-green-50"
+                        >
+                          <span
+                            class="py-2 flex justify-end bg-gradient-to-t px-2 from-blue-400 to-blue-500"
+                          >
+                            <img src="./images/expand.png" alt="expand.png" />
+                          </span>
+                          <span
+                            class="px-2 py-3 text-dark text-[13px] flex justify-between items-center"
+                          >
+                            10.2005 Wit
+                          </span>
+                        </label>
+                      </div>
+                      <div class="w-full">
+                        <input
+                          type="checkbox"
+                          class="peer hidden"
+                          name="typeone"
+                          id="type-5"
+                        />
+                        <label
+                          for="type-5"
+                          class="border-2 cursor-pointer block border-brand-gray-100 peer-checked:border-brand-green peer-checked:bg-brand-green-50"
+                        >
+                          <span
+                            class="py-2 flex justify-end bg-gradient-to-t px-2 from-indigo-400 to-indigo-500"
+                          >
+                            <img src="./images/expand.png" alt="expand.png" />
+                          </span>
+                          <span
+                            class="px-2 py-3 text-dark text-[13px] flex justify-between items-center"
+                          >
+                            10.2005 Wit
+                          </span>
+                        </label>
+                      </div>
+                      <div class="w-full">
+                        <input
+                          type="checkbox"
+                          class="peer hidden"
+                          name="typeone"
+                          id="type-6"
+                        />
+                        <label
+                          for="type-6"
+                          class="border-2 cursor-pointer block border-brand-gray-100 peer-checked:border-brand-green peer-checked:bg-brand-green-50"
+                        >
+                          <span
+                            class="py-2 flex justify-end bg-gradient-to-t px-2 from-gray-500 to-gray-200"
+                          >
+                            <img src="./images/expand.png" alt="expand.png" />
+                          </span>
+                          <span
+                            class="px-2 py-3 text-dark text-[13px] flex justify-between items-center"
+                          >
+                            10.2005 Wit
+                          </span>
+                        </label>
+                      </div>
+                      <div class="w-full">
+                        <input
+                          type="checkbox"
+                          class="peer hidden"
+                          name="typeone"
+                          id="type-7"
+                        />
+                        <label
+                          for="type-7"
+                          class="border-2 cursor-pointer block border-brand-gray-100 peer-checked:border-brand-green peer-checked:bg-brand-green-50"
+                        >
+                          <span
+                            class="py-2 flex justify-end bg-gradient-to-t px-2 from-gray-400 to-gray-500"
+                          >
+                            <img src="./images/expand.png" alt="expand.png" />
+                          </span>
+                          <span
+                            class="px-2 py-3 text-dark text-[13px] flex justify-between items-center"
+                          >
+                            10.2005 Wit
+                            <strong
+                              class="text-brand-orange text-base leading-none"
+                              >+ 10,00</strong
+                            >
+                          </span>
+                        </label>
+                      </div>
+                      <div class="w-full">
+                        <input
+                          type="checkbox"
+                          class="peer hidden"
+                          name="typeone"
+                          id="type-8"
+                        />
+                        <label
+                          for="type-8"
+                          class="border-2 cursor-pointer block border-brand-gray-100 peer-checked:border-brand-green peer-checked:bg-brand-green-50"
+                        >
+                          <span
+                            class="py-2 flex justify-end bg-gradient-to-t px-2 from-red-400 to-red-500"
+                          >
+                            <img src="./images/expand.png" alt="expand.png" />
+                          </span>
+                          <span
+                            class="px-2 py-3 text-dark text-[13px] flex justify-between items-center"
+                          >
+                            10.2005 Wit
+                          </span>
+                        </label>
+                      </div>
+                      <div class="w-full">
+                        <input
+                          type="checkbox"
+                          class="peer hidden"
+                          name="typeone"
+                          id="type-9"
+                        />
+                        <label
+                          for="type-9"
+                          class="border-2 cursor-pointer block border-brand-gray-100 peer-checked:border-brand-green peer-checked:bg-brand-green-50"
+                        >
+                          <span
+                            class="py-2 flex justify-end bg-gradient-to-t px-2 from-blue-400 to-blue-500"
+                          >
+                            <img src="./images/expand.png" alt="expand.png" />
+                          </span>
+                          <span
+                            class="px-2 py-3 text-dark text-[13px] flex justify-between items-center"
+                          >
+                            10.2005 Wit
+                          </span>
+                        </label>
+                      </div>
+                      <div class="w-full">
+                        <input
+                          type="checkbox"
+                          class="peer hidden"
+                          name="typeone"
+                          id="type-10"
+                        />
+                        <label
+                          for="type-10"
+                          class="border-2 cursor-pointer block border-brand-gray-100 peer-checked:border-brand-green peer-checked:bg-brand-green-50"
+                        >
+                          <span
+                            class="py-2 flex justify-end bg-gradient-to-t px-2 from-indigo-400 to-indigo-500"
+                          >
+                            <img src="./images/expand.png" alt="expand.png" />
+                          </span>
+                          <span
+                            class="px-2 py-3 text-dark text-[13px] flex justify-between items-center"
+                          >
+                            10.2005 Wit
+                          </span>
+                        </label>
+                      </div>
+                      <div class="w-full">
+                        <input
+                          type="checkbox"
+                          class="peer hidden"
+                          name="typeone"
+                          id="type-11"
+                        />
+                        <label
+                          for="type-11"
+                          class="border-2 cursor-pointer block border-brand-gray-100 peer-checked:border-brand-green peer-checked:bg-brand-green-50"
+                        >
+                          <span
+                            class="py-2 flex justify-end bg-gradient-to-t px-2 from-gray-400 to-gray-500"
+                          >
+                            <img src="./images/expand.png" alt="expand.png" />
+                          </span>
+                          <span
+                            class="px-2 py-3 text-dark text-[13px] flex justify-between items-center"
+                          >
+                            10.2005 Wit
+                            <strong
+                              class="text-brand-orange text-base leading-none"
+                              >+ 10,00</strong
+                            >
+                          </span>
+                        </label>
+                      </div>
+                      <div class="w-full">
+                        <input
+                          type="checkbox"
+                          class="peer hidden"
+                          name="typeone"
+                          id="type-12"
+                        />
+                        <label
+                          for="type-12"
+                          class="border-2 cursor-pointer block border-brand-gray-100 peer-checked:border-brand-green peer-checked:bg-brand-green-50"
+                        >
+                          <span
+                            class="py-2 flex justify-end bg-gradient-to-t px-2 from-red-400 to-red-500"
+                          >
+                            <img src="./images/expand.png" alt="expand.png" />
+                          </span>
+                          <span
+                            class="px-2 py-3 text-dark text-[13px] flex justify-between items-center"
+                          >
+                            10.2005 Wit
+                          </span>
+                        </label>
+                      </div>
+                      <div class="w-full">
+                        <input
+                          type="checkbox"
+                          class="peer hidden"
+                          name="typeone"
+                          id="type-13"
+                        />
+                        <label
+                          for="type-13"
+                          class="border-2 cursor-pointer block border-brand-gray-100 peer-checked:border-brand-green peer-checked:bg-brand-green-50"
+                        >
+                          <span
+                            class="py-2 flex justify-end bg-gradient-to-t px-2 from-blue-400 to-blue-500"
+                          >
+                            <img src="./images/expand.png" alt="expand.png" />
+                          </span>
+                          <span
+                            class="px-2 py-3 text-dark text-[13px] flex justify-between items-center"
+                          >
+                            10.2005 Wit
+                          </span>
+                        </label>
+                      </div>
+                      <div class="w-full">
+                        <input
+                          type="checkbox"
+                          class="peer hidden"
+                          name="typeone"
+                          id="type-14"
+                        />
+                        <label
+                          for="type-14"
+                          class="border-2 cursor-pointer block border-brand-gray-100 peer-checked:border-brand-green peer-checked:bg-brand-green-50"
+                        >
+                          <span
+                            class="py-2 flex justify-end bg-gradient-to-t px-2 from-indigo-400 to-indigo-500"
+                          >
+                            <img src="./images/expand.png" alt="expand.png" />
+                          </span>
+                          <span
+                            class="px-2 py-3 text-dark text-[13px] flex justify-between items-center"
+                          >
+                            10.2005 Wit
+                          </span>
+                        </label>
+                      </div>
+                      <div class="w-full">
+                        <input
+                          type="checkbox"
+                          class="peer hidden"
+                          name="typeone"
+                          id="type-15"
+                        />
+                        <label
+                          for="type-15"
+                          class="border-2 cursor-pointer block border-brand-gray-100 peer-checked:border-brand-green peer-checked:bg-brand-green-50"
+                        >
+                          <span
+                            class="py-2 flex justify-end bg-gradient-to-t px-2 from-cyan-400 to-cyan-500"
+                          >
+                            <img src="./images/expand.png" alt="expand.png" />
+                          </span>
+                          <span
+                            class="px-2 py-3 text-dark text-[13px] flex justify-between items-center"
+                          >
+                            10.2005 Wit
+                          </span>
+                        </label>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- for Bediening -->
+            <div class="group">
+              <div
+                class="accordion flex flex-col md:flex-row gap-4 items-start py-3 px-4"
+              >
+                <div
+                  class="cursor-pointer flex w-[180px] lg:w-[230px] shrink-0 gap-3 items-center"
+                >
+                  <figure>
+                    <img
+                      class="group-[.open]:block hidden"
+                      src="./images/check-round.png"
+                      alt="checkround"
+                    />
+                    <img
+                      class="group-[.open]:hidden block"
+                      src="./images/question-mark.png"
+                      alt="question-mark.png"
+                    />
+                  </figure>
+                  <h2
+                    class="text-[19px] group-[.open]:text-dark text-brand-gray-300 font-extrabold"
+                  >
+                    Bediening
+                  </h2>
+                </div>
+                <div class="flex gap-3 justify-between w-full">
+                  <div class="flex gap-4 items-center">
+                    <button
+                      type="button"
+                      class="px-8 py-1.5 rounded-full bg-brand-green text-white font-extrabold hover:bg-white border border-brand-green hover:border-brand-gray-100 hover:text-dark transition-all"
+                    >
+                      Elektrisch
+                    </button>
+                    <button
+                      type="button"
+                      class="px-8 py-1.5 rounded-full hover:bg-brand-green hover:text-white font-extrabold bg-white border hover:border-brand-green border-brand-gray-100 text-dark transition-all"
+                    >
+                      Handmatig
+                    </button>
+                  </div>
+                  <div class="w-[80px] shrink-0">
+                    <p
+                      class="text-brand-orange text-right font-extrabold text-base"
+                    >
+                      + 200,00
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <div class="overflow-hidden transition-all max-h-0">
+                <div class="space-y-3">
+                  <div class="flex flex-col md:flex-row gap-4">
+                    <div
+                      class="md:w-[180px] lg:w-[230px] shrink-0 pl-4 md:pl-14"
+                    >
+                      <h3 class="font-extrabold text-dark text-base">Keuze</h3>
+                    </div>
+                    <div class="px-5 space-y-3 pb-5 pt-1 w-full">
+                      <div
+                        class="grid max-[400px]:grid-cols-1 grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-2"
+                      >
+                        <div>
+                          <input
+                            type="checkbox"
+                            name="keuze"
+                            id="keuze-1"
+                            class="peer hidden"
+                          />
+                          <label
+                            for="keuze-1"
+                            class="flex flex-col border-2 peer-checked:bg-brand-green-50 border-brand-gray-300 relative peer-checked:border-brand-green"
+                          >
+                            <img
+                              src="./images/config-info.png"
+                              alt="config-info"
+                              class="absolute right-2 top-2"
+                            />
+                            <div class="bg-white px-2 py-2">
+                              <figure
+                                class="flex justify-center items-center h-[150px]"
+                              >
+                                <img
+                                  src="./images/config-img-1.png"
+                                  alt="config-img"
+                                />
+                              </figure>
+                              <div class="flex justify-end">
+                                <p
+                                  class="text-base font-extrabold text-brand-orange"
+                                >
+                                  + 100.-
+                                </p>
+                              </div>
+                            </div>
+                            <div class="h-[65px] px-2 py-3">
+                              <p class="text-[13px] text-dark leading-[15.6px]">
+                                Somfy Orea WT motor
+                              </p>
+                            </div>
+                          </label>
+                        </div>
+                        <div>
+                          <input
+                            type="checkbox"
+                            name="keuze"
+                            id="keuze-1"
+                            class="peer hidden"
+                          />
+                          <label
+                            for="keuze-1"
+                            class="flex flex-col border-2 peer-checked:bg-brand-green-50 border-brand-gray-300 relative peer-checked:border-brand-green"
+                          >
+                            <div class="bg-white px-2 py-2">
+                              <figure
+                                class="flex justify-center items-center h-[150px]"
+                              >
+                                <img
+                                  src="./images/config-img-2.png"
+                                  alt="config-img"
+                                />
+                              </figure>
+                              <div class="flex justify-end">
+                                <p
+                                  class="text-base font-extrabold text-brand-orange"
+                                >
+                                  + 150.-
+                                </p>
+                              </div>
+                            </div>
+                            <div class="h-[65px] px-2 py-3">
+                              <p class="text-[13px] text-dark leading-[15.6px]">
+                                Somfy Sunea IO (excl. zender)
+                              </p>
+                            </div>
+                          </label>
+                        </div>
+                        <div>
+                          <input
+                            type="checkbox"
+                            name="keuze"
+                            id="keuze-3"
+                            class="peer hidden"
+                          />
+                          <label
+                            for="keuze-3"
+                            class="flex flex-col border-2 peer-checked:bg-brand-green-50 border-brand-gray-300 relative peer-checked:border-brand-green"
+                          >
+                            <div class="bg-white px-2 py-2">
+                              <figure
+                                class="flex justify-center items-center h-[150px]"
+                              >
+                                <img
+                                  src="./images/config-img-3.png"
+                                  alt="config-img"
+                                />
+                              </figure>
+                              <div class="flex justify-end">
+                                <p
+                                  class="text-base font-extrabold text-brand-orange"
+                                >
+                                  + 200.-
+                                </p>
+                              </div>
+                            </div>
+                            <div class="h-[65px] px-2 py-3">
+                              <p class="text-[13px] text-dark leading-[15.6px]">
+                                Somfy Orea RTS (excl. handzender)
+                              </p>
+                            </div>
+                          </label>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="flex flex-col md:flex-row gap-4">
+                    <div
+                      class="md:w-[180px] lg:w-[230px] shrink-0 pl-4 md:pl-14"
+                    >
+                      <h3 class="font-extrabold text-dark text-base">
+                        Optioneel
+                      </h3>
+                    </div>
+                    <div class="px-5 space-y-3 pb-5 pt-1 w-full">
+                      <div
+                        class="grid max-[400px]:grid-cols-1 grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-2"
+                      >
+                        <div>
+                          <input
+                            type="checkbox"
+                            name="optioneel"
+                            id="optioneel-1"
+                            class="peer hidden"
+                          />
+                          <label
+                            for="optioneel-1"
+                            class="flex flex-col border-2 peer-checked:bg-brand-green-50 border-brand-gray-300 relative peer-checked:border-brand-green"
+                          >
+                            <img
+                              src="./images/config-info.png"
+                              alt="config-info"
+                              class="absolute right-2 top-2"
+                            />
+                            <div class="bg-white px-2 py-2">
+                              <figure
+                                class="flex justify-center items-center h-[150px]"
+                              >
+                                <img
+                                  src="./images/config-img-4.png"
+                                  alt="config-img"
+                                />
+                              </figure>
+                              <div class="flex justify-end">
+                                <p
+                                  class="text-base font-extrabold text-brand-orange"
+                                >
+                                  + 100.-
+                                </p>
+                              </div>
+                            </div>
+                            <div class="h-[65px] px-2 py-3">
+                              <p class="text-[13px] text-dark leading-[15.6px]">
+                                Situo 1 RTS - Pure II (Grijs/Wit)
+                              </p>
+                            </div>
+                          </label>
+                        </div>
+                        <div>
+                          <input
+                            type="checkbox"
+                            name="optioneel"
+                            id="optioneel-2"
+                            class="peer hidden"
+                          />
+                          <label
+                            for="optioneel-2"
+                            class="flex flex-col border-2 peer-checked:bg-brand-green-50 border-brand-gray-300 relative peer-checked:border-brand-green"
+                          >
+                            <img
+                              src="./images/config-info.png"
+                              alt="config-info"
+                              class="absolute right-2 top-2"
+                            />
+                            <div class="bg-white px-2 py-2">
+                              <figure
+                                class="flex justify-center items-center h-[150px]"
+                              >
+                                <img
+                                  src="./images/config-img-5.png"
+                                  alt="config-img"
+                                />
+                              </figure>
+                              <div class="flex justify-end">
+                                <p
+                                  class="text-base font-extrabold text-brand-orange"
+                                >
+                                  + 40.-
+                                </p>
+                              </div>
+                            </div>
+                            <div class="h-[65px] px-2 py-3">
+                              <p class="text-[13px] text-dark leading-[15.6px]">
+                                Somfy Sunea IO (excl. zender)
+                              </p>
+                            </div>
+                          </label>
+                        </div>
+                        <div>
+                          <input
+                            type="checkbox"
+                            name="optioneel"
+                            id="optioneel-3"
+                            class="peer hidden"
+                          />
+                          <label
+                            for="optioneel-3"
+                            class="flex flex-col border-2 peer-checked:bg-brand-green-50 border-brand-gray-300 relative peer-checked:border-brand-green"
+                          >
+                            <img
+                              src="./images/config-info.png"
+                              alt="config-info"
+                              class="absolute right-2 top-2"
+                            />
+                            <div class="bg-white px-2 py-2">
+                              <figure
+                                class="flex justify-center items-center h-[150px]"
+                              >
+                                <img
+                                  src="./images/config-img-6.png"
+                                  alt="config-img"
+                                />
+                              </figure>
+                              <div class="flex justify-end">
+                                <p
+                                  class="text-base font-extrabold text-brand-orange"
+                                >
+                                  + 60.-
+                                </p>
+                              </div>
+                            </div>
+                            <div class="h-[65px] px-2 py-3">
+                              <p class="text-[13px] text-dark leading-[15.6px]">
+                                Somfy Orea RTS (excl. handzender)
+                              </p>
+                            </div>
+                          </label>
+                        </div>
+                        <div>
+                          <input
+                            type="checkbox"
+                            name="optioneel"
+                            id="optioneel-4"
+                            class="peer hidden"
+                          />
+                          <label
+                            for="optioneel-4"
+                            class="flex flex-col border-2 peer-checked:bg-brand-green-50 border-brand-gray-300 relative peer-checked:border-brand-green"
+                          >
+                            <img
+                              src="./images/config-info.png"
+                              alt="config-info"
+                              class="absolute right-2 top-2"
+                            />
+                            <div class="bg-white px-2 py-2">
+                              <figure
+                                class="flex justify-center items-center h-[150px]"
+                              >
+                                <img
+                                  src="./images/config-img-4.png"
+                                  alt="config-img"
+                                />
+                              </figure>
+                              <div class="flex justify-end">
+                                <p
+                                  class="text-base font-extrabold text-brand-orange"
+                                >
+                                  + 100.-
+                                </p>
+                              </div>
+                            </div>
+                            <div class="h-[65px] px-2 py-3">
+                              <p class="text-[13px] text-dark leading-[15.6px]">
+                                Somfy Orea WT motor
+                              </p>
+                            </div>
+                          </label>
+                        </div>
+                        <div>
+                          <input
+                            type="checkbox"
+                            name="optioneel"
+                            id="optioneel-5"
+                            class="peer hidden"
+                          />
+                          <label
+                            for="optioneel-5"
+                            class="flex flex-col border-2 peer-checked:bg-brand-green-50 border-brand-gray-300 relative peer-checked:border-brand-green"
+                          >
+                            <img
+                              src="./images/config-info.png"
+                              alt="config-info"
+                              class="absolute right-2 top-2"
+                            />
+                            <div class="bg-white px-2 py-2">
+                              <figure
+                                class="flex justify-center items-center h-[150px]"
+                              >
+                                <img
+                                  src="./images/config-img-7.png"
+                                  alt="config-img"
+                                />
+                              </figure>
+                              <div class="flex justify-end">
+                                <p
+                                  class="text-base font-extrabold text-brand-orange"
+                                >
+                                  + 200.-
+                                </p>
+                              </div>
+                            </div>
+                            <div class="h-[65px] px-2 py-3">
+                              <p class="text-[13px] text-dark leading-[15.6px]">
+                                Somfy zon- en wind- automaat Soliris RTS (incl.
+                                zender)
+                              </p>
+                            </div>
+                          </label>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="flex flex-col md:flex-row gap-4">
+                    <div
+                      class="md:w-[180px] lg:w-[230px] shrink-0 pl-4 md:pl-14"
+                    >
+                      <h3 class="font-extrabold text-dark text-base">
+                        Bedieningszijde
+                      </h3>
+                    </div>
+                    <div class="px-5 space-y-3 pb-5 pt-1 w-full">
+                      <p class="text-base text-dark">
+                        De bedieningszijde, van buiten gezien.
+                      </p>
+                      <div
+                        class="grid max-[400px]:grid-cols-1 grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-2"
+                      >
+                        <div>
+                          <input
+                            type="checkbox"
+                            name="bedieningszijde"
+                            id="bedieningszijde-1"
+                            class="peer hidden"
+                          />
+                          <label
+                            for="bedieningszijde-1"
+                            class="flex flex-col border-2 peer-checked:bg-brand-green-50 border-brand-gray-300 relative peer-checked:border-brand-green"
+                          >
+                            <div class="bg-white px-2 py-2">
+                              <figure
+                                class="flex justify-center items-center h-[150px]"
+                              >
+                                <img
+                                  src="./images/arrow-left-big.png"
+                                  alt="arrow-left-big.png"
+                                />
+                              </figure>
+                            </div>
+                            <div class="h-[65px] px-2 py-3">
+                              <p class="text-[13px] text-dark leading-[15.6px]">
+                                Motor zit links
+                              </p>
+                            </div>
+                          </label>
+                        </div>
+                        <div>
+                          <input
+                            type="checkbox"
+                            name="bedieningszijde"
+                            id="bedieningszijde-2"
+                            class="peer hidden"
+                          />
+                          <label
+                            for="bedieningszijde-2"
+                            class="flex flex-col border-2 peer-checked:bg-brand-green-50 border-brand-gray-300 relative peer-checked:border-brand-green"
+                          >
+                            <div class="bg-white px-2 py-2">
+                              <figure
+                                class="flex justify-center items-center h-[150px]"
+                              >
+                                <img
+                                  src="./images/arrow-right-big.png"
+                                  alt="arrow-right-big.png"
+                                />
+                              </figure>
+                            </div>
+                            <div class="h-[65px] px-2 py-3">
+                              <p class="text-[13px] text-dark leading-[15.6px]">
+                                Motor zit rechts
+                              </p>
+                            </div>
+                          </label>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- for Kwaliteit -->
+            <div class="group">
+              <div
+                class="accordion flex flex-col md:flex-row gap-4 items-start py-3 px-4"
+              >
+                <div
+                  class="cursor-pointer flex w-[180px] lg:w-[230px] shrink-0 gap-3 items-center"
+                >
+                  <figure>
+                    <img
+                      class="group-[.open]:block hidden"
+                      src="./images/check-round.png"
+                      alt="checkround"
+                    />
+                    <img
+                      class="group-[.open]:hidden block"
+                      src="./images/question-mark.png"
+                      alt="question-mark.png"
+                    />
+                  </figure>
+                  <h2
+                    class="text-[19px] group-[.open]:text-dark text-brand-gray-300 font-extrabold"
+                  >
+                    Kwaliteit
+                  </h2>
+                </div>
+                <div class="flex gap-3 justify-between w-full">
+                  <p class="text-brand-gray-500 text-base">
+                    Nog niet gekozen (verplicht)
+                  </p>
+                </div>
+              </div>
+              <div class="overflow-hidden transition-all max-h-0">
+                <div class="space-y-3 px-4 py-3">
+                  <div class="flex flex-col md:flex-row gap-4">
+                    <div class="md:w-[180px] lg:w-[230px] shrink-0"></div>
+                    <div class="pb-4">
+                      <h3 class="text-3xl">Upcoming content</h3>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- for Uitvoering -->
+            <div class="group">
+              <div
+                class="accordion flex flex-col md:flex-row gap-4 items-start py-3 px-4"
+              >
+                <div
+                  class="cursor-pointer flex w-[180px] lg:w-[230px] shrink-0 gap-3 items-center"
+                >
+                  <figure>
+                    <img
+                      class="group-[.open]:block hidden"
+                      src="./images/check-round.png"
+                      alt="checkround"
+                    />
+                    <img
+                      class="group-[.open]:hidden block"
+                      src="./images/question-mark.png"
+                      alt="question-mark.png"
+                    />
+                  </figure>
+                  <h2
+                    class="text-[19px] group-[.open]:text-dark text-brand-gray-300 font-extrabold"
+                  >
+                    Uitvoering
+                  </h2>
+                </div>
+                <div class="flex gap-3 justify-between w-full">
+                  <p class="text-brand-gray-500 text-base">
+                    Nog niet gekozen (verplicht)
+                  </p>
+                </div>
+              </div>
+              <div class="overflow-hidden transition-all max-h-0">
+                <div class="space-y-3 px-4 py-3">
+                  <div class="flex flex-col md:flex-row gap-4">
+                    <div class="md:w-[180px] lg:w-[230px] shrink-0"></div>
+                    <div class="pb-4">
+                      <h3 class="text-3xl">Upcoming content</h3>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- for Bevestiging -->
+            <div class="group">
+              <div
+                class="accordion flex flex-col md:flex-row gap-4 items-start py-3 px-4"
+              >
+                <div
+                  class="cursor-pointer flex w-[180px] lg:w-[230px] shrink-0 gap-3 items-center"
+                >
+                  <figure>
+                    <img
+                      class="group-[.open]:block hidden"
+                      src="./images/check-round.png"
+                      alt="checkround"
+                    />
+                    <img
+                      class="group-[.open]:hidden block"
+                      src="./images/question-mark.png"
+                      alt="question-mark.png"
+                    />
+                  </figure>
+                  <h2
+                    class="text-[19px] group-[.open]:text-dark text-brand-gray-300 font-extrabold"
+                  >
+                    Kwaliteit
+                  </h2>
+                </div>
+                <div class="flex gap-3 justify-between w-full">
+                  <p class="text-brand-gray-500 text-base">
+                    Nog niet gekozen (verplicht)
+                  </p>
+                </div>
+              </div>
+              <div class="overflow-hidden transition-all max-h-0">
+                <div class="space-y-3 px-4 py-3">
+                  <div class="flex flex-col md:flex-row gap-4">
+                    <div class="md:w-[180px] lg:w-[230px] shrink-0"></div>
+                    <div class="pb-4">
+                      <h3 class="text-3xl">Upcoming content</h3>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="flex justify-end px-4 lg:px-0">
+            <div class="space-y-3">
+              <div class="flex gap-10 items-center justify-end">
+                <h4 class="text-2xl text-brand-orange">Totaalprijs</h4>
+                <h2
+                  class="font-extrabold text-brand-orange text-right text-2xl"
+                >
+                  290,00
+                </h2>
+              </div>
+              <div class="flex gap-5 items-center">
+                <div
+                  class="flex items-center rounded-md py-2.5 px-3 border bg-white border-brand-gray"
+                >
+                  <button type="button">-</button>
+                  <div class="px-4 shrink-0">
+                    <input
+                      class="text-dark text-base border-0 ring-0 w-5"
+                      value="1"
+                    />
+                  </div>
+                  <button class="" type="button">+</button>
+                </div>
+                <button
+                  type="button"
+                  disabled
+                  class="disabled:bg-brand-gray-400 disabled:text-white flex text-[19px] font-bold bg-brand-orange shrink-0 text-white rounded-lg py-2.5 px-10 sm:px-20 relative"
+                >
+                  Bestellen
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section
+      class="lg:px-4 py-12 bg-white"
+      data-block="product-configurator"
+      id="product-configurator"
+    >
+      <div class="container mx-auto">
+        <div class="w-full grid grid-cols-1 md:grid-cols-2 gap-8">
+          <div class="space-y-8">
+            <div class="space-y-4">
+              <h3 class="text-dark text-xl font-extrabold">
+                Omschrijving Aluminium Jaloezie 25mm
+              </h3>
+              <div class="space-y-4">
+                <p class="text-dark text-base">
+                  Jaloezie uitgevoerd met horizontale 25 mm brede aluminium
+                  lamellen. Het product wordt standaard geleverd met tuimelstang
+                  en trekkoord. De maximale maat is 3200 mm breed en 3000 mm
+                  hoog.
+                </p>
+                <p class="text-dark text-base">
+                  Op het complete product is een garantie van 2 jaar van
+                  toepassing. De levertijd is ca. 10 werkdagen. Als u vragen
+                  hebt over het product aarzel dan niet om contact met ons op te
+                  nemen.
+                </p>
+                <p class="text-dark text-base">
+                  Let op: De bovenbak en onderlat zijn in een standaard
+                  bijpassende kleur. Deze kan altijd iets afwijken van de
+                  gekozen lamelkleur. Afmetingen boven de 5m² vallen buiten
+                  garantie.
+                </p>
+              </div>
+            </div>
+            <div class="space-y-4">
+              <h3 class="text-xl font-extrabold text-dark">
+                Reviews Aluminium Jaloezie 25mm
+              </h3>
+              <div class="flex gap-10">
+                <div class="w-[200px] shrink-0 space-y-4">
+                  <div class="flex items-center gap-5">
+                    <ul class="flex gap-1 items-center">
+                      <li>
+                        <img class="w-5" src="./images/star.png" alt="star" />
+                      </li>
+                      <li>
+                        <img class="w-5" src="./images/star.png" alt="star" />
+                      </li>
+                      <li>
+                        <img class="w-5" src="./images/star.png" alt="star" />
+                      </li>
+                      <li>
+                        <img class="w-5" src="./images/star.png" alt="star" />
+                      </li>
+                      <li>
+                        <img
+                          class="w-5"
+                          src="./images/star-emty.png"
+                          alt="star-emty"
+                        />
+                      </li>
+                    </ul>
+                    <h2 class="text-[32px] text-dark font-extrabold">4,2</h2>
+                  </div>
+                  <div class="space-y-1">
+                    <h2 class="text-base text-dark font-extrabold">
+                      Algemene beoordeling
+                    </h2>
+                    <ul class="flex gap-1 items-center">
+                      <li>
+                        <img class="w-5" src="./images/star.png" alt="star" />
+                      </li>
+                      <li>
+                        <img class="w-5" src="./images/star.png" alt="star" />
+                      </li>
+                      <li>
+                        <img class="w-5" src="./images/star.png" alt="star" />
+                      </li>
+                      <li>
+                        <img class="w-5" src="./images/star.png" alt="star" />
+                      </li>
+                      <li>
+                        <img
+                          class="w-5"
+                          src="./images/star-emty.png"
+                          alt="star-emty"
+                        />
+                      </li>
+                    </ul>
+                  </div>
+                  <div class="space-y-1">
+                    <h2 class="text-base text-dark font-extrabold">
+                      Prijs-kwaliteit
+                    </h2>
+                    <ul class="flex gap-1 items-center">
+                      <li>
+                        <img
+                          class="w-5"
+                          src="./images/star-emty.png"
+                          alt="star-emty"
+                        />
+                      </li>
+                      <li>
+                        <img
+                          class="w-5"
+                          src="./images/star-emty.png"
+                          alt="star-emty"
+                        />
+                      </li>
+                      <li>
+                        <img
+                          class="w-5"
+                          src="./images/star-emty.png"
+                          alt="star-emty"
+                        />
+                      </li>
+                      <li>
+                        <img
+                          class="w-5"
+                          src="./images/star-emty.png"
+                          alt="star-emty"
+                        />
+                      </li>
+                      <li>
+                        <img
+                          class="w-5"
+                          src="./images/star-emty.png"
+                          alt="star-emty"
+                        />
+                      </li>
+                    </ul>
+                  </div>
+                  <div class="space-y-1">
+                    <h2 class="text-base text-dark font-extrabold">
+                      Voldoet aan verwachting
+                    </h2>
+                    <ul class="flex gap-1 items-center">
+                      <li>
+                        <img
+                          class="w-5"
+                          src="./images/star-emty.png"
+                          alt="star-emty"
+                        />
+                      </li>
+                      <li>
+                        <img
+                          class="w-5"
+                          src="./images/star-emty.png"
+                          alt="star-emty"
+                        />
+                      </li>
+                      <li>
+                        <img
+                          class="w-5"
+                          src="./images/star-emty.png"
+                          alt="star-emty"
+                        />
+                      </li>
+                      <li>
+                        <img
+                          class="w-5"
+                          src="./images/star-emty.png"
+                          alt="star-emty"
+                        />
+                      </li>
+                      <li>
+                        <img
+                          class="w-5"
+                          src="./images/star-emty.png"
+                          alt="star-emty"
+                        />
+                      </li>
+                    </ul>
+                  </div>
+                  <div class="space-y-1">
+                    <h2 class="text-base text-dark font-extrabold">
+                      Maat / afmeting
+                    </h2>
+                    <ul class="flex gap-1 items-center">
+                      <li>
+                        <img
+                          class="w-5"
+                          src="./images/star-emty.png"
+                          alt="star-emty"
+                        />
+                      </li>
+                      <li>
+                        <img
+                          class="w-5"
+                          src="./images/star-emty.png"
+                          alt="star-emty"
+                        />
+                      </li>
+                      <li>
+                        <img
+                          class="w-5"
+                          src="./images/star-emty.png"
+                          alt="star-emty"
+                        />
+                      </li>
+                      <li>
+                        <img
+                          class="w-5"
+                          src="./images/star-emty.png"
+                          alt="star-emty"
+                        />
+                      </li>
+                      <li>
+                        <img
+                          class="w-5"
+                          src="./images/star-emty.png"
+                          alt="star-emty"
+                        />
+                      </li>
+                    </ul>
+                  </div>
+                  <div class="space-y-1">
+                    <h2 class="text-base text-dark font-extrabold">
+                      Uiterlijk / stijl
+                    </h2>
+                    <ul class="flex gap-1 items-center">
+                      <li>
+                        <img
+                          class="w-5"
+                          src="./images/star-emty.png"
+                          alt="star-emty"
+                        />
+                      </li>
+                      <li>
+                        <img
+                          class="w-5"
+                          src="./images/star-emty.png"
+                          alt="star-emty"
+                        />
+                      </li>
+                      <li>
+                        <img
+                          class="w-5"
+                          src="./images/star-emty.png"
+                          alt="star-emty"
+                        />
+                      </li>
+                      <li>
+                        <img
+                          class="w-5"
+                          src="./images/star-emty.png"
+                          alt="star-emty"
+                        />
+                      </li>
+                      <li>
+                        <img
+                          class="w-5"
+                          src="./images/star-emty.png"
+                          alt="star-emty"
+                        />
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+                <div class="w-[450px] space-y-8 pt-2.5">
+                  <div class="flex justify-between items-center">
+                    <a href="#" class="underline text-brand-orange text-base"
+                      >Schrijf een review</a
+                    >
+                    <button type="button">
+                      <img src="./images/cross.png" alt="cross.png" />
+                    </button>
+                  </div>
+                  <form action="" class="space-y-4">
+                    <div class="input-parent group space-y-1.5">
+                      <div
+                        class="group-focus rounded-lg group-[.disabled]:border-brand-gray-100 group-[.disabled]:bg-brand-gray-100 bg-white px-5 py-1.5 border border-brand-gray-300 group-[.focused]:border-brand-green"
+                      >
+                        <label
+                          for="naam"
+                          class="block font-bold text-brand-orange"
+                          >Uw naam</label
+                        >
+                        <input
+                          type="text"
+                          name="naam"
+                          id="naam"
+                          value="P.A. van Eekelen"
+                          class="input px-0 py-0.5 w-full text-dark text-base outline-none focus:outline-none focus:border-0 focus:ring-0 bg-transparent border-none"
+                        />
+                      </div>
+                    </div>
+                    <div class="input-parent group space-y-1.5">
+                      <div
+                        class="group-focus rounded-lg group-[.disabled]:border-brand-gray-100 group-[.disabled]:bg-brand-gray-100 bg-white px-5 py-1.5 border border-brand-gray-300 group-[.focused]:border-brand-green"
+                      >
+                        <label
+                          for="Plaats"
+                          class="block font-bold text-brand-orange"
+                          >Plaats</label
+                        >
+                        <input
+                          type="text"
+                          name="Plaats"
+                          id="Plaats"
+                          value="Zoetermeer"
+                          class="input px-0 py-0.5 w-full text-dark text-base outline-none focus:outline-none focus:border-0 focus:ring-0 bg-transparent border-none"
+                        />
+                      </div>
+                    </div>
+                    <div class="input-parent group space-y-1.5">
+                      <div
+                        class="group-focus rounded-lg group-[.disabled]:border-brand-gray-100 group-[.disabled]:bg-brand-gray-100 bg-white px-5 py-1.5 border border-brand-gray-300 group-[.focused]:border-brand-green"
+                      >
+                        <label
+                          for="titel"
+                          class="block font-bold text-brand-orange"
+                          >Titel van uw review</label
+                        >
+                        <input
+                          type="text"
+                          name="titel"
+                          id="titel"
+                          value="Heel erg tevreden!"
+                          class="input px-0 py-0.5 w-full text-dark text-base outline-none focus:outline-none focus:border-0 focus:ring-0 bg-transparent border-none"
+                        />
+                      </div>
+                    </div>
+                    <div class="input-parent group space-y-1.5">
+                      <div
+                        class="group-focus rounded-lg group-[.disabled]:border-brand-gray-100 group-[.disabled]:bg-brand-gray-100 bg-white px-5 py-1.5 border border-brand-gray-300 group-[.focused]:border-brand-green"
+                      >
+                        <label
+                          for="titel"
+                          class="block font-bold text-brand-orange"
+                          >Titel van uw review</label
+                        >
+                        <textarea
+                          name=""
+                          id=""
+                          cols="30"
+                          rows="5"
+                          class="input resize-none px-0 py-0.5 w-full text-dark text-base outline-none focus:outline-none focus:border-0 focus:ring-0 bg-transparent border-none"
+                        >
+Een geweldig product, hij hangt prachtig in onze woonkamer. Mijn man kon hem zelf makkelijk ophangen. Super tevreden!</textarea
+                        >
+                      </div>
+                    </div>
+                    <div class="space-y-2">
+                      <div class="flex items-center mb-4">
+                        <input
+                          id="default-checkbox"
+                          type="checkbox"
+                          value=""
+                          class="w-6 h-6 focus:outline-none focus:ring-0 rounded-md"
+                        />
+                        <label
+                          for="default-checkbox"
+                          class="ml-2 text-base text-dark"
+                          >Ik heb deze review naar waarheid ingevuld.</label
+                        >
+                      </div>
+                      <button
+                        type="button"
+                        class="px-8 py-2.5 rounded-lg bg-brand-orange text-white font-extrabold hover:bg-opacity-90"
+                      >
+                        Review plaatsen
+                      </button>
+                    </div>
+                  </form>
+                </div>
+              </div>
+            </div>
+            <div class="pt-8">
+              <div
+                class="divide-y divide-gray-200 py-4 border-t border-gray-200"
+              >
+                <div class="space-y-3">
+                  <div class="space-y-1"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
     <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
     <script src="./js/custom.js"></script>
   </body>

@@ -13,7 +13,10 @@ module.exports = {
         "brand-gray-100": "#e2e2e2",
         "brand-gray-200": "#bababa",
         "brand-gray-300": "#b9b9b9",
+        "brand-gray-400": "#d3d2d2",
+        "brand-gray-500": "#565656",
         "brand-green": "#59a935",
+        "brand-green-50": "#f3fbf0",
       },
       screens: {
         "2xl": "1410px",
