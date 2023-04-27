@@ -252,8 +252,10 @@ if (myInput !== null) {
   });
 }
 window.onclick = function (e) {
+  if(searchAutoComplete !== null){
   if (!searchAutoComplete.contains(e.target)) {
     searchAutoComplete.classList.remove("autocomplete-active");
+    }
   }
 };
 /**for input border */
@@ -290,16 +292,16 @@ if (accordionBtns.length >= 0) {
     if (i === 1) {
       break;
     }
-    var parentel = accordionBtns[i].parentElement;
-    var article = accordionBtns[i].nextElementSibling;
+    var parentel = accordionBtns[i].parentElement.parentElement;
+    var article = accordionBtns[i].parentElement.nextElementSibling;
     parentel.classList.add("open");
     article.style.maxHeight = article.scrollHeight + "px";
   }
 
   accordionBtns.forEach((accordion) => {
     accordion.onclick = function () {
-      this.parentElement.classList.toggle("open");
-      let content = this.nextElementSibling;
+      this.parentElement.parentElement.classList.toggle("open");
+      let content = this.parentElement.nextElementSibling;
       if (content.style.maxHeight) {
         content.style.maxHeight = null;
       } else {
@@ -308,3 +310,290 @@ if (accordionBtns.length >= 0) {
     };
   });
 }
+
+// start coding for 1st section afmetingen
+ 
+let breedteData = getSelectedRadioValue('breedte');
+
+
+let afmetingen = document.querySelector('.parent-afmetingen');
+
+const breedte = document.getElementsByName('breedte'); 
+for (let i = 0; i < breedte.length; i++) {
+  breedte[i].addEventListener('click', () => {
+    const selectedBreedte = getSelectedRadioValue('breedte');
+    breedteData = selectedBreedte; 
+    if (breedteData.length != 0) { 
+      afmetingen.classList.add('valued')
+     }
+  });
+}
+
+if (breedteData.length != 0) {
+  afmetingen.classList.add('valued')
+}else{
+  afmetingen.classList.remove('valued')
+}
+
+// for hoogte
+let hoogte = document.querySelector('.hoogte');
+
+hoogte.addEventListener('input', () => { 
+  var inputValue = hoogte.value;
+  if (inputValue.length >= 1) {
+    afmetingen.classList.add('valued')
+  }else{
+    if (breedteData.length === 0) {
+      afmetingen.classList.remove('valued')
+    }
+  }
+})
+
+
+// function for kleur
+
+let parentKleur = document.querySelector('.parent-kleur');
+
+let kleurData = getSelectedRadioValue('kleur');
+  
+const kleur = document.getElementsByName('kleur'); 
+for (let i = 0; i < kleur.length; i++) {
+  kleur[i].addEventListener('click', () => {
+    const selectedKleur = getSelectedRadioValue('kleur');
+    kleurData = selectedKleur; 
+    if (kleurData.length != 0) { 
+      parentKleur.classList.add('valued')
+     }
+  });
+}
+
+if (kleurData.length != 0) {
+  parentKleur.classList.add('valued')
+}else{
+  parentKleur.classList.remove('valued')
+}
+
+// coding for  Bediening
+
+let bediening = document.querySelector('.parent-bediening');
+
+
+// for  keuze
+let keuzeData = getSelectedRadioValue('keuze'); 
+const keuze = document.getElementsByName('keuze'); 
+for (let i = 0; i < kleur.length; i++) {
+  kleur[i].addEventListener('click', () => {
+    const selectedKeuze = getSelectedRadioValue('keuze');
+    keuzeData = selectedKeuze; 
+    if (keuzeData.length != 0) { 
+      bediening.classList.add('valued')
+     }
+  });
+}
+
+if (kleurData.length != 0) {
+  bediening.classList.add('valued')
+}else{
+  bediening.classList.remove('valued')
+}
+// for  Optioneel
+let optioneelData = getSelectedRadioValue('optioneel'); 
+const optioneel = document.getElementsByName('optioneel'); 
+for (let i = 0; i < optioneel.length; i++) {
+  optioneel[i].addEventListener('click', () => {
+    const selectedOptioneel = getSelectedRadioValue('optioneel');
+    optioneelData = selectedOptioneel; 
+    if (optioneelData.length != 0) { 
+      bediening.classList.add('valued')
+     }
+  });
+}
+
+if (optioneelData.length != 0) {
+  bediening.classList.add('valued')
+}else{
+  bediening.classList.remove('valued')
+}
+// for  bedieningszijde
+let bedieningszijdeData = getSelectedRadioValue('bedieningszijde'); 
+const bedieningszijde = document.getElementsByName('bedieningszijde'); 
+for (let i = 0; i < bedieningszijde.length; i++) {
+  bedieningszijde[i].addEventListener('click', () => {
+    const selectedBedieningszijde = getSelectedRadioValue('bedieningszijde');
+    bedieningszijdeData = selectedBedieningszijde; 
+    if (bedieningszijdeData.length != 0) { 
+      bediening.classList.add('valued')
+     }
+  });
+}
+
+if (bedieningszijdeData.length != 0) {
+  bediening.classList.add('valued')
+}else{
+  bediening.classList.remove('valued')
+}
+
+
+
+
+
+
+
+
+// start coding for getSelectedRadioValue 
+function getSelectedRadioValue(radioGroupName) {
+  const radioButtons = document.getElementsByName(radioGroupName);
+  let selectedValue = '';
+
+  for (let i = 0; i < radioButtons.length; i++) {
+    if (radioButtons[i].checked) {
+      selectedValue = radioButtons[i].value;
+      break;
+    }
+  }
+
+  return selectedValue;
+} 
+
+// const paging = new Swiper(".select-kleur", {
+//   slidesPerView: 1.5, 
+//   spaceBetween: 10, 
+//   breakpoints: {
+//     1280: {
+//       slidesPerView: 5,
+//       spaceBetween: 10, 
+//     },
+//     1024: {
+//       slidesPerView: 4,
+//       spaceBetween: 10, 
+//     },
+//     768: {
+//       slidesPerView: 2,
+//       spaceBetween: 10, 
+//     },
+//     540: {
+//       slidesPerView: 2.5,
+//       spaceBetween: 10, 
+//     },
+//   },
+//   navigation: {
+//     nextEl: ".select-kleur-next",
+//     prevEl: ".select-kleur-prev",
+//   },
+//   on: {
+//     slideChange: function () {
+//       currentSlide.innerHTML = paging.activeIndex + 1; 
+//       totalSlide.innerHTML = paging.slides.length;
+//      }
+//   }
+// });
+
+// currentSlide.innerHTML = paging.activeIndex + 1; 
+// totalSlide.innerHTML = paging.slides.length;
+
+
+function openModal(img_name) {
+  var modal = document.querySelector(".modal-colors");
+  var modalImg = document.querySelector(".modal-img-color");
+  modal.style.display = "block";
+  modalImg.src = '';
+  modalImg.src = img_name;
+  modal.parentElement.classList.add('modal-active')
+  
+  var close = document.querySelector(".modal-close");
+
+  close.addEventListener('click', () => {
+    modal.parentElement.classList.remove('modal-active')
+  })
+  
+}
+
+var images = document.querySelectorAll(".expand-color");
+for (var i = 0; i < images.length; i++) {
+  images[i].onclick = function () {
+      let img_name = this.getAttribute('data-img')
+     openModal(img_name)
+  };
+}
+
+
+// for pagination 
+const container = document.getElementById('paging-container');
+const prevButton = document.getElementById('prev');
+const nextButton = document.getElementById('next');
+let currentSlide =  document.querySelector(".current-slide");
+let totalSlide =  document.querySelector(".total-slide");
+var divCount = 2; // Number of divs to display per page
+let currentPage = 1; // Set the initial page to 1
+
+function showPage(page) {
+  const start = (page - 1) * divCount;
+  const end = start + divCount;
+  const divs = container.querySelectorAll('.item');
+  totalSlide.innerHTML = Math.ceil(divs.length / divCount)
+  currentSlide.innerHTML = currentPage
+  // Hide all divs
+  divs.forEach(div => {
+    div.style.display = 'none';
+  });
+
+  // Show the divs for the current page
+  for (let i = start; i < end; i++) {
+    if (divs[i]) {
+      divs[i].style.display = 'block';
+    }
+  }
+}
+
+// Show the initial page
+showPage(currentPage);
+prevButton.classList.add('nope'); 
+// Add event listeners to the pagination buttons
+prevButton.addEventListener('click', () => {
+  currentPage--;
+  nextButton.classList.remove('nope'); 
+  if (currentPage <= 1) {
+    currentPage = 1;
+    prevButton.classList.add('nope'); 
+  } else {
+    prevButton.classList.remove('nope');
+  }
+  showPage(currentPage);
+});
+
+nextButton.addEventListener('click', () => {
+  const pageCount = Math.ceil(container.querySelectorAll('.item').length / divCount);
+  currentPage++;
+  prevButton.classList.remove('nope'); 
+  if (currentPage >= pageCount) {
+    currentPage = pageCount;
+    nextButton.classList.add('nope'); 
+  } else {
+    nextButton.classList.remove('nope'); 
+   
+  }
+  showPage(currentPage);
+});
+function checkWidth() {
+  const width = window.innerWidth;
+
+  if (width >= 1024) {
+    divCount = 5; 
+    showPage(currentPage);
+  } else if (width >= 768) {
+    divCount = 4;
+    showPage(currentPage);
+  } else if (width >= 640) {
+    divCount = 3;
+    showPage(currentPage);
+  } else {
+    divCount = 2;
+    showPage(currentPage);
+  }
+}
+checkWidth();
+
+window.addEventListener('resize', () => {
+  checkWidth(); 
+});
+ 

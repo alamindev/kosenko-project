@@ -19,7 +19,7 @@
   </head>
   <body class="font-nunito_sans font-normal">
     <!-- start coding for main area section wise  -->
-    <section class="px-4 py-12" data-block="big-header" id="big-header">
+    <section class="px-4 py-12 overflow-x-clip" data-block="big-header" id="big-header">
       <div class="container mx-auto space-y-8">
         <div class=" " id="breadcrumb">
           <ul class="list-none">
@@ -219,7 +219,7 @@
       </div>
     </section>
     <section
-      class="lg:px-4 py-12 bg-brand-gray"
+      class="lg:px-4 py-12 bg-brand-gray overflow-x-clip"
       data-block="product-configurator"
       id="product-configurator"
     >
@@ -240,33 +240,33 @@
             class="bg-white divide-y divide-gray-200 border border-brand-gray-300"
           >
             <!-- for Afmetingen -->
-            <div class="group">
+            <div class="group parent-afmetingen">
               <div
-                class="accordion flex flex-col md:flex-row gap-4 justify-between items-start py-3 px-4"
+                class="flex flex-col md:flex-row gap-4 justify-between items-start py-3 px-4 group-[.open]:h-auto h-[50px]"
               >
                 <div
-                  class="flex w-[180px] lg:w-[230px] shrink-0 gap-3 items-center"
+                  class="accordion flex w-[180px] lg:w-[230px] select-none shrink-0 gap-3 items-center cursor-pointer"
                 >
                   <figure>
                     <img
-                      class="group-[.open]:block hidden"
+                      class="group-[.valued]:block hidden"
                       src="./images/check-round.png"
                       alt="checkround"
                     />
                     <img
-                      class="group-[.open]:hidden block"
+                      class="group-[.valued]:hidden block"
                       src="./images/question-mark.png"
                       alt="question-mark.png"
                     />
                   </figure>
                   <h2
-                    class="text-[19px] group-[.open]:text-dark text-brand-gray-300 font-extrabold"
+                    class="text-[19px] group-[.valued]:text-dark text-brand-gray-300 font-extrabold"
                   >
                     Afmetingen
                   </h2>
                 </div>
-                <div class="flex gap-3 group-[.open]:opacity-100 opacity-0">
-                  <div class="">
+                <div class="flex gap-3">
+                  <div class="group-[.open]:opacity-100 opacity-0">
                     <p class="text-dark text-base">
                       <a href="#" class="text-brand-orange underline">
                         Bekijk de meetinstructies</a
@@ -286,7 +286,9 @@
               </div>
               <div class="overflow-hidden transition-all max-h-0">
                 <div class="flex gap-4 pb-4">
-                  <div class="hidden md:block md:w-[180px] lg:w-[230px]"></div>
+                  <div
+                    class="hidden md:block md:w-[180px] lg:w-[230px] select-none"
+                  ></div>
                   <div class="px-5 space-y-3">
                     <div class="space-y-2">
                       <h4 class="text-base text-dark">
@@ -302,7 +304,7 @@
                           />
                           <label
                             for="one"
-                            class="h-[36px] select-none cursor-pointer w-[85px] text-dark text-base peer-checked:border-brand-green peer-checked:bg-brand-green-50 border border-brand-gray-300 flex justify-center items-center rounded-md"
+                            class="h-[36px] select-none w-[85px] text-dark text-base cursor-pointer peer-checked:border-brand-green peer-checked:bg-brand-green-50 border border-brand-gray-300 flex justify-center items-center rounded-md"
                             >250</label
                           >
                         </div>
@@ -315,7 +317,7 @@
                           />
                           <label
                             for="two"
-                            class="h-[36px] select-none cursor-pointer w-[85px] text-dark text-base peer-checked:border-brand-green peer-checked:bg-brand-green-50 border border-brand-gray-300 flex justify-center items-center rounded-md"
+                            class="h-[36px] select-none w-[85px] text-dark text-base cursor-pointer peer-checked:border-brand-green peer-checked:bg-brand-green-50 border border-brand-gray-300 flex justify-center items-center rounded-md"
                             >300</label
                           >
                         </div>
@@ -328,7 +330,7 @@
                           />
                           <label
                             for="three"
-                            class="h-[36px] select-none cursor-pointer w-[85px] text-dark text-base peer-checked:border-brand-green peer-checked:bg-brand-green-50 border border-brand-gray-300 flex justify-center items-center rounded-md"
+                            class="h-[36px] select-none w-[85px] text-dark text-base cursor-pointer peer-checked:border-brand-green peer-checked:bg-brand-green-50 border border-brand-gray-300 flex justify-center items-center rounded-md"
                             >350</label
                           >
                         </div>
@@ -341,7 +343,7 @@
                           />
                           <label
                             for="four"
-                            class="h-[36px] select-none cursor-pointer w-[85px] text-dark text-base peer-checked:border-brand-green peer-checked:bg-brand-green-50 border border-brand-gray-300 flex justify-center items-center rounded-md"
+                            class="h-[36px] select-none w-[85px] text-dark text-base cursor-pointer peer-checked:border-brand-green peer-checked:bg-brand-green-50 border border-brand-gray-300 flex justify-center items-center rounded-md"
                             >400</label
                           >
                         </div>
@@ -358,10 +360,10 @@
                         >
                         <input
                           type="text"
-                          name="Hoogte"
+                          name="hoogte"
                           id="Hoogte"
                           placeholder="250"
-                          class="input px-0 py-0.5 w-full text-dark text-base outline-none focus:outline-none focus:border-0 focus:ring-0 bg-transparent border-none"
+                          class="input hoogte px-0 py-0.5 w-full text-dark text-base outline-none focus:outline-none focus:border-0 focus:ring-0 bg-transparent border-none"
                         />
                       </div>
                     </div>
@@ -370,21 +372,21 @@
               </div>
             </div>
             <!-- for Kleur -->
-            <div class="group">
+            <div class="group parent-kleur">
               <div
-                class="accordion flex flex-col md:flex-row gap-4 items-start py-3 px-4"
+                class="flex flex-col md:flex-row gap-4 items-start py-3 px-4 group-[.open]:h-auto h-[50px]"
               >
                 <div
-                  class="cursor-pointer flex w-[180px] lg:w-[230px] shrink-0 gap-3 items-center"
+                  class="accordion flex w-[180px] lg:w-[230px] select-none shrink-0 gap-3 items-center cursor-pointer"
                 >
                   <figure>
                     <img
-                      class="group-[.open]:block hidden"
+                      class="group-[.valued]:block hidden"
                       src="./images/check-round.png"
                       alt="checkround"
                     />
                     <img
-                      class="group-[.open]:hidden block"
+                      class="group-[.valued]:hidden block"
                       src="./images/question-mark.png"
                       alt="question-mark.png"
                     />
@@ -396,14 +398,15 @@
                   </h2>
                 </div>
                 <div
-                  class="flex gap-3 justify-between w-full group-[.open]:opacity-100 opacity-0 group-[.open]:opacity-100 opacity-0"
+                  class="flex gap-3 justify-between w-full "
                 >
-                  <div class="flex gap-4 items-center">
-                    <p class="text-base text-dark">pagina 1 van 5</p>
+                  <div class="flex gap-4 items-center group-[.open]:opacity-100 opacity-0">
+                    <p class="text-base text-dark">pagina <span class="current-slide"></span> van <span class="total-slide"></span></p>
                     <div class="flex gap-2">
-                      <button
+                      <button 
+                        id="prev"
                         type="button"
-                        class="w-[31px] h-[33px] border border-brand-gray-100 flex justify-center items-center"
+                        class="w-[31px] group  h-[33px] border border-brand-gray-100 flex justify-center items-center"
                       >
                         <svg
                           xmlns="http://www.w3.org/2000/svg"
@@ -415,14 +418,14 @@
                           stroke-width="2"
                           stroke-linecap="round"
                           stroke-linejoin="round"
-                          class="stroke-dark"
+                          class="stroke-dark  group-[.nope]:opacity-50"
                         >
                           <polyline points="15 18 9 12 15 6"></polyline>
                         </svg>
                       </button>
-                      <button
+                      <button id="next"
                         type="button"
-                        class="w-[31px] h-[33px] border border-brand-gray-100 flex justify-center items-center"
+                        class="w-[31px] group  h-[33px] border border-brand-gray-100 flex justify-center items-center"
                       >
                         <svg
                           xmlns="http://www.w3.org/2000/svg"
@@ -434,7 +437,7 @@
                           stroke-width="2"
                           stroke-linecap="round"
                           stroke-linejoin="round"
-                          class="-rotate-180 stroke-dark"
+                          class="-rotate-180 stroke-dark group-[.nope]:opacity-50"
                         >
                           <polyline points="15 18 9 12 15 6"></polyline>
                         </svg>
@@ -443,7 +446,7 @@
                   </div>
                   <div class="w-[80px] shrink-0">
                     <p
-                      class="text-brand-orange text-right font-extrabold text-base"
+                      class="text-brand-orange text-right group-[.valued]:opacity-100 opacity-0 font-extrabold text-base"
                     >
                       + 10,00
                     </p>
@@ -453,390 +456,1740 @@
               <div class="overflow-hidden transition-all max-h-0">
                 <div class="flex gap-4">
                   <div
-                    class="hidden md:block md:w-[180px] lg:w-[230px] shrink-0"
+                    class="hidden md:block md:w-[180px] lg:w-[230px] select-none shrink-0"
                   ></div>
-                  <div class="px-5 space-y-3 pb-5 pt-1 w-full">
-                    <div
-                      class="grid max-[400px]:grid-cols-1 grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-2"
-                    >
-                      <div class="w-full">
-                        <input
-                          type="checkbox"
-                          class="peer hidden"
-                          name="typeone"
-                          id="type-1"
-                        />
-                        <label
-                          for="type-1"
-                          class="border-2 cursor-pointer block border-brand-gray-100 peer-checked:border-brand-green peer-checked:bg-brand-green-50"
-                        >
-                          <span
-                            class="py-2 flex justify-end bg-gradient-to-t px-2 from-gray-500 to-gray-200"
-                          >
-                            <img src="./images/expand.png" alt="expand.png" />
-                          </span>
-                          <span
-                            class="px-2 py-3 text-dark text-[13px] flex justify-between items-center"
-                          >
-                            10.2005 Wit
-                          </span>
-                        </label>
-                      </div>
-                      <div class="w-full">
-                        <input
-                          type="checkbox"
-                          class="peer hidden"
-                          name="typeone"
-                          id="type-2"
-                        />
-                        <label
-                          for="type-2"
-                          class="border-2 cursor-pointer block border-brand-gray-100 peer-checked:border-brand-green peer-checked:bg-brand-green-50"
-                        >
-                          <span
-                            class="py-2 flex justify-end bg-gradient-to-t px-2 from-gray-400 to-gray-500"
-                          >
-                            <img src="./images/expand.png" alt="expand.png" />
-                          </span>
-                          <span
-                            class="px-2 py-3 text-dark text-[13px] flex justify-between items-center"
-                          >
-                            10.2005 Wit
-                            <strong
-                              class="text-brand-orange text-base leading-none"
-                              >+ 10,00</strong
+                  <div class="px-4 sm:px-5  pb-5 pt-1 w-full md:w-[565px] lg:w-[745px] xl:w-[920px] ">
+                    <div id="paging-container" class="w-full grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-x-3">  
+                        <div class="item py-1 space-y-3">
+                          <div class="w-full">
+                            <input
+                              type="radio"
+                              class="peer hidden"
+                              name="kleur"
+                              id="type-1"
+                            />
+                            <label
+                              for="type-1"
+                              class="border-2 cursor-pointer block border-brand-gray-100 peer-checked:border-brand-green peer-checked:bg-brand-green-50"
                             >
-                          </span>
-                        </label>
-                      </div>
-                      <div class="w-full">
-                        <input
-                          type="checkbox"
-                          class="peer hidden"
-                          name="typeone"
-                          id="type-3"
-                        />
-                        <label
-                          for="type-3"
-                          class="border-2 cursor-pointer block border-brand-gray-100 peer-checked:border-brand-green peer-checked:bg-brand-green-50"
-                        >
-                          <span
-                            class="py-2 flex justify-end bg-gradient-to-t px-2 from-red-400 to-red-500"
-                          >
-                            <img src="./images/expand.png" alt="expand.png" />
-                          </span>
-                          <span
-                            class="px-2 py-3 text-dark text-[13px] flex justify-between items-center"
-                          >
-                            10.2005 Wit
-                          </span>
-                        </label>
-                      </div>
-                      <div class="w-full">
-                        <input
-                          type="checkbox"
-                          class="peer hidden"
-                          name="typeone"
-                          id="type-4"
-                        />
-                        <label
-                          for="type-4"
-                          class="border-2 cursor-pointer block border-brand-gray-100 peer-checked:border-brand-green peer-checked:bg-brand-green-50"
-                        >
-                          <span
-                            class="py-2 flex justify-end bg-gradient-to-t px-2 from-blue-400 to-blue-500"
-                          >
-                            <img src="./images/expand.png" alt="expand.png" />
-                          </span>
-                          <span
-                            class="px-2 py-3 text-dark text-[13px] flex justify-between items-center"
-                          >
-                            10.2005 Wit
-                          </span>
-                        </label>
-                      </div>
-                      <div class="w-full">
-                        <input
-                          type="checkbox"
-                          class="peer hidden"
-                          name="typeone"
-                          id="type-5"
-                        />
-                        <label
-                          for="type-5"
-                          class="border-2 cursor-pointer block border-brand-gray-100 peer-checked:border-brand-green peer-checked:bg-brand-green-50"
-                        >
-                          <span
-                            class="py-2 flex justify-end bg-gradient-to-t px-2 from-indigo-400 to-indigo-500"
-                          >
-                            <img src="./images/expand.png" alt="expand.png" />
-                          </span>
-                          <span
-                            class="px-2 py-3 text-dark text-[13px] flex justify-between items-center"
-                          >
-                            10.2005 Wit
-                          </span>
-                        </label>
-                      </div>
-                      <div class="w-full">
-                        <input
-                          type="checkbox"
-                          class="peer hidden"
-                          name="typeone"
-                          id="type-6"
-                        />
-                        <label
-                          for="type-6"
-                          class="border-2 cursor-pointer block border-brand-gray-100 peer-checked:border-brand-green peer-checked:bg-brand-green-50"
-                        >
-                          <span
-                            class="py-2 flex justify-end bg-gradient-to-t px-2 from-gray-500 to-gray-200"
-                          >
-                            <img src="./images/expand.png" alt="expand.png" />
-                          </span>
-                          <span
-                            class="px-2 py-3 text-dark text-[13px] flex justify-between items-center"
-                          >
-                            10.2005 Wit
-                          </span>
-                        </label>
-                      </div>
-                      <div class="w-full">
-                        <input
-                          type="checkbox"
-                          class="peer hidden"
-                          name="typeone"
-                          id="type-7"
-                        />
-                        <label
-                          for="type-7"
-                          class="border-2 cursor-pointer block border-brand-gray-100 peer-checked:border-brand-green peer-checked:bg-brand-green-50"
-                        >
-                          <span
-                            class="py-2 flex justify-end bg-gradient-to-t px-2 from-gray-400 to-gray-500"
-                          >
-                            <img src="./images/expand.png" alt="expand.png" />
-                          </span>
-                          <span
-                            class="px-2 py-3 text-dark text-[13px] flex justify-between items-center"
-                          >
-                            10.2005 Wit
-                            <strong
-                              class="text-brand-orange text-base leading-none"
-                              >+ 10,00</strong
+                              <span
+                                class="relative flex justify-end "
+                              >
+                                <img src="./images/color-img-sm-1.png" class="h-[31px] object-cover w-full" alt="color-img-sm-1">
+                                <button type="button" class="expand-color absolute right-2 top-2" data-img="./images/color-img-big-1.jpg">
+                                  <img src="./images/expand.png" alt="expand.png" />
+                                </button>
+                              </span>
+                              <span
+                                class="px-2 py-3 text-dark text-[13px] flex justify-between items-center"
+                              >
+                                10.2005 Wit
+                              </span>
+                            </label>
+                          </div> 
+                          <div class="w-full">
+                            <input
+                              type="radio"
+                              class="peer hidden"
+                              name="kleur"
+                              id="type-2"
+                            />
+                            <label
+                              for="type-2"
+                              class="border-2 cursor-pointer block border-brand-gray-100 peer-checked:border-brand-green peer-checked:bg-brand-green-50"
                             >
-                          </span>
-                        </label>
-                      </div>
-                      <div class="w-full">
-                        <input
-                          type="checkbox"
-                          class="peer hidden"
-                          name="typeone"
-                          id="type-8"
-                        />
-                        <label
-                          for="type-8"
-                          class="border-2 cursor-pointer block border-brand-gray-100 peer-checked:border-brand-green peer-checked:bg-brand-green-50"
-                        >
-                          <span
-                            class="py-2 flex justify-end bg-gradient-to-t px-2 from-red-400 to-red-500"
-                          >
-                            <img src="./images/expand.png" alt="expand.png" />
-                          </span>
-                          <span
-                            class="px-2 py-3 text-dark text-[13px] flex justify-between items-center"
-                          >
-                            10.2005 Wit
-                          </span>
-                        </label>
-                      </div>
-                      <div class="w-full">
-                        <input
-                          type="checkbox"
-                          class="peer hidden"
-                          name="typeone"
-                          id="type-9"
-                        />
-                        <label
-                          for="type-9"
-                          class="border-2 cursor-pointer block border-brand-gray-100 peer-checked:border-brand-green peer-checked:bg-brand-green-50"
-                        >
-                          <span
-                            class="py-2 flex justify-end bg-gradient-to-t px-2 from-blue-400 to-blue-500"
-                          >
-                            <img src="./images/expand.png" alt="expand.png" />
-                          </span>
-                          <span
-                            class="px-2 py-3 text-dark text-[13px] flex justify-between items-center"
-                          >
-                            10.2005 Wit
-                          </span>
-                        </label>
-                      </div>
-                      <div class="w-full">
-                        <input
-                          type="checkbox"
-                          class="peer hidden"
-                          name="typeone"
-                          id="type-10"
-                        />
-                        <label
-                          for="type-10"
-                          class="border-2 cursor-pointer block border-brand-gray-100 peer-checked:border-brand-green peer-checked:bg-brand-green-50"
-                        >
-                          <span
-                            class="py-2 flex justify-end bg-gradient-to-t px-2 from-indigo-400 to-indigo-500"
-                          >
-                            <img src="./images/expand.png" alt="expand.png" />
-                          </span>
-                          <span
-                            class="px-2 py-3 text-dark text-[13px] flex justify-between items-center"
-                          >
-                            10.2005 Wit
-                          </span>
-                        </label>
-                      </div>
-                      <div class="w-full">
-                        <input
-                          type="checkbox"
-                          class="peer hidden"
-                          name="typeone"
-                          id="type-11"
-                        />
-                        <label
-                          for="type-11"
-                          class="border-2 cursor-pointer block border-brand-gray-100 peer-checked:border-brand-green peer-checked:bg-brand-green-50"
-                        >
-                          <span
-                            class="py-2 flex justify-end bg-gradient-to-t px-2 from-gray-400 to-gray-500"
-                          >
-                            <img src="./images/expand.png" alt="expand.png" />
-                          </span>
-                          <span
-                            class="px-2 py-3 text-dark text-[13px] flex justify-between items-center"
-                          >
-                            10.2005 Wit
-                            <strong
-                              class="text-brand-orange text-base leading-none"
-                              >+ 10,00</strong
+                              <span
+                                class="relative flex justify-end "
+                              >
+                                <img src="./images/color-img-sm-2.png" class="h-[31px] object-cover w-full" alt="color-img-sm-2">
+                                <button type="button" class="expand-color absolute right-2 top-2" data-img="./images/color-img-big-2.jpg">
+                                  <img src="./images/expand.png" alt="expand.png" />
+                                </button>
+                              </span>
+                              <span
+                                class="px-2 py-3 text-dark text-[13px] flex justify-between items-center"
+                              >
+                                10.2005 Wit
+                              </span>
+                            </label>
+                          </div> 
+                          <div class="w-full">
+                            <input
+                              type="radio"
+                              class="peer hidden"
+                              name="kleur"
+                              id="type-3"
+                            />
+                            <label
+                              for="type-3"
+                              class="border-2 cursor-pointer block border-brand-gray-100 peer-checked:border-brand-green peer-checked:bg-brand-green-50"
                             >
-                          </span>
-                        </label>
-                      </div>
-                      <div class="w-full">
-                        <input
-                          type="checkbox"
-                          class="peer hidden"
-                          name="typeone"
-                          id="type-12"
-                        />
-                        <label
-                          for="type-12"
-                          class="border-2 cursor-pointer block border-brand-gray-100 peer-checked:border-brand-green peer-checked:bg-brand-green-50"
-                        >
-                          <span
-                            class="py-2 flex justify-end bg-gradient-to-t px-2 from-red-400 to-red-500"
-                          >
-                            <img src="./images/expand.png" alt="expand.png" />
-                          </span>
-                          <span
-                            class="px-2 py-3 text-dark text-[13px] flex justify-between items-center"
-                          >
-                            10.2005 Wit
-                          </span>
-                        </label>
-                      </div>
-                      <div class="w-full">
-                        <input
-                          type="checkbox"
-                          class="peer hidden"
-                          name="typeone"
-                          id="type-13"
-                        />
-                        <label
-                          for="type-13"
-                          class="border-2 cursor-pointer block border-brand-gray-100 peer-checked:border-brand-green peer-checked:bg-brand-green-50"
-                        >
-                          <span
-                            class="py-2 flex justify-end bg-gradient-to-t px-2 from-blue-400 to-blue-500"
-                          >
-                            <img src="./images/expand.png" alt="expand.png" />
-                          </span>
-                          <span
-                            class="px-2 py-3 text-dark text-[13px] flex justify-between items-center"
-                          >
-                            10.2005 Wit
-                          </span>
-                        </label>
-                      </div>
-                      <div class="w-full">
-                        <input
-                          type="checkbox"
-                          class="peer hidden"
-                          name="typeone"
-                          id="type-14"
-                        />
-                        <label
-                          for="type-14"
-                          class="border-2 cursor-pointer block border-brand-gray-100 peer-checked:border-brand-green peer-checked:bg-brand-green-50"
-                        >
-                          <span
-                            class="py-2 flex justify-end bg-gradient-to-t px-2 from-indigo-400 to-indigo-500"
-                          >
-                            <img src="./images/expand.png" alt="expand.png" />
-                          </span>
-                          <span
-                            class="px-2 py-3 text-dark text-[13px] flex justify-between items-center"
-                          >
-                            10.2005 Wit
-                          </span>
-                        </label>
-                      </div>
-                      <div class="w-full">
-                        <input
-                          type="checkbox"
-                          class="peer hidden"
-                          name="typeone"
-                          id="type-15"
-                        />
-                        <label
-                          for="type-15"
-                          class="border-2 cursor-pointer block border-brand-gray-100 peer-checked:border-brand-green peer-checked:bg-brand-green-50"
-                        >
-                          <span
-                            class="py-2 flex justify-end bg-gradient-to-t px-2 from-cyan-400 to-cyan-500"
-                          >
-                            <img src="./images/expand.png" alt="expand.png" />
-                          </span>
-                          <span
-                            class="px-2 py-3 text-dark text-[13px] flex justify-between items-center"
-                          >
-                            10.2005 Wit
-                          </span>
-                        </label>
+                              <span
+                                class="relative flex justify-end "
+                              >
+                                <img src="./images/color-img-sm-3.png" class="h-[31px] object-cover w-full" alt="color-img-sm-3">
+                                <button type="button" class="expand-color absolute right-2 top-2" data-img="./images/color-img-big-3.jpg">
+                                  <img src="./images/expand.png" alt="expand.png" />
+                                </button>
+                              </span>
+                              <span
+                                class="px-2 py-3 text-dark text-[13px] flex justify-between items-center"
+                              >
+                                10.2005 Wit
+                              </span>
+                            </label>
+                          </div> 
+                          <div class="w-full">
+                            <input
+                              type="radio"
+                              class="peer hidden"
+                              name="kleur"
+                              id="type-4"
+                            />
+                            <label
+                              for="type-4"
+                              class="border-2 cursor-pointer block border-brand-gray-100 peer-checked:border-brand-green peer-checked:bg-brand-green-50"
+                            >
+                              <span
+                                class="relative flex justify-end "
+                              >
+                                <img src="./images/color-img-sm-4.png" class="h-[31px] object-cover w-full" alt="color-img-sm-4">
+                                <button type="button" class="expand-color absolute right-2 top-2" data-img="./images/color-img-big-4.jpg">
+                                  <img src="./images/expand.png" alt="expand.png" />
+                                </button>
+                              </span>
+                              <span
+                                class="px-2 py-3 text-dark text-[13px] flex justify-between items-center"
+                              >
+                                10.2005 Wit
+                              </span>
+                            </label>
+                          </div> 
+                        </div> 
+                        <div class="item py-1 space-y-3">
+                          <div class="w-full">
+                            <input
+                              type="radio"
+                              class="peer hidden"
+                              name="kleur"
+                              id="type-5"
+                            />
+                            <label
+                              for="type-5"
+                              class="border-2 cursor-pointer block border-brand-gray-100 peer-checked:border-brand-green peer-checked:bg-brand-green-50"
+                            >
+                              <span
+                                class="relative flex justify-end "
+                              >
+                                <img src="./images/color-img-sm-1.png" class="h-[31px] object-cover w-full" alt="color-img-sm-1">
+                                <button type="button" class="expand-color absolute right-2 top-2" data-img="./images/color-img-big-1.jpg">
+                                  <img src="./images/expand.png" alt="expand.png" />
+                                </button>
+                              </span>
+                              <span
+                                class="px-2 py-3 text-dark text-[13px] flex justify-between items-center"
+                              >
+                                10.2005 Wit
+                              </span>
+                            </label>
+                          </div> 
+                          <div class="w-full">
+                            <input
+                              type="radio"
+                              class="peer hidden"
+                              name="kleur"
+                              id="type-6"
+                            />
+                            <label
+                              for="type-6"
+                              class="border-2 cursor-pointer block border-brand-gray-100 peer-checked:border-brand-green peer-checked:bg-brand-green-50"
+                            >
+                              <span
+                                class="relative flex justify-end "
+                              >
+                                <img src="./images/color-img-sm-2.png" class="h-[31px] object-cover w-full" alt="color-img-sm-2">
+                                <button type="button" class="expand-color absolute right-2 top-2" data-img="./images/color-img-big-2.jpg">
+                                  <img src="./images/expand.png" alt="expand.png" />
+                                </button>
+                              </span>
+                              <span
+                                class="px-2 py-3 text-dark text-[13px] flex justify-between items-center"
+                              >
+                                10.2005 Wit
+                              </span>
+                            </label>
+                          </div> 
+                          <div class="w-full">
+                            <input
+                              type="radio"
+                              class="peer hidden"
+                              name="kleur"
+                              id="type-7"
+                            />
+                            <label
+                              for="type-7"
+                              class="border-2 cursor-pointer block border-brand-gray-100 peer-checked:border-brand-green peer-checked:bg-brand-green-50"
+                            >
+                              <span
+                                class="relative flex justify-end "
+                              >
+                                <img src="./images/color-img-sm-3.png" class="h-[31px] object-cover w-full" alt="color-img-sm-3">
+                                <button type="button" class="expand-color absolute right-2 top-2" data-img="./images/color-img-big-3.jpg">
+                                  <img src="./images/expand.png" alt="expand.png" />
+                                </button>
+                              </span>
+                              <span
+                                class="px-2 py-3 text-dark text-[13px] flex justify-between items-center"
+                              >
+                                10.2005 Wit
+                              </span>
+                            </label>
+                          </div> 
+                          <div class="w-full">
+                            <input
+                              type="radio"
+                              class="peer hidden"
+                              name="kleur"
+                              id="type-8"
+                            />
+                            <label
+                              for="type-8"
+                              class="border-2 cursor-pointer block border-brand-gray-100 peer-checked:border-brand-green peer-checked:bg-brand-green-50"
+                            >
+                              <span
+                                class="relative flex justify-end "
+                              >
+                                <img src="./images/color-img-sm-4.png" class="h-[31px] object-cover w-full" alt="color-img-sm-4">
+                                <button type="button" class="expand-color absolute right-2 top-2" data-img="./images/color-img-big-4.jpg">
+                                  <img src="./images/expand.png" alt="expand.png" />
+                                </button>
+                              </span>
+                              <span
+                                class="px-2 py-3 text-dark text-[13px] flex justify-between items-center"
+                              >
+                                10.2005 Wit
+                              </span>
+                            </label>
+                          </div> 
+                        </div> 
+                        <div class="item py-1 space-y-3">
+                          <div class="w-full">
+                            <input
+                              type="radio"
+                              class="peer hidden"
+                              name="kleur"
+                              id="type-9"
+                            />
+                            <label
+                              for="type-9"
+                              class="border-2 cursor-pointer block border-brand-gray-100 peer-checked:border-brand-green peer-checked:bg-brand-green-50"
+                            >
+                              <span
+                                class="relative flex justify-end "
+                              >
+                                <img src="./images/color-img-sm-1.png" class="h-[31px] object-cover w-full" alt="color-img-sm-1">
+                                <button type="button" class="expand-color absolute right-2 top-2" data-img="./images/color-img-big-1.jpg">
+                                  <img src="./images/expand.png" alt="expand.png" />
+                                </button>
+                              </span>
+                              <span
+                                class="px-2 py-3 text-dark text-[13px] flex justify-between items-center"
+                              >
+                                10.2005 Wit
+                              </span>
+                            </label>
+                          </div> 
+                          <div class="w-full">
+                            <input
+                              type="radio"
+                              class="peer hidden"
+                              name="kleur"
+                              id="type-10"
+                            />
+                            <label
+                              for="type-10"
+                              class="border-2 cursor-pointer block border-brand-gray-100 peer-checked:border-brand-green peer-checked:bg-brand-green-50"
+                            >
+                              <span
+                                class="relative flex justify-end "
+                              >
+                                <img src="./images/color-img-sm-2.png" class="h-[31px] object-cover w-full" alt="color-img-sm-2">
+                                <button type="button" class="expand-color absolute right-2 top-2" data-img="./images/color-img-big-2.jpg">
+                                  <img src="./images/expand.png" alt="expand.png" />
+                                </button>
+                              </span>
+                              <span
+                                class="px-2 py-3 text-dark text-[13px] flex justify-between items-center"
+                              >
+                                10.2005 Wit
+                              </span>
+                            </label>
+                          </div> 
+                          <div class="w-full">
+                            <input
+                              type="radio"
+                              class="peer hidden"
+                              name="kleur"
+                              id="type-11"
+                            />
+                            <label
+                              for="type-11"
+                              class="border-2 cursor-pointer block border-brand-gray-100 peer-checked:border-brand-green peer-checked:bg-brand-green-50"
+                            >
+                              <span
+                                class="relative flex justify-end "
+                              >
+                                <img src="./images/color-img-sm-3.png" class="h-[31px] object-cover w-full" alt="color-img-sm-3">
+                                <button type="button" class="expand-color absolute right-2 top-2" data-img="./images/color-img-big-3.jpg">
+                                  <img src="./images/expand.png" alt="expand.png" />
+                                </button>
+                              </span>
+                              <span
+                                class="px-2 py-3 text-dark text-[13px] flex justify-between items-center"
+                              >
+                                10.2005 Wit
+                              </span>
+                            </label>
+                          </div> 
+                          <div class="w-full">
+                            <input
+                              type="radio"
+                              class="peer hidden"
+                              name="kleur"
+                              id="type-12"
+                            />
+                            <label
+                              for="type-12"
+                              class="border-2 cursor-pointer block border-brand-gray-100 peer-checked:border-brand-green peer-checked:bg-brand-green-50"
+                            >
+                              <span
+                                class="relative flex justify-end "
+                              >
+                                <img src="./images/color-img-sm-4.png" class="h-[31px] object-cover w-full" alt="color-img-sm-4">
+                                <button type="button" class="expand-color absolute right-2 top-2" data-img="./images/color-img-big-4.jpg">
+                                  <img src="./images/expand.png" alt="expand.png" />
+                                </button>
+                              </span>
+                              <span
+                                class="px-2 py-3 text-dark text-[13px] flex justify-between items-center"
+                              >
+                                10.2005 Wit
+                              </span>
+                            </label>
+                          </div> 
+                        </div> 
+                        <div class="item py-1 space-y-3">
+                          <div class="w-full">
+                            <input
+                              type="radio"
+                              class="peer hidden"
+                              name="kleur"
+                              id="type-13"
+                            />
+                            <label
+                              for="type-13"
+                              class="border-2 cursor-pointer block border-brand-gray-100 peer-checked:border-brand-green peer-checked:bg-brand-green-50"
+                            >
+                              <span
+                                class="relative flex justify-end "
+                              >
+                                <img src="./images/color-img-sm-1.png" class="h-[31px] object-cover w-full" alt="color-img-sm-1">
+                                <button type="button" class="expand-color absolute right-2 top-2" data-img="./images/color-img-big-1.jpg">
+                                  <img src="./images/expand.png" alt="expand.png" />
+                                </button>
+                              </span>
+                              <span
+                                class="px-2 py-3 text-dark text-[13px] flex justify-between items-center"
+                              >
+                                10.2005 Wit
+                              </span>
+                            </label>
+                          </div> 
+                          <div class="w-full">
+                            <input
+                              type="radio"
+                              class="peer hidden"
+                              name="kleur"
+                              id="type-14"
+                            />
+                            <label
+                              for="type-14"
+                              class="border-2 cursor-pointer block border-brand-gray-100 peer-checked:border-brand-green peer-checked:bg-brand-green-50"
+                            >
+                              <span
+                                class="relative flex justify-end "
+                              >
+                                <img src="./images/color-img-sm-2.png" class="h-[31px] object-cover w-full" alt="color-img-sm-2">
+                                <button type="button" class="expand-color absolute right-2 top-2" data-img="./images/color-img-big-2.jpg">
+                                  <img src="./images/expand.png" alt="expand.png" />
+                                </button>
+                              </span>
+                              <span
+                                class="px-2 py-3 text-dark text-[13px] flex justify-between items-center"
+                              >
+                                10.2005 Wit
+                              </span>
+                            </label>
+                          </div> 
+                          <div class="w-full">
+                            <input
+                              type="radio"
+                              class="peer hidden"
+                              name="kleur"
+                              id="type-15"
+                            />
+                            <label
+                              for="type-15"
+                              class="border-2 cursor-pointer block border-brand-gray-100 peer-checked:border-brand-green peer-checked:bg-brand-green-50"
+                            >
+                              <span
+                                class="relative flex justify-end "
+                              >
+                                <img src="./images/color-img-sm-3.png" class="h-[31px] object-cover w-full" alt="color-img-sm-3">
+                                <button type="button" class="expand-color absolute right-2 top-2" data-img="./images/color-img-big-3.jpg">
+                                  <img src="./images/expand.png" alt="expand.png" />
+                                </button>
+                              </span>
+                              <span
+                                class="px-2 py-3 text-dark text-[13px] flex justify-between items-center"
+                              >
+                                10.2005 Wit
+                              </span>
+                            </label>
+                          </div> 
+                          <div class="w-full">
+                            <input
+                              type="radio"
+                              class="peer hidden"
+                              name="kleur"
+                              id="type-16"
+                            />
+                            <label
+                              for="type-16"
+                              class="border-2 cursor-pointer block border-brand-gray-100 peer-checked:border-brand-green peer-checked:bg-brand-green-50"
+                            >
+                              <span
+                                class="relative flex justify-end "
+                              >
+                                <img src="./images/color-img-sm-4.png" class="h-[31px] object-cover w-full" alt="color-img-sm-4">
+                                <button type="button" class="expand-color absolute right-2 top-2" data-img="./images/color-img-big-4.jpg">
+                                  <img src="./images/expand.png" alt="expand.png" />
+                                </button>
+                              </span>
+                              <span
+                                class="px-2 py-3 text-dark text-[13px] flex justify-between items-center"
+                              >
+                                10.2005 Wit
+                              </span>
+                            </label>
+                          </div> 
+                        </div> 
+                        <div class="item py-1 space-y-3">
+                          <div class="w-full">
+                            <input
+                              type="radio"
+                              class="peer hidden"
+                              name="kleur"
+                              id="type-17"
+                            />
+                            <label
+                              for="type-17"
+                              class="border-2 cursor-pointer block border-brand-gray-100 peer-checked:border-brand-green peer-checked:bg-brand-green-50"
+                            >
+                              <span
+                                class="relative flex justify-end "
+                              >
+                                <img src="./images/color-img-sm-1.png" class="h-[31px] object-cover w-full" alt="color-img-sm-1">
+                                <button type="button" class="expand-color absolute right-2 top-2" data-img="./images/color-img-big-1.jpg">
+                                  <img src="./images/expand.png" alt="expand.png" />
+                                </button>
+                              </span>
+                              <span
+                                class="px-2 py-3 text-dark text-[13px] flex justify-between items-center"
+                              >
+                                10.2005 Wit
+                              </span>
+                            </label>
+                          </div> 
+                          <div class="w-full">
+                            <input
+                              type="radio"
+                              class="peer hidden"
+                              name="kleur"
+                              id="type-18"
+                            />
+                            <label
+                              for="type-18"
+                              class="border-2 cursor-pointer block border-brand-gray-100 peer-checked:border-brand-green peer-checked:bg-brand-green-50"
+                            >
+                              <span
+                                class="relative flex justify-end "
+                              >
+                                <img src="./images/color-img-sm-2.png" class="h-[31px] object-cover w-full" alt="color-img-sm-2">
+                                <button type="button" class="expand-color absolute right-2 top-2" data-img="./images/color-img-big-2.jpg">
+                                  <img src="./images/expand.png" alt="expand.png" />
+                                </button>
+                              </span>
+                              <span
+                                class="px-2 py-3 text-dark text-[13px] flex justify-between items-center"
+                              >
+                                10.2005 Wit
+                              </span>
+                            </label>
+                          </div> 
+                          <div class="w-full">
+                            <input
+                              type="radio"
+                              class="peer hidden"
+                              name="kleur"
+                              id="type-19"
+                            />
+                            <label
+                              for="type-19"
+                              class="border-2 cursor-pointer block border-brand-gray-100 peer-checked:border-brand-green peer-checked:bg-brand-green-50"
+                            >
+                              <span
+                                class="relative flex justify-end "
+                              >
+                                <img src="./images/color-img-sm-3.png" class="h-[31px] object-cover w-full" alt="color-img-sm-3">
+                                <button type="button" class="expand-color absolute right-2 top-2" data-img="./images/color-img-big-3.jpg">
+                                  <img src="./images/expand.png" alt="expand.png" />
+                                </button>
+                              </span>
+                              <span
+                                class="px-2 py-3 text-dark text-[13px] flex justify-between items-center"
+                              >
+                                10.2005 Wit
+                              </span>
+                            </label>
+                          </div> 
+                          <div class="w-full">
+                            <input
+                              type="radio"
+                              class="peer hidden"
+                              name="kleur"
+                              id="type-19"
+                            />
+                            <label
+                              for="type-19"
+                              class="border-2 cursor-pointer block border-brand-gray-100 peer-checked:border-brand-green peer-checked:bg-brand-green-50"
+                            >
+                              <span
+                                class="relative flex justify-end "
+                              >
+                                <img src="./images/color-img-sm-4.png" class="h-[31px] object-cover w-full" alt="color-img-sm-4">
+                                <button type="button" class="expand-color absolute right-2 top-2" data-img="./images/color-img-big-4.jpg">
+                                  <img src="./images/expand.png" alt="expand.png" />
+                                </button>
+                              </span>
+                              <span
+                                class="px-2 py-3 text-dark text-[13px] flex justify-between items-center"
+                              >
+                                10.2005 Wit
+                              </span>
+                            </label>
+                          </div> 
+                        </div> 
+                        <div class="item py-1 space-y-3">
+                          <div class="w-full">
+                            <input
+                              type="radio"
+                              class="peer hidden"
+                              name="kleur"
+                              id="type-20"
+                            />
+                            <label
+                              for="type-20"
+                              class="border-2 cursor-pointer block border-brand-gray-100 peer-checked:border-brand-green peer-checked:bg-brand-green-50"
+                            >
+                              <span
+                                class="relative flex justify-end "
+                              >
+                                <img src="./images/color-img-sm-1.png" class="h-[31px] object-cover w-full" alt="color-img-sm-1">
+                                <button type="button" class="expand-color absolute right-2 top-2" data-img="./images/color-img-big-1.jpg">
+                                  <img src="./images/expand.png" alt="expand.png" />
+                                </button>
+                              </span>
+                              <span
+                                class="px-2 py-3 text-dark text-[13px] flex justify-between items-center"
+                              >
+                                10.2005 Wit
+                              </span>
+                            </label>
+                          </div> 
+                          <div class="w-full">
+                            <input
+                              type="radio"
+                              class="peer hidden"
+                              name="kleur"
+                              id="type-21"
+                            />
+                            <label
+                              for="type-21"
+                              class="border-2 cursor-pointer block border-brand-gray-100 peer-checked:border-brand-green peer-checked:bg-brand-green-50"
+                            >
+                              <span
+                                class="relative flex justify-end "
+                              >
+                                <img src="./images/color-img-sm-2.png" class="h-[31px] object-cover w-full" alt="color-img-sm-2">
+                                <button type="button" class="expand-color absolute right-2 top-2" data-img="./images/color-img-big-2.jpg">
+                                  <img src="./images/expand.png" alt="expand.png" />
+                                </button>
+                              </span>
+                              <span
+                                class="px-2 py-3 text-dark text-[13px] flex justify-between items-center"
+                              >
+                                10.2005 Wit
+                              </span>
+                            </label>
+                          </div> 
+                          <div class="w-full">
+                            <input
+                              type="radio"
+                              class="peer hidden"
+                              name="kleur"
+                              id="type-22"
+                            />
+                            <label
+                              for="type-22"
+                              class="border-2 cursor-pointer block border-brand-gray-100 peer-checked:border-brand-green peer-checked:bg-brand-green-50"
+                            >
+                              <span
+                                class="relative flex justify-end "
+                              >
+                                <img src="./images/color-img-sm-3.png" class="h-[31px] object-cover w-full" alt="color-img-sm-3">
+                                <button type="button" class="expand-color absolute right-2 top-2" data-img="./images/color-img-big-3.jpg">
+                                  <img src="./images/expand.png" alt="expand.png" />
+                                </button>
+                              </span>
+                              <span
+                                class="px-2 py-3 text-dark text-[13px] flex justify-between items-center"
+                              >
+                                10.2005 Wit
+                              </span>
+                            </label>
+                          </div> 
+                          <div class="w-full">
+                            <input
+                              type="radio"
+                              class="peer hidden"
+                              name="kleur"
+                              id="type-23"
+                            />
+                            <label
+                              for="type-23"
+                              class="border-2 cursor-pointer block border-brand-gray-100 peer-checked:border-brand-green peer-checked:bg-brand-green-50"
+                            >
+                              <span
+                                class="relative flex justify-end "
+                              >
+                                <img src="./images/color-img-sm-4.png" class="h-[31px] object-cover w-full" alt="color-img-sm-4">
+                                <button type="button" class="expand-color absolute right-2 top-2" data-img="./images/color-img-big-4.jpg">
+                                  <img src="./images/expand.png" alt="expand.png" />
+                                </button>
+                              </span>
+                              <span
+                                class="px-2 py-3 text-dark text-[13px] flex justify-between items-center"
+                              >
+                                10.2005 Wit
+                              </span>
+                            </label>
+                          </div> 
+                        </div>  
+                        <div class="item py-1 space-y-3">
+                          <div class="w-full">
+                            <input
+                              type="radio"
+                              class="peer hidden"
+                              name="kleur"
+                              id="type-24"
+                            />
+                            <label
+                              for="type-24"
+                              class="border-2 cursor-pointer block border-brand-gray-100 peer-checked:border-brand-green peer-checked:bg-brand-green-50"
+                            >
+                              <span
+                                class="relative flex justify-end "
+                              >
+                                <img src="./images/color-img-sm-1.png" class="h-[31px] object-cover w-full" alt="color-img-sm-1">
+                                <button type="button" class="expand-color absolute right-2 top-2" data-img="./images/color-img-big-1.jpg">
+                                  <img src="./images/expand.png" alt="expand.png" />
+                                </button>
+                              </span>
+                              <span
+                                class="px-2 py-3 text-dark text-[13px] flex justify-between items-center"
+                              >
+                                10.2005 Wit
+                              </span>
+                            </label>
+                          </div> 
+                          <div class="w-full">
+                            <input
+                              type="radio"
+                              class="peer hidden"
+                              name="kleur"
+                              id="type-25"
+                            />
+                            <label
+                              for="type-25"
+                              class="border-2 cursor-pointer block border-brand-gray-100 peer-checked:border-brand-green peer-checked:bg-brand-green-50"
+                            >
+                              <span
+                                class="relative flex justify-end "
+                              >
+                                <img src="./images/color-img-sm-2.png" class="h-[31px] object-cover w-full" alt="color-img-sm-2">
+                                <button type="button" class="expand-color absolute right-2 top-2" data-img="./images/color-img-big-2.jpg">
+                                  <img src="./images/expand.png" alt="expand.png" />
+                                </button>
+                              </span>
+                              <span
+                                class="px-2 py-3 text-dark text-[13px] flex justify-between items-center"
+                              >
+                                10.2005 Wit
+                              </span>
+                            </label>
+                          </div> 
+                          <div class="w-full">
+                            <input
+                              type="radio"
+                              class="peer hidden"
+                              name="kleur"
+                              id="type-26"
+                            />
+                            <label
+                              for="type-26"
+                              class="border-2 cursor-pointer block border-brand-gray-100 peer-checked:border-brand-green peer-checked:bg-brand-green-50"
+                            >
+                              <span
+                                class="relative flex justify-end "
+                              >
+                                <img src="./images/color-img-sm-3.png" class="h-[31px] object-cover w-full" alt="color-img-sm-3">
+                                <button type="button" class="expand-color absolute right-2 top-2" data-img="./images/color-img-big-3.jpg">
+                                  <img src="./images/expand.png" alt="expand.png" />
+                                </button>
+                              </span>
+                              <span
+                                class="px-2 py-3 text-dark text-[13px] flex justify-between items-center"
+                              >
+                                10.2005 Wit
+                              </span>
+                            </label>
+                          </div> 
+                          <div class="w-full">
+                            <input
+                              type="radio"
+                              class="peer hidden"
+                              name="kleur"
+                              id="type-27"
+                            />
+                            <label
+                              for="type-27"
+                              class="border-2 cursor-pointer block border-brand-gray-100 peer-checked:border-brand-green peer-checked:bg-brand-green-50"
+                            >
+                              <span
+                                class="relative flex justify-end "
+                              >
+                                <img src="./images/color-img-sm-4.png" class="h-[31px] object-cover w-full" alt="color-img-sm-4">
+                                <button type="button" class="expand-color absolute right-2 top-2" data-img="./images/color-img-big-4.jpg">
+                                  <img src="./images/expand.png" alt="expand.png" />
+                                </button>
+                              </span>
+                              <span
+                                class="px-2 py-3 text-dark text-[13px] flex justify-between items-center"
+                              >
+                                10.2005 Wit
+                              </span>
+                            </label>
+                          </div> 
+                        </div> 
+                        <div class="item py-1 space-y-3">
+                          <div class="w-full">
+                            <input
+                              type="radio"
+                              class="peer hidden"
+                              name="kleur"
+                              id="type-28"
+                            />
+                            <label
+                              for="type-28"
+                              class="border-2 cursor-pointer block border-brand-gray-100 peer-checked:border-brand-green peer-checked:bg-brand-green-50"
+                            >
+                              <span
+                                class="relative flex justify-end "
+                              >
+                                <img src="./images/color-img-sm-1.png" class="h-[31px] object-cover w-full" alt="color-img-sm-1">
+                                <button type="button" class="expand-color absolute right-2 top-2" data-img="./images/color-img-big-1.jpg">
+                                  <img src="./images/expand.png" alt="expand.png" />
+                                </button>
+                              </span>
+                              <span
+                                class="px-2 py-3 text-dark text-[13px] flex justify-between items-center"
+                              >
+                                10.2005 Wit
+                              </span>
+                            </label>
+                          </div> 
+                          <div class="w-full">
+                            <input
+                              type="radio"
+                              class="peer hidden"
+                              name="kleur"
+                              id="type-29"
+                            />
+                            <label
+                              for="type-29"
+                              class="border-2 cursor-pointer block border-brand-gray-100 peer-checked:border-brand-green peer-checked:bg-brand-green-50"
+                            >
+                              <span
+                                class="relative flex justify-end "
+                              >
+                                <img src="./images/color-img-sm-2.png" class="h-[31px] object-cover w-full" alt="color-img-sm-2">
+                                <button type="button" class="expand-color absolute right-2 top-2" data-img="./images/color-img-big-2.jpg">
+                                  <img src="./images/expand.png" alt="expand.png" />
+                                </button>
+                              </span>
+                              <span
+                                class="px-2 py-3 text-dark text-[13px] flex justify-between items-center"
+                              >
+                                10.2005 Wit
+                              </span>
+                            </label>
+                          </div> 
+                          <div class="w-full">
+                            <input
+                              type="radio"
+                              class="peer hidden"
+                              name="kleur"
+                              id="type-30"
+                            />
+                            <label
+                              for="type-30"
+                              class="border-2 cursor-pointer block border-brand-gray-100 peer-checked:border-brand-green peer-checked:bg-brand-green-50"
+                            >
+                              <span
+                                class="relative flex justify-end "
+                              >
+                                <img src="./images/color-img-sm-3.png" class="h-[31px] object-cover w-full" alt="color-img-sm-3">
+                                <button type="button" class="expand-color absolute right-2 top-2" data-img="./images/color-img-big-3.jpg">
+                                  <img src="./images/expand.png" alt="expand.png" />
+                                </button>
+                              </span>
+                              <span
+                                class="px-2 py-3 text-dark text-[13px] flex justify-between items-center"
+                              >
+                                10.2005 Wit
+                              </span>
+                            </label>
+                          </div> 
+                          <div class="w-full">
+                            <input
+                              type="radio"
+                              class="peer hidden"
+                              name="kleur"
+                              id="type-31"
+                            />
+                            <label
+                              for="type-31"
+                              class="border-2 cursor-pointer block border-brand-gray-100 peer-checked:border-brand-green peer-checked:bg-brand-green-50"
+                            >
+                              <span
+                                class="relative flex justify-end "
+                              >
+                                <img src="./images/color-img-sm-4.png" class="h-[31px] object-cover w-full" alt="color-img-sm-4">
+                                <button type="button" class="expand-color absolute right-2 top-2" data-img="./images/color-img-big-4.jpg">
+                                  <img src="./images/expand.png" alt="expand.png" />
+                                </button>
+                              </span>
+                              <span
+                                class="px-2 py-3 text-dark text-[13px] flex justify-between items-center"
+                              >
+                                10.2005 Wit
+                              </span>
+                            </label>
+                          </div> 
+                        </div> 
+                        <div class="item py-1 space-y-3">
+                          <div class="w-full">
+                            <input
+                              type="radio"
+                              class="peer hidden"
+                              name="kleur"
+                              id="type-32"
+                            />
+                            <label
+                              for="type-32"
+                              class="border-2 cursor-pointer block border-brand-gray-100 peer-checked:border-brand-green peer-checked:bg-brand-green-50"
+                            >
+                              <span
+                                class="relative flex justify-end "
+                              >
+                                <img src="./images/color-img-sm-1.png" class="h-[31px] object-cover w-full" alt="color-img-sm-1">
+                                <button type="button" class="expand-color absolute right-2 top-2" data-img="./images/color-img-big-1.jpg">
+                                  <img src="./images/expand.png" alt="expand.png" />
+                                </button>
+                              </span>
+                              <span
+                                class="px-2 py-3 text-dark text-[13px] flex justify-between items-center"
+                              >
+                                10.2005 Wit
+                              </span>
+                            </label>
+                          </div> 
+                          <div class="w-full">
+                            <input
+                              type="radio"
+                              class="peer hidden"
+                              name="kleur"
+                              id="type-33"
+                            />
+                            <label
+                              for="type-33"
+                              class="border-2 cursor-pointer block border-brand-gray-100 peer-checked:border-brand-green peer-checked:bg-brand-green-50"
+                            >
+                              <span
+                                class="relative flex justify-end "
+                              >
+                                <img src="./images/color-img-sm-2.png" class="h-[31px] object-cover w-full" alt="color-img-sm-2">
+                                <button type="button" class="expand-color absolute right-2 top-2" data-img="./images/color-img-big-2.jpg">
+                                  <img src="./images/expand.png" alt="expand.png" />
+                                </button>
+                              </span>
+                              <span
+                                class="px-2 py-3 text-dark text-[13px] flex justify-between items-center"
+                              >
+                                10.2005 Wit
+                              </span>
+                            </label>
+                          </div> 
+                          <div class="w-full">
+                            <input
+                              type="radio"
+                              class="peer hidden"
+                              name="kleur"
+                              id="type-34"
+                            />
+                            <label
+                              for="type-34"
+                              class="border-2 cursor-pointer block border-brand-gray-100 peer-checked:border-brand-green peer-checked:bg-brand-green-50"
+                            >
+                              <span
+                                class="relative flex justify-end "
+                              >
+                                <img src="./images/color-img-sm-3.png" class="h-[31px] object-cover w-full" alt="color-img-sm-3">
+                                <button type="button" class="expand-color absolute right-2 top-2" data-img="./images/color-img-big-3.jpg">
+                                  <img src="./images/expand.png" alt="expand.png" />
+                                </button>
+                              </span>
+                              <span
+                                class="px-2 py-3 text-dark text-[13px] flex justify-between items-center"
+                              >
+                                10.2005 Wit
+                              </span>
+                            </label>
+                          </div> 
+                          <div class="w-full">
+                            <input
+                              type="radio"
+                              class="peer hidden"
+                              name="kleur"
+                              id="type-35"
+                            />
+                            <label
+                              for="type-35"
+                              class="border-2 cursor-pointer block border-brand-gray-100 peer-checked:border-brand-green peer-checked:bg-brand-green-50"
+                            >
+                              <span
+                                class="relative flex justify-end "
+                              >
+                                <img src="./images/color-img-sm-4.png" class="h-[31px] object-cover w-full" alt="color-img-sm-4">
+                                <button type="button" class="expand-color absolute right-2 top-2" data-img="./images/color-img-big-4.jpg">
+                                  <img src="./images/expand.png" alt="expand.png" />
+                                </button>
+                              </span>
+                              <span
+                                class="px-2 py-3 text-dark text-[13px] flex justify-between items-center"
+                              >
+                                10.2005 Wit
+                              </span>
+                            </label>
+                          </div> 
+                        </div>  
+                        <div class="item py-1 space-y-3">
+                          <div class="w-full">
+                            <input
+                              type="radio"
+                              class="peer hidden"
+                              name="kleur"
+                              id="type-36"
+                            />
+                            <label
+                              for="type-36"
+                              class="border-2 cursor-pointer block border-brand-gray-100 peer-checked:border-brand-green peer-checked:bg-brand-green-50"
+                            >
+                              <span
+                                class="relative flex justify-end "
+                              >
+                                <img src="./images/color-img-sm-1.png" class="h-[31px] object-cover w-full" alt="color-img-sm-1">
+                                <button type="button" class="expand-color absolute right-2 top-2" data-img="./images/color-img-big-1.jpg">
+                                  <img src="./images/expand.png" alt="expand.png" />
+                                </button>
+                              </span>
+                              <span
+                                class="px-2 py-3 text-dark text-[13px] flex justify-between items-center"
+                              >
+                                10.2005 Wit
+                              </span>
+                            </label>
+                          </div> 
+                          <div class="w-full">
+                            <input
+                              type="radio"
+                              class="peer hidden"
+                              name="kleur"
+                              id="type-37"
+                            />
+                            <label
+                              for="type-37"
+                              class="border-2 cursor-pointer block border-brand-gray-100 peer-checked:border-brand-green peer-checked:bg-brand-green-50"
+                            >
+                              <span
+                                class="relative flex justify-end "
+                              >
+                                <img src="./images/color-img-sm-2.png" class="h-[31px] object-cover w-full" alt="color-img-sm-2">
+                                <button type="button" class="expand-color absolute right-2 top-2" data-img="./images/color-img-big-2.jpg">
+                                  <img src="./images/expand.png" alt="expand.png" />
+                                </button>
+                              </span>
+                              <span
+                                class="px-2 py-3 text-dark text-[13px] flex justify-between items-center"
+                              >
+                                10.2005 Wit
+                              </span>
+                            </label>
+                          </div> 
+                          <div class="w-full">
+                            <input
+                              type="radio"
+                              class="peer hidden"
+                              name="kleur"
+                              id="type-38"
+                            />
+                            <label
+                              for="type-38"
+                              class="border-2 cursor-pointer block border-brand-gray-100 peer-checked:border-brand-green peer-checked:bg-brand-green-50"
+                            >
+                              <span
+                                class="relative flex justify-end "
+                              >
+                                <img src="./images/color-img-sm-3.png" class="h-[31px] object-cover w-full" alt="color-img-sm-3">
+                                <button type="button" class="expand-color absolute right-2 top-2" data-img="./images/color-img-big-3.jpg">
+                                  <img src="./images/expand.png" alt="expand.png" />
+                                </button>
+                              </span>
+                              <span
+                                class="px-2 py-3 text-dark text-[13px] flex justify-between items-center"
+                              >
+                                10.2005 Wit
+                              </span>
+                            </label>
+                          </div> 
+                          <div class="w-full">
+                            <input
+                              type="radio"
+                              class="peer hidden"
+                              name="kleur"
+                              id="type-39"
+                            />
+                            <label
+                              for="type-39"
+                              class="border-2 cursor-pointer block border-brand-gray-100 peer-checked:border-brand-green peer-checked:bg-brand-green-50"
+                            >
+                              <span
+                                class="relative flex justify-end "
+                              >
+                                <img src="./images/color-img-sm-4.png" class="h-[31px] object-cover w-full" alt="color-img-sm-4">
+                                <button type="button" class="expand-color absolute right-2 top-2" data-img="./images/color-img-big-4.jpg">
+                                  <img src="./images/expand.png" alt="expand.png" />
+                                </button>
+                              </span>
+                              <span
+                                class="px-2 py-3 text-dark text-[13px] flex justify-between items-center"
+                              >
+                                10.2005 Wit
+                              </span>
+                            </label>
+                          </div> 
+                        </div> 
+                        <div class="item py-1 space-y-3">
+                          <div class="w-full">
+                            <input
+                              type="radio"
+                              class="peer hidden"
+                              name="kleur"
+                              id="type-40"
+                            />
+                            <label
+                              for="type-40"
+                              class="border-2 cursor-pointer block border-brand-gray-100 peer-checked:border-brand-green peer-checked:bg-brand-green-50"
+                            >
+                              <span
+                                class="relative flex justify-end "
+                              >
+                                <img src="./images/color-img-sm-1.png" class="h-[31px] object-cover w-full" alt="color-img-sm-1">
+                                <button type="button" class="expand-color absolute right-2 top-2" data-img="./images/color-img-big-1.jpg">
+                                  <img src="./images/expand.png" alt="expand.png" />
+                                </button>
+                              </span>
+                              <span
+                                class="px-2 py-3 text-dark text-[13px] flex justify-between items-center"
+                              >
+                                10.2005 Wit
+                              </span>
+                            </label>
+                          </div> 
+                          <div class="w-full">
+                            <input
+                              type="radio"
+                              class="peer hidden"
+                              name="kleur"
+                              id="type-41"
+                            />
+                            <label
+                              for="type-41"
+                              class="border-2 cursor-pointer block border-brand-gray-100 peer-checked:border-brand-green peer-checked:bg-brand-green-50"
+                            >
+                              <span
+                                class="relative flex justify-end "
+                              >
+                                <img src="./images/color-img-sm-2.png" class="h-[31px] object-cover w-full" alt="color-img-sm-2">
+                                <button type="button" class="expand-color absolute right-2 top-2" data-img="./images/color-img-big-2.jpg">
+                                  <img src="./images/expand.png" alt="expand.png" />
+                                </button>
+                              </span>
+                              <span
+                                class="px-2 py-3 text-dark text-[13px] flex justify-between items-center"
+                              >
+                                10.2005 Wit
+                              </span>
+                            </label>
+                          </div> 
+                          <div class="w-full">
+                            <input
+                              type="radio"
+                              class="peer hidden"
+                              name="kleur"
+                              id="type-42"
+                            />
+                            <label
+                              for="type-42"
+                              class="border-2 cursor-pointer block border-brand-gray-100 peer-checked:border-brand-green peer-checked:bg-brand-green-50"
+                            >
+                              <span
+                                class="relative flex justify-end "
+                              >
+                                <img src="./images/color-img-sm-3.png" class="h-[31px] object-cover w-full" alt="color-img-sm-3">
+                                <button type="button" class="expand-color absolute right-2 top-2" data-img="./images/color-img-big-3.jpg">
+                                  <img src="./images/expand.png" alt="expand.png" />
+                                </button>
+                              </span>
+                              <span
+                                class="px-2 py-3 text-dark text-[13px] flex justify-between items-center"
+                              >
+                                10.2005 Wit
+                              </span>
+                            </label>
+                          </div> 
+                          <div class="w-full">
+                            <input
+                              type="radio"
+                              class="peer hidden"
+                              name="kleur"
+                              id="type-43"
+                            />
+                            <label
+                              for="type-43"
+                              class="border-2 cursor-pointer block border-brand-gray-100 peer-checked:border-brand-green peer-checked:bg-brand-green-50"
+                            >
+                              <span
+                                class="relative flex justify-end "
+                              >
+                                <img src="./images/color-img-sm-4.png" class="h-[31px] object-cover w-full" alt="color-img-sm-4">
+                                <button type="button" class="expand-color absolute right-2 top-2" data-img="./images/color-img-big-4.jpg">
+                                  <img src="./images/expand.png" alt="expand.png" />
+                                </button>
+                              </span>
+                              <span
+                                class="px-2 py-3 text-dark text-[13px] flex justify-between items-center"
+                              >
+                                10.2005 Wit
+                              </span>
+                            </label>
+                          </div> 
+                        </div> 
+                        <div class="item py-1 space-y-3">
+                          <div class="w-full">
+                            <input
+                              type="radio"
+                              class="peer hidden"
+                              name="kleur"
+                              id="type-44"
+                            />
+                            <label
+                              for="type-44"
+                              class="border-2 cursor-pointer block border-brand-gray-100 peer-checked:border-brand-green peer-checked:bg-brand-green-50"
+                            >
+                              <span
+                                class="relative flex justify-end "
+                              >
+                                <img src="./images/color-img-sm-1.png" class="h-[31px] object-cover w-full" alt="color-img-sm-1">
+                                <button type="button" class="expand-color absolute right-2 top-2" data-img="./images/color-img-big-1.jpg">
+                                  <img src="./images/expand.png" alt="expand.png" />
+                                </button>
+                              </span>
+                              <span
+                                class="px-2 py-3 text-dark text-[13px] flex justify-between items-center"
+                              >
+                                10.2005 Wit
+                              </span>
+                            </label>
+                          </div> 
+                          <div class="w-full">
+                            <input
+                              type="radio"
+                              class="peer hidden"
+                              name="kleur"
+                              id="type-45"
+                            />
+                            <label
+                              for="type-45"
+                              class="border-2 cursor-pointer block border-brand-gray-100 peer-checked:border-brand-green peer-checked:bg-brand-green-50"
+                            >
+                              <span
+                                class="relative flex justify-end "
+                              >
+                                <img src="./images/color-img-sm-2.png" class="h-[31px] object-cover w-full" alt="color-img-sm-2">
+                                <button type="button" class="expand-color absolute right-2 top-2" data-img="./images/color-img-big-2.jpg">
+                                  <img src="./images/expand.png" alt="expand.png" />
+                                </button>
+                              </span>
+                              <span
+                                class="px-2 py-3 text-dark text-[13px] flex justify-between items-center"
+                              >
+                                10.2005 Wit
+                              </span>
+                            </label>
+                          </div> 
+                          <div class="w-full">
+                            <input
+                              type="radio"
+                              class="peer hidden"
+                              name="kleur"
+                              id="type-46"
+                            />
+                            <label
+                              for="type-46"
+                              class="border-2 cursor-pointer block border-brand-gray-100 peer-checked:border-brand-green peer-checked:bg-brand-green-50"
+                            >
+                              <span
+                                class="relative flex justify-end "
+                              >
+                                <img src="./images/color-img-sm-3.png" class="h-[31px] object-cover w-full" alt="color-img-sm-3">
+                                <button type="button" class="expand-color absolute right-2 top-2" data-img="./images/color-img-big-3.jpg">
+                                  <img src="./images/expand.png" alt="expand.png" />
+                                </button>
+                              </span>
+                              <span
+                                class="px-2 py-3 text-dark text-[13px] flex justify-between items-center"
+                              >
+                                10.2005 Wit
+                              </span>
+                            </label>
+                          </div> 
+                          <div class="w-full">
+                            <input
+                              type="radio"
+                              class="peer hidden"
+                              name="kleur"
+                              id="type-47"
+                            />
+                            <label
+                              for="type-47"
+                              class="border-2 cursor-pointer block border-brand-gray-100 peer-checked:border-brand-green peer-checked:bg-brand-green-50"
+                            >
+                              <span
+                                class="relative flex justify-end "
+                              >
+                                <img src="./images/color-img-sm-4.png" class="h-[31px] object-cover w-full" alt="color-img-sm-4">
+                                <button type="button" class="expand-color absolute right-2 top-2" data-img="./images/color-img-big-4.jpg">
+                                  <img src="./images/expand.png" alt="expand.png" />
+                                </button>
+                              </span>
+                              <span
+                                class="px-2 py-3 text-dark text-[13px] flex justify-between items-center"
+                              >
+                                10.2005 Wit
+                              </span>
+                            </label>
+                          </div> 
+                        </div>  
+                        <div class="item py-1 space-y-3">
+                          <div class="w-full">
+                            <input
+                              type="radio"
+                              class="peer hidden"
+                              name="kleur"
+                              id="type-48"
+                            />
+                            <label
+                              for="type-48"
+                              class="border-2 cursor-pointer block border-brand-gray-100 peer-checked:border-brand-green peer-checked:bg-brand-green-50"
+                            >
+                              <span
+                                class="relative flex justify-end "
+                              >
+                                <img src="./images/color-img-sm-1.png" class="h-[31px] object-cover w-full" alt="color-img-sm-1">
+                                <button type="button" class="expand-color absolute right-2 top-2" data-img="./images/color-img-big-1.jpg">
+                                  <img src="./images/expand.png" alt="expand.png" />
+                                </button>
+                              </span>
+                              <span
+                                class="px-2 py-3 text-dark text-[13px] flex justify-between items-center"
+                              >
+                                10.2005 Wit
+                              </span>
+                            </label>
+                          </div> 
+                          <div class="w-full">
+                            <input
+                              type="radio"
+                              class="peer hidden"
+                              name="kleur"
+                              id="type-49"
+                            />
+                            <label
+                              for="type-49"
+                              class="border-2 cursor-pointer block border-brand-gray-100 peer-checked:border-brand-green peer-checked:bg-brand-green-50"
+                            >
+                              <span
+                                class="relative flex justify-end "
+                              >
+                                <img src="./images/color-img-sm-2.png" class="h-[31px] object-cover w-full" alt="color-img-sm-2">
+                                <button type="button" class="expand-color absolute right-2 top-2" data-img="./images/color-img-big-2.jpg">
+                                  <img src="./images/expand.png" alt="expand.png" />
+                                </button>
+                              </span>
+                              <span
+                                class="px-2 py-3 text-dark text-[13px] flex justify-between items-center"
+                              >
+                                10.2005 Wit
+                              </span>
+                            </label>
+                          </div> 
+                          <div class="w-full">
+                            <input
+                              type="radio"
+                              class="peer hidden"
+                              name="kleur"
+                              id="type-50"
+                            />
+                            <label
+                              for="type-50"
+                              class="border-2 cursor-pointer block border-brand-gray-100 peer-checked:border-brand-green peer-checked:bg-brand-green-50"
+                            >
+                              <span
+                                class="relative flex justify-end "
+                              >
+                                <img src="./images/color-img-sm-3.png" class="h-[31px] object-cover w-full" alt="color-img-sm-3">
+                                <button type="button" class="expand-color absolute right-2 top-2" data-img="./images/color-img-big-3.jpg">
+                                  <img src="./images/expand.png" alt="expand.png" />
+                                </button>
+                              </span>
+                              <span
+                                class="px-2 py-3 text-dark text-[13px] flex justify-between items-center"
+                              >
+                                10.2005 Wit
+                              </span>
+                            </label>
+                          </div> 
+                          <div class="w-full">
+                            <input
+                              type="radio"
+                              class="peer hidden"
+                              name="kleur"
+                              id="type-51"
+                            />
+                            <label
+                              for="type-51"
+                              class="border-2 cursor-pointer block border-brand-gray-100 peer-checked:border-brand-green peer-checked:bg-brand-green-50"
+                            >
+                              <span
+                                class="relative flex justify-end "
+                              >
+                                <img src="./images/color-img-sm-4.png" class="h-[31px] object-cover w-full" alt="color-img-sm-4">
+                                <button type="button" class="expand-color absolute right-2 top-2" data-img="./images/color-img-big-4.jpg">
+                                  <img src="./images/expand.png" alt="expand.png" />
+                                </button>
+                              </span>
+                              <span
+                                class="px-2 py-3 text-dark text-[13px] flex justify-between items-center"
+                              >
+                                10.2005 Wit
+                              </span>
+                            </label>
+                          </div> 
+                        </div> 
+                        <div class="item py-1 space-y-3">
+                          <div class="w-full">
+                            <input
+                              type="radio"
+                              class="peer hidden"
+                              name="kleur"
+                              id="type-52"
+                            />
+                            <label
+                              for="type-52"
+                              class="border-2 cursor-pointer block border-brand-gray-100 peer-checked:border-brand-green peer-checked:bg-brand-green-50"
+                            >
+                              <span
+                                class="relative flex justify-end "
+                              >
+                                <img src="./images/color-img-sm-1.png" class="h-[31px] object-cover w-full" alt="color-img-sm-1">
+                                <button type="button" class="expand-color absolute right-2 top-2" data-img="./images/color-img-big-1.jpg">
+                                  <img src="./images/expand.png" alt="expand.png" />
+                                </button>
+                              </span>
+                              <span
+                                class="px-2 py-3 text-dark text-[13px] flex justify-between items-center"
+                              >
+                                10.2005 Wit
+                              </span>
+                            </label>
+                          </div> 
+                          <div class="w-full">
+                            <input
+                              type="radio"
+                              class="peer hidden"
+                              name="kleur"
+                              id="type-53"
+                            />
+                            <label
+                              for="type-53"
+                              class="border-2 cursor-pointer block border-brand-gray-100 peer-checked:border-brand-green peer-checked:bg-brand-green-50"
+                            >
+                              <span
+                                class="relative flex justify-end "
+                              >
+                                <img src="./images/color-img-sm-2.png" class="h-[31px] object-cover w-full" alt="color-img-sm-2">
+                                <button type="button" class="expand-color absolute right-2 top-2" data-img="./images/color-img-big-2.jpg">
+                                  <img src="./images/expand.png" alt="expand.png" />
+                                </button>
+                              </span>
+                              <span
+                                class="px-2 py-3 text-dark text-[13px] flex justify-between items-center"
+                              >
+                                10.2005 Wit
+                              </span>
+                            </label>
+                          </div> 
+                          <div class="w-full">
+                            <input
+                              type="radio"
+                              class="peer hidden"
+                              name="kleur"
+                              id="type-54"
+                            />
+                            <label
+                              for="type-54"
+                              class="border-2 cursor-pointer block border-brand-gray-100 peer-checked:border-brand-green peer-checked:bg-brand-green-50"
+                            >
+                              <span
+                                class="relative flex justify-end "
+                              >
+                                <img src="./images/color-img-sm-3.png" class="h-[31px] object-cover w-full" alt="color-img-sm-3">
+                                <button type="button" class="expand-color absolute right-2 top-2" data-img="./images/color-img-big-3.jpg">
+                                  <img src="./images/expand.png" alt="expand.png" />
+                                </button>
+                              </span>
+                              <span
+                                class="px-2 py-3 text-dark text-[13px] flex justify-between items-center"
+                              >
+                                10.2005 Wit
+                              </span>
+                            </label>
+                          </div> 
+                          <div class="w-full">
+                            <input
+                              type="radio"
+                              class="peer hidden"
+                              name="kleur"
+                              id="type-55"
+                            />
+                            <label
+                              for="type-55"
+                              class="border-2 cursor-pointer block border-brand-gray-100 peer-checked:border-brand-green peer-checked:bg-brand-green-50"
+                            >
+                              <span
+                                class="relative flex justify-end "
+                              >
+                                <img src="./images/color-img-sm-4.png" class="h-[31px] object-cover w-full" alt="color-img-sm-4">
+                                <button type="button" class="expand-color absolute right-2 top-2" data-img="./images/color-img-big-4.jpg">
+                                  <img src="./images/expand.png" alt="expand.png" />
+                                </button>
+                              </span>
+                              <span
+                                class="px-2 py-3 text-dark text-[13px] flex justify-between items-center"
+                              >
+                                10.2005 Wit
+                              </span>
+                            </label>
+                          </div> 
+                        </div> 
+                        <div class="item py-1 space-y-3">
+                          <div class="w-full">
+                            <input
+                              type="radio"
+                              class="peer hidden"
+                              name="kleur"
+                              id="type-56"
+                            />
+                            <label
+                              for="type-56"
+                              class="border-2 cursor-pointer block border-brand-gray-100 peer-checked:border-brand-green peer-checked:bg-brand-green-50"
+                            >
+                              <span
+                                class="relative flex justify-end "
+                              >
+                                <img src="./images/color-img-sm-1.png" class="h-[31px] object-cover w-full" alt="color-img-sm-1">
+                                <button type="button" class="expand-color absolute right-2 top-2" data-img="./images/color-img-big-1.jpg">
+                                  <img src="./images/expand.png" alt="expand.png" />
+                                </button>
+                              </span>
+                              <span
+                                class="px-2 py-3 text-dark text-[13px] flex justify-between items-center"
+                              >
+                                10.2005 Wit
+                              </span>
+                            </label>
+                          </div> 
+                          <div class="w-full">
+                            <input
+                              type="radio"
+                              class="peer hidden"
+                              name="kleur"
+                              id="type-57"
+                            />
+                            <label
+                              for="type-57"
+                              class="border-2 cursor-pointer block border-brand-gray-100 peer-checked:border-brand-green peer-checked:bg-brand-green-50"
+                            >
+                              <span
+                                class="relative flex justify-end "
+                              >
+                                <img src="./images/color-img-sm-2.png" class="h-[31px] object-cover w-full" alt="color-img-sm-2">
+                                <button type="button" class="expand-color absolute right-2 top-2" data-img="./images/color-img-big-2.jpg">
+                                  <img src="./images/expand.png" alt="expand.png" />
+                                </button>
+                              </span>
+                              <span
+                                class="px-2 py-3 text-dark text-[13px] flex justify-between items-center"
+                              >
+                                10.2005 Wit
+                              </span>
+                            </label>
+                          </div> 
+                          <div class="w-full">
+                            <input
+                              type="radio"
+                              class="peer hidden"
+                              name="kleur"
+                              id="type-58"
+                            />
+                            <label
+                              for="type-58"
+                              class="border-2 cursor-pointer block border-brand-gray-100 peer-checked:border-brand-green peer-checked:bg-brand-green-50"
+                            >
+                              <span
+                                class="relative flex justify-end "
+                              >
+                                <img src="./images/color-img-sm-3.png" class="h-[31px] object-cover w-full" alt="color-img-sm-3">
+                                <button type="button" class="expand-color absolute right-2 top-2" data-img="./images/color-img-big-3.jpg">
+                                  <img src="./images/expand.png" alt="expand.png" />
+                                </button>
+                              </span>
+                              <span
+                                class="px-2 py-3 text-dark text-[13px] flex justify-between items-center"
+                              >
+                                10.2005 Wit
+                              </span>
+                            </label>
+                          </div> 
+                          <div class="w-full">
+                            <input
+                              type="radio"
+                              class="peer hidden"
+                              name="kleur"
+                              id="type-59"
+                            />
+                            <label
+                              for="type-59"
+                              class="border-2 cursor-pointer block border-brand-gray-100 peer-checked:border-brand-green peer-checked:bg-brand-green-50"
+                            >
+                              <span
+                                class="relative flex justify-end "
+                              >
+                                <img src="./images/color-img-sm-4.png" class="h-[31px] object-cover w-full" alt="color-img-sm-4">
+                                <button type="button" class="expand-color absolute right-2 top-2" data-img="./images/color-img-big-4.jpg">
+                                  <img src="./images/expand.png" alt="expand.png" />
+                                </button>
+                              </span>
+                              <span
+                                class="px-2 py-3 text-dark text-[13px] flex justify-between items-center"
+                              >
+                                10.2005 Wit
+                              </span>
+                            </label>
+                          </div> 
+                        </div>  
+                        <div class="item py-1 space-y-3">
+                          <div class="w-full">
+                            <input
+                              type="radio"
+                              class="peer hidden"
+                              name="kleur"
+                              id="type-60"
+                            />
+                            <label
+                              for="type-60"
+                              class="border-2 cursor-pointer block border-brand-gray-100 peer-checked:border-brand-green peer-checked:bg-brand-green-50"
+                            >
+                              <span
+                                class="relative flex justify-end "
+                              >
+                                <img src="./images/color-img-sm-1.png" class="h-[31px] object-cover w-full" alt="color-img-sm-1">
+                                <button type="button" class="expand-color absolute right-2 top-2" data-img="./images/color-img-big-1.jpg">
+                                  <img src="./images/expand.png" alt="expand.png" />
+                                </button>
+                              </span>
+                              <span
+                                class="px-2 py-3 text-dark text-[13px] flex justify-between items-center"
+                              >
+                                10.2005 Wit
+                              </span>
+                            </label>
+                          </div> 
+                          <div class="w-full">
+                            <input
+                              type="radio"
+                              class="peer hidden"
+                              name="kleur"
+                              id="type-61"
+                            />
+                            <label
+                              for="type-61"
+                              class="border-2 cursor-pointer block border-brand-gray-100 peer-checked:border-brand-green peer-checked:bg-brand-green-50"
+                            >
+                              <span
+                                class="relative flex justify-end "
+                              >
+                                <img src="./images/color-img-sm-2.png" class="h-[31px] object-cover w-full" alt="color-img-sm-2">
+                                <button type="button" class="expand-color absolute right-2 top-2" data-img="./images/color-img-big-2.jpg">
+                                  <img src="./images/expand.png" alt="expand.png" />
+                                </button>
+                              </span>
+                              <span
+                                class="px-2 py-3 text-dark text-[13px] flex justify-between items-center"
+                              >
+                                10.2005 Wit
+                              </span>
+                            </label>
+                          </div> 
+                          <div class="w-full">
+                            <input
+                              type="radio"
+                              class="peer hidden"
+                              name="kleur"
+                              id="type-62"
+                            />
+                            <label
+                              for="type-62"
+                              class="border-2 cursor-pointer block border-brand-gray-100 peer-checked:border-brand-green peer-checked:bg-brand-green-50"
+                            >
+                              <span
+                                class="relative flex justify-end "
+                              >
+                                <img src="./images/color-img-sm-3.png" class="h-[31px] object-cover w-full" alt="color-img-sm-3">
+                                <button type="button" class="expand-color absolute right-2 top-2" data-img="./images/color-img-big-3.jpg">
+                                  <img src="./images/expand.png" alt="expand.png" />
+                                </button>
+                              </span>
+                              <span
+                                class="px-2 py-3 text-dark text-[13px] flex justify-between items-center"
+                              >
+                                10.2005 Wit
+                              </span>
+                            </label>
+                          </div> 
+                          <div class="w-full">
+                            <input
+                              type="radio"
+                              class="peer hidden"
+                              name="kleur"
+                              id="type-63"
+                            />
+                            <label
+                              for="type-63"
+                              class="border-2 cursor-pointer block border-brand-gray-100 peer-checked:border-brand-green peer-checked:bg-brand-green-50"
+                            >
+                              <span
+                                class="relative flex justify-end "
+                              >
+                                <img src="./images/color-img-sm-4.png" class="h-[31px] object-cover w-full" alt="color-img-sm-4">
+                                <button type="button" class="expand-color absolute right-2 top-2" data-img="./images/color-img-big-4.jpg">
+                                  <img src="./images/expand.png" alt="expand.png" />
+                                </button>
+                              </span>
+                              <span
+                                class="px-2 py-3 text-dark text-[13px] flex justify-between items-center"
+                              >
+                                10.2005 Wit
+                              </span>
+                            </label>
+                          </div> 
+                        </div>   
+                    </div> 
+                    <!-- start coding for modal    -->
+                    <div class="group  "> 
+                    <div class="modal-colors group-[.modal-active]:opacity-100 group-[.modal-active]:visible opacity-0 invisible transition-all px-4 z-40 fixed inset-0 bg-dark bg-opacity-70  ">
+                      <button type="button" class="modal-close w-8 absolute top-3 right-3 h-8 bg-opacity-60 hover:bg-opacity-80 flex justify-center items-center bg-white">
+                        <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true">
+                          <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12"></path>
+                        </svg>
+                      </button>
+                      <div class="modal-body w-full flex justify-center items-center min-h-screen">
+                        <img class="modal-img-color" src="" alt="">
                       </div>
                     </div>
+                  </div>
                   </div>
                 </div>
               </div>
             </div>
             <!-- for Bediening -->
-            <div class="group">
+            <div class="group parent-bediening">
               <div
-                class="accordion flex flex-col md:flex-row gap-4 items-start py-3 px-4"
+                class="flex flex-col md:flex-row gap-4 items-start py-3 px-4 group-[.open]:h-auto h-[50px]"
               >
                 <div
-                  class="cursor-pointer flex w-[180px] lg:w-[230px] shrink-0 gap-3 items-center"
+                  class="accordion flex w-[180px] lg:w-[230px] select-none shrink-0 gap-3 items-center cursor-pointer"
                 >
                   <figure>
                     <img
-                      class="group-[.open]:block hidden"
+                      class="group-[.valued]:block hidden"
                       src="./images/check-round.png"
                       alt="checkround"
                     />
                     <img
-                      class="group-[.open]:hidden block"
+                      class="group-[.valued]:hidden block"
                       src="./images/question-mark.png"
                       alt="question-mark.png"
                     />
@@ -848,9 +2201,9 @@
                   </h2>
                 </div>
                 <div
-                  class="flex gap-3 justify-between w-full group-[.open]:opacity-100 opacity-0"
+                  class="flex gap-3 justify-between w-full "
                 >
-                  <div class="flex gap-4 items-center">
+                  <div class="flex gap-4 items-center group-[.open]:opacity-100 opacity-0">
                     <button
                       type="button"
                       class="px-8 py-1.5 rounded-full bg-brand-green text-white font-extrabold hover:bg-white border border-brand-green hover:border-brand-gray-100 hover:text-dark transition-all"
@@ -864,7 +2217,7 @@
                       Handmatig
                     </button>
                   </div>
-                  <div class="w-[80px] shrink-0">
+                  <div class="w-[80px] shrink-0 group-[.valued]:opacity-100 opacity-0">
                     <p
                       class="text-brand-orange text-right font-extrabold text-base"
                     >
@@ -874,10 +2227,10 @@
                 </div>
               </div>
               <div class="overflow-hidden transition-all max-h-0">
-                <div py-4>
+                <div class="py-4">
                   <div class="flex flex-col md:flex-row gap-4">
                     <div
-                      class="md:w-[180px] lg:w-[230px] shrink-0 pl-4 md:pl-14"
+                      class="md:w-[180px] lg:w-[230px] select-none shrink-0 pl-4 md:pl-14"
                     >
                       <h3 class="font-extrabold text-dark text-base">Keuze</h3>
                     </div>
@@ -887,7 +2240,7 @@
                       >
                         <div>
                           <input
-                            type="checkbox"
+                            type="radio"
                             name="keuze"
                             id="keuze-1"
                             class="peer hidden"
@@ -927,7 +2280,7 @@
                         </div>
                         <div>
                           <input
-                            type="checkbox"
+                            type="radio"
                             name="keuze"
                             id="keuze-1"
                             class="peer hidden"
@@ -962,7 +2315,7 @@
                         </div>
                         <div>
                           <input
-                            type="checkbox"
+                            type="radio"
                             name="keuze"
                             id="keuze-3"
                             class="peer hidden"
@@ -1000,7 +2353,7 @@
                   </div>
                   <div class="flex flex-col md:flex-row gap-4">
                     <div
-                      class="md:w-[180px] lg:w-[230px] shrink-0 pl-4 md:pl-14"
+                      class="md:w-[180px] lg:w-[230px] select-none shrink-0 pl-4 md:pl-14"
                     >
                       <h3 class="font-extrabold text-dark text-base">
                         Optioneel
@@ -1012,7 +2365,7 @@
                       >
                         <div>
                           <input
-                            type="checkbox"
+                            type="radio"
                             name="optioneel"
                             id="optioneel-1"
                             class="peer hidden"
@@ -1052,7 +2405,7 @@
                         </div>
                         <div>
                           <input
-                            type="checkbox"
+                            type="radio"
                             name="optioneel"
                             id="optioneel-2"
                             class="peer hidden"
@@ -1092,7 +2445,7 @@
                         </div>
                         <div>
                           <input
-                            type="checkbox"
+                            type="radio"
                             name="optioneel"
                             id="optioneel-3"
                             class="peer hidden"
@@ -1132,7 +2485,7 @@
                         </div>
                         <div>
                           <input
-                            type="checkbox"
+                            type="radio"
                             name="optioneel"
                             id="optioneel-4"
                             class="peer hidden"
@@ -1172,7 +2525,7 @@
                         </div>
                         <div>
                           <input
-                            type="checkbox"
+                            type="radio"
                             name="optioneel"
                             id="optioneel-5"
                             class="peer hidden"
@@ -1216,7 +2569,7 @@
                   </div>
                   <div class="flex flex-col md:flex-row gap-4">
                     <div
-                      class="md:w-[180px] lg:w-[230px] shrink-0 pl-4 md:pl-14"
+                      class="md:w-[180px] lg:w-[230px] select-none shrink-0 pl-4 md:pl-14"
                     >
                       <h3 class="font-extrabold text-dark text-base">
                         Bedieningszijde
@@ -1231,7 +2584,7 @@
                       >
                         <div>
                           <input
-                            type="checkbox"
+                            type="radio"
                             name="bedieningszijde"
                             id="bedieningszijde-1"
                             class="peer hidden"
@@ -1259,7 +2612,7 @@
                         </div>
                         <div>
                           <input
-                            type="checkbox"
+                            type="radio"
                             name="bedieningszijde"
                             id="bedieningszijde-2"
                             class="peer hidden"
@@ -1294,19 +2647,19 @@
             <!-- for Kwaliteit -->
             <div class="group">
               <div
-                class="accordion flex flex-col md:flex-row gap-4 items-start py-3 px-4"
+                class="flex flex-col md:flex-row gap-4 items-start py-3 px-4 group-[.open]:h-auto h-[50px]"
               >
                 <div
-                  class="cursor-pointer flex w-[180px] lg:w-[230px] shrink-0 gap-3 items-center"
+                  class="accordion flex w-[180px] lg:w-[230px] select-none shrink-0 gap-3 items-center cursor-pointer"
                 >
                   <figure>
                     <img
-                      class="group-[.open]:block hidden"
+                      class="group-[.valued]:block hidden"
                       src="./images/check-round.png"
                       alt="checkround"
                     />
                     <img
-                      class="group-[.open]:hidden block"
+                      class="group-[.valued]:hidden block"
                       src="./images/question-mark.png"
                       alt="question-mark.png"
                     />
@@ -1328,7 +2681,9 @@
               <div class="overflow-hidden transition-all max-h-0">
                 <div class="space-y-3 px-4 py-3">
                   <div class="flex flex-col md:flex-row gap-4">
-                    <div class="md:w-[180px] lg:w-[230px] shrink-0"></div>
+                    <div
+                      class="md:w-[180px] lg:w-[230px] select-none shrink-0"
+                    ></div>
                     <div class="pb-4">
                       <h3 class="text-3xl">Upcoming content</h3>
                     </div>
@@ -1339,19 +2694,19 @@
             <!-- for Uitvoering -->
             <div class="group">
               <div
-                class="accordion flex flex-col md:flex-row gap-4 items-start py-3 px-4"
+                class="flex flex-col md:flex-row gap-4 items-start py-3 px-4 group-[.open]:h-auto h-[50px]"
               >
                 <div
-                  class="cursor-pointer flex w-[180px] lg:w-[230px] shrink-0 gap-3 items-center"
+                  class="accordion flex w-[180px] lg:w-[230px] select-none shrink-0 gap-3 items-center cursor-pointer"
                 >
                   <figure>
                     <img
-                      class="group-[.open]:block hidden"
+                      class="group-[.valued]:block hidden"
                       src="./images/check-round.png"
                       alt="checkround"
                     />
                     <img
-                      class="group-[.open]:hidden block"
+                      class="group-[.valued]:hidden block"
                       src="./images/question-mark.png"
                       alt="question-mark.png"
                     />
@@ -1373,7 +2728,9 @@
               <div class="overflow-hidden transition-all max-h-0">
                 <div class="space-y-3 px-4 py-3">
                   <div class="flex flex-col md:flex-row gap-4">
-                    <div class="md:w-[180px] lg:w-[230px] shrink-0"></div>
+                    <div
+                      class="md:w-[180px] lg:w-[230px] select-none shrink-0"
+                    ></div>
                     <div class="pb-4">
                       <h3 class="text-3xl">Upcoming content</h3>
                     </div>
@@ -1384,19 +2741,19 @@
             <!-- for Bevestiging -->
             <div class="group">
               <div
-                class="accordion flex flex-col md:flex-row gap-4 items-start py-3 px-4"
+                class="flex flex-col md:flex-row gap-4 items-start py-3 px-4 group-[.open]:h-auto h-[50px]"
               >
                 <div
-                  class="cursor-pointer flex w-[180px] lg:w-[230px] shrink-0 gap-3 items-center"
+                  class="accordion flex w-[180px] lg:w-[230px] select-none shrink-0 gap-3 items-center cursor-pointer"
                 >
                   <figure>
                     <img
-                      class="group-[.open]:block hidden"
+                      class="group-[.valued]:block hidden"
                       src="./images/check-round.png"
                       alt="checkround"
                     />
                     <img
-                      class="group-[.open]:hidden block"
+                      class="group-[.valued]:hidden block"
                       src="./images/question-mark.png"
                       alt="question-mark.png"
                     />
@@ -1418,7 +2775,9 @@
               <div class="overflow-hidden transition-all max-h-0">
                 <div class="space-y-3 px-4 py-3">
                   <div class="flex flex-col md:flex-row gap-4">
-                    <div class="md:w-[180px] lg:w-[230px] shrink-0"></div>
+                    <div
+                      class="md:w-[180px] lg:w-[230px] select-none shrink-0"
+                    ></div>
                     <div class="pb-4">
                       <h3 class="text-3xl">Upcoming content</h3>
                     </div>
@@ -2203,7 +3562,7 @@ Een geweldig product, hij hangt prachtig in onze woonkamer. Mijn man kon hem zel
                       <div class="flex items-center mb-4">
                         <input
                           id="default-checkbox"
-                          type="checkbox"
+                          type="radio"
                           value=""
                           class="w-6 h-6 focus:outline-none focus:ring-0 rounded-md"
                         />
