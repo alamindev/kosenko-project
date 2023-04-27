@@ -123,22 +123,27 @@ new Swiper(".slider-three", {
     1400: {
       slidesPerView: 4,
       spaceBetween: 30,
+      slidesOffsetAfter: 0,
     },
     1200: {
       slidesPerView: 3,
       spaceBetween: 30,
+      slidesOffsetAfter: 0,
     },
     1024: {
       slidesPerView: 2.5,
       spaceBetween: 30,
+      slidesOffsetAfter: 0,
     },
     768: {
       slidesPerView: 2,
       spaceBetween: 30,
+      slidesOffsetAfter: 0,
     },
     540: {
       slidesPerView: 1.8,
       spaceBetween: 30,
+      slidesOffsetAfter: 0,
     },
   },
   navigation: {
@@ -154,22 +159,27 @@ new Swiper(".slider-four", {
     1400: {
       slidesPerView: 4,
       spaceBetween: 30,
+      slidesOffsetAfter: 0,
     },
     1200: {
       slidesPerView: 3,
       spaceBetween: 30,
+      slidesOffsetAfter: 0,
     },
     1024: {
       slidesPerView: 2.5,
       spaceBetween: 30,
+      slidesOffsetAfter: 0,
     },
     768: {
       slidesPerView: 2,
       spaceBetween: 30,
+      slidesOffsetAfter: 0,
     },
     540: {
       slidesPerView: 1.8,
       spaceBetween: 30,
+      slidesOffsetAfter: 0,
     },
   },
   navigation: {
@@ -185,22 +195,27 @@ new Swiper(".slider-five", {
     1400: {
       slidesPerView: 3,
       spaceBetween: 30,
+      slidesOffsetAfter: 0,
     },
     1280: {
       slidesPerView: 2.8,
       spaceBetween: 30,
+      slidesOffsetAfter: 0,
     },
     1024: {
       slidesPerView: 2.5,
       spaceBetween: 30,
+      slidesOffsetAfter: 0,
     },
     768: {
       slidesPerView: 2,
       spaceBetween: 30,
+      slidesOffsetAfter: 0,
     },
     540: {
       slidesPerView: 1.4,
       spaceBetween: 30,
+      slidesOffsetAfter: 0,
     },
   },
   navigation: {
@@ -226,44 +241,52 @@ const searchAutoComplete = document.getElementById("autocomplete-search");
 if (myInput !== null) {
   myInput.addEventListener("input", () => {
     if (myInput.value) {
-      searchAutoComplete.classList.add("active");
+      searchAutoComplete.classList.add("autocomplete-active");
+      cartOverlay.classList.add("overlay-active");
+      mainAreaOverlay.classList.add("overlay-active");
     } else {
-      searchAutoComplete.classList.remove("active");
+      searchAutoComplete.classList.remove("autocomplete-active");
+      cartOverlay.classList.remove("overlay-active");
+      mainAreaOverlay.classList.remove("overlay-active");
     }
   });
 }
-
+window.onclick = function (e) {
+  if (!searchAutoComplete.contains(e.target)) {
+    searchAutoComplete.classList.remove("autocomplete-active");
+  }
+};
 /**for input border */
-const parents = document.querySelectorAll('.input-parent');
-const inputs = document.querySelectorAll('.input');
-if(inputs.length > 0){ 
-inputs.forEach(function (i, index) {
+const parents = document.querySelectorAll(".input-parent");
+const inputs = document.querySelectorAll(".input");
+if (inputs.length > 0) {
+  inputs.forEach(function (i, index) {
     if (i.disabled) {
-        parents[index].classList.add('disabled');
-      }
-  i.addEventListener('focus', function() {
-    parents[index].classList.add('focused');
-  });
-
-  i.addEventListener('blur', function() { 
-    let stillFocused = false;
-    inputs.forEach(function(input) {
-      if (input === document.activeElement) {
-        stillFocused = true;
-      }
-    }); 
-    if (!stillFocused) {
-      parents[index].classList.remove('focused');
+      parents[index].classList.add("disabled");
     }
+    i.addEventListener("focus", function () {
+      parents[index].classList.add("focused");
+    });
+
+    i.addEventListener("blur", function () {
+      let stillFocused = false;
+      inputs.forEach(function (input) {
+        if (input === document.activeElement) {
+          stillFocused = true;
+        }
+      });
+      if (!stillFocused) {
+        parents[index].classList.remove("focused");
+      }
+    });
   });
-});
 }
 
 // start coding for accrodion
- 
+
 const accordionBtns = document.querySelectorAll(".accordion");
 if (accordionBtns.length >= 0) {
-  for (let i = 0; accordionBtns.length; i++){  
+  for (let i = 0; accordionBtns.length; i++) {
     if (i === 1) {
       break;
     }
@@ -271,18 +294,17 @@ if (accordionBtns.length >= 0) {
     var article = accordionBtns[i].nextElementSibling;
     parentel.classList.add("open");
     article.style.maxHeight = article.scrollHeight + "px";
-  } 
+  }
 
   accordionBtns.forEach((accordion) => {
     accordion.onclick = function () {
-      this.parentElement.classList.toggle("open"); 
-      let content = this.nextElementSibling;  
-      if (content.style.maxHeight) { 
+      this.parentElement.classList.toggle("open");
+      let content = this.nextElementSibling;
+      if (content.style.maxHeight) {
         content.style.maxHeight = null;
-      } else { 
-        content.style.maxHeight = content.scrollHeight + "px"; 
+      } else {
+        content.style.maxHeight = content.scrollHeight + "px";
       }
     };
   });
 }
- 

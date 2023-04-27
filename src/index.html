@@ -57,34 +57,34 @@
                   class="flex justify-start lg:justify-between items-center lg:-ml-10 xl:ml-0 pt-14 lg:pt-0"
                 >
                   <ul class="hidden lg:flex gap-3 xl:gap-7 items-center">
-                    <li class="text-sm text-dark flex gap-1.5 items-center">
+                    <li class="text-[13px] text-dark flex gap-1.5 items-center">
                       <img
                         src="./images/check-orange.png"
                         alt="check-orange.png"
                       />
                       <span class="">De nummer 1 in NL!</span>
                     </li>
-                    <li class="text-sm text-dark flex gap-1.5 items-center">
+                    <li class="text-[13px] text-dark flex gap-1.5 items-center">
                       <img
                         src="./images/check-orange.png"
                         alt="check-orange.png"
                       />
                       <span>Laagste prijsgarantie </span>
                     </li>
-                    <li class="text-sm text-dark flex gap-1.5 items-center">
+                    <li class="text-[13px] text-dark flex gap-1.5 items-center">
                       <img
                         src="./images/check-orange.png"
                         alt="check-orange.png"
                       /><span>Showroom</span>
                     </li>
-                    <li class="text-sm text-dark flex gap-1.5 items-center">
+                    <li class="text-[13px] text-dark flex gap-1.5 items-center">
                       <img
                         src="./images/check-orange.png"
                         alt="check-orange.png"
                       />
                       <span>Tot 5 jaar garantie</span>
                     </li>
-                    <li class="text-sm text-dark flex gap-1.5 items-center">
+                    <li class="text-[13px] text-dark flex gap-1.5 items-center">
                       <img
                         src="./images/check-orange.png"
                         alt="check-orange.png"
@@ -109,6 +109,7 @@
                   class="group flex flex-col lg:flex-row xl:pl-10 items-center gap-8 xl:gap-12"
                 >
                   <div
+                    id="search"
                     class="group-[.search-active]:top-0 transition-all duration-150 lg:relative w-full fixed -top-[999px] lg:top-0 left-0 z-30 bg-brand-gray pt-10 pb-3 px-8 lg:bg-transparent lg:py-0 lg:px-0"
                   >
                     <button
@@ -147,6 +148,7 @@
                         />
                       </div>
                       <div
+                        id="autocomplete"
                         class="group-[.autocomplete-active]:opacity-100 group-[.autocomplete-active]:visible opacity-0 invisible group-[.autocomplete-active]:translate-y-0 translate-y-10 bg-white absolute left-0 top-full w-full border-t border-brand-gray shadow-md h-[calc(100vh-100px)] overflow-y-auto"
                       >
                         <div
@@ -322,14 +324,14 @@
                         class="flex px-3 pt-3 pb-4 h-[95px] flex-col gap-2 justify-end items-center"
                       >
                         <img src="./images/user.png" alt="user.png" />
-                        <p class="text-center text-sm text-dark">Account</p>
+                        <p class="text-center text-[13px] text-dark">Account</p>
                       </a>
                       <a
                         href="#"
                         class="flex flex-col gap-2 h-[95px] px-3 pt-3 pb-4 justify-end items-center"
                       >
                         <img src="./images/help.png" alt="help.png" />
-                        <p class="text-center text-sm text-dark">
+                        <p class="text-center text-[13px] text-dark">
                           Klantenservice
                         </p>
                       </a>
@@ -348,7 +350,7 @@
                             </div>
                             <img src="./images/cart.png" alt="cart" />
                           </figure>
-                          <p class="text-center text-dark text-sm">
+                          <p class="text-center text-dark text-[13px]">
                             Winkelwagen
                           </p>
                         </button>
@@ -384,7 +386,9 @@
                                     </p>
                                   </div>
                                 </div>
-                                <p class="text-dark font-extrabold text-base">
+                                <p
+                                  class="text-dark font-extrabold text-base lg:text-xl"
+                                >
                                   €1475,00
                                 </p>
                               </div>
@@ -404,7 +408,7 @@
                                   </div>
                                 </div>
                                 <p
-                                  class="text-dark font-extrabold text-base pt-3 lg:pt-0"
+                                  class="text-dark font-extrabold text-base lg:text-xl pt-3 lg:pt-0"
                                 >
                                   €10,00
                                 </p>
@@ -505,10 +509,10 @@
                                     alt="image-1"
                                   />
                                   <div
-                                    class="flex justify-between items-center pl-5 pr-2 py-2 bg-white group-hover/item:bg-brand-orange"
+                                    class="flex justify-between items-center pl-5 pr-2 py-3 bg-white group-hover/item:bg-brand-orange"
                                   >
                                     <h2
-                                      class="text-dark font-extrabold text-base group-hover/item:text-white"
+                                      class="text-dark font-extrabold text-base lg:text-xl group-hover/item:text-white"
                                     >
                                       Binnenzonwering
                                     </h2>
@@ -535,17 +539,17 @@
                                   class="p-1.5 bg-brand-orange absolute right-5 top-0"
                                 >
                                   <h3
-                                    class="text-[10px] font-extrabold text-white"
+                                    class="text-[10px] font-extrabold text-left text-white"
                                   >
                                     Tot wel
                                   </h3>
                                   <h2
-                                    class="text-[26px] leading-none font-extrabold text-white"
+                                    class="text-[26px] leading-none font-extrabold text-left text-white"
                                   >
                                     40<sub class="text-base">%</sub>
                                   </h2>
                                   <p
-                                    class="text-[10px] font-extrabold text-white"
+                                    class="text-[10px] font-extrabold text-left text-white"
                                   >
                                     Goedkoper
                                   </p>
@@ -559,10 +563,10 @@
                                     alt="image-1"
                                   />
                                   <div
-                                    class="flex justify-between items-center pl-5 pr-2 py-2 bg-white group-hover/item:bg-brand-orange"
+                                    class="flex justify-between items-center pl-5 pr-2 py-3 bg-white group-hover/item:bg-brand-orange"
                                   >
                                     <h2
-                                      class="text-dark font-extrabold text-base group-hover/item:text-white"
+                                      class="text-dark font-extrabold text-base lg:text-xl group-hover/item:text-white"
                                     >
                                       Plissegordijnen
                                     </h2>
@@ -594,10 +598,10 @@
                                     alt="image-2"
                                   />
                                   <div
-                                    class="flex justify-between items-center pl-5 pr-2 py-2 bg-white group-hover/item:bg-brand-orange"
+                                    class="flex justify-between items-center pl-5 pr-2 py-3 bg-white group-hover/item:bg-brand-orange"
                                   >
                                     <h2
-                                      class="text-dark font-extrabold text-base group-hover/item:text-white"
+                                      class="text-dark font-extrabold text-base lg:text-xl group-hover/item:text-white"
                                     >
                                       Vouwgordijnen
                                     </h2>
@@ -629,10 +633,10 @@
                                     alt="image-2"
                                   />
                                   <div
-                                    class="flex justify-between items-center pl-5 pr-2 py-2 bg-white group-hover/item:bg-brand-orange"
+                                    class="flex justify-between items-center pl-5 pr-2 py-3 bg-white group-hover/item:bg-brand-orange"
                                   >
                                     <h2
-                                      class="text-dark font-extrabold text-base group-hover/item:text-white"
+                                      class="text-dark font-extrabold text-base lg:text-xl group-hover/item:text-white"
                                     >
                                       Aluminium jaloezieen
                                     </h2>
@@ -664,10 +668,10 @@
                                     alt="image-2"
                                   />
                                   <div
-                                    class="flex justify-between items-center pl-5 pr-2 py-2 bg-white group-hover/item:bg-brand-orange"
+                                    class="flex justify-between items-center pl-5 pr-2 py-3 bg-white group-hover/item:bg-brand-orange"
                                   >
                                     <h2
-                                      class="text-dark font-extrabold text-base group-hover/item:text-white"
+                                      class="text-dark font-extrabold text-base lg:text-xl group-hover/item:text-white"
                                     >
                                       Rolgordijnen
                                     </h2>
@@ -699,10 +703,10 @@
                                     alt="image-2"
                                   />
                                   <div
-                                    class="flex justify-between items-center pl-5 pr-2 py-2 bg-white group-hover/item:bg-brand-orange"
+                                    class="flex justify-between items-center pl-5 pr-2 py-3 bg-white group-hover/item:bg-brand-orange"
                                   >
                                     <h2
-                                      class="text-dark font-extrabold text-base group-hover/item:text-white"
+                                      class="text-dark font-extrabold text-base lg:text-xl group-hover/item:text-white"
                                     >
                                       Vouwgordijnen
                                     </h2>
@@ -734,10 +738,10 @@
                                     alt="image-2"
                                   />
                                   <div
-                                    class="flex justify-between items-center pl-5 pr-2 py-2 bg-white group-hover/item:bg-brand-orange"
+                                    class="flex justify-between items-center pl-5 pr-2 py-3 bg-white group-hover/item:bg-brand-orange"
                                   >
                                     <h2
-                                      class="text-dark font-extrabold text-base group-hover/item:text-white"
+                                      class="text-dark font-extrabold text-base lg:text-xl group-hover/item:text-white"
                                     >
                                       Aluminium jaloezieen
                                     </h2>
@@ -769,10 +773,10 @@
                                     alt="image-2"
                                   />
                                   <div
-                                    class="flex justify-between items-center pl-5 pr-2 py-2 bg-white group-hover/item:bg-brand-orange"
+                                    class="flex justify-between items-center pl-5 pr-2 py-3 bg-white group-hover/item:bg-brand-orange"
                                   >
                                     <h2
-                                      class="text-dark font-extrabold text-base group-hover/item:text-white"
+                                      class="text-dark font-extrabold text-base lg:text-xl group-hover/item:text-white"
                                     >
                                       Rolgordijnen
                                     </h2>
@@ -804,10 +808,10 @@
                                     alt="image-2"
                                   />
                                   <div
-                                    class="flex justify-between items-center pl-5 pr-2 py-2 bg-white group-hover/item:bg-brand-orange"
+                                    class="flex justify-between items-center pl-5 pr-2 py-3 bg-white group-hover/item:bg-brand-orange"
                                   >
                                     <h2
-                                      class="text-dark font-extrabold text-base group-hover/item:text-white"
+                                      class="text-dark font-extrabold text-base lg:text-xl group-hover/item:text-white"
                                     >
                                       Rolgordijnen
                                     </h2>
@@ -966,10 +970,10 @@
                               alt="image-1"
                             />
                             <div
-                              class="flex justify-between items-center pl-5 pr-2 py-2 bg-white group-hover/item:bg-brand-orange"
+                              class="flex justify-between items-center pl-5 pr-2 py-3 bg-white group-hover/item:bg-brand-orange"
                             >
                               <h2
-                                class="text-dark font-extrabold text-base group-hover/item:text-white"
+                                class="text-dark font-extrabold text-base lg:text-xl group-hover/item:text-white"
                               >
                                 Binnenzonwering
                               </h2>
@@ -993,15 +997,19 @@
                           <div
                             class="p-1.5 bg-brand-orange absolute right-5 top-0"
                           >
-                            <h3 class="text-[10px] font-extrabold text-white">
+                            <h3
+                              class="text-[10px] font-extrabold text-left text-white"
+                            >
                               Tot wel
                             </h3>
                             <h2
-                              class="text-[26px] leading-none font-extrabold text-white"
+                              class="text-[26px] leading-none font-extrabold text-left text-white"
                             >
                               40<sub class="text-base">%</sub>
                             </h2>
-                            <p class="text-[10px] font-extrabold text-white">
+                            <p
+                              class="text-[10px] font-extrabold text-left text-white"
+                            >
                               Goedkoper
                             </p>
                           </div>
@@ -1015,10 +1023,10 @@
                               alt="image-1"
                             />
                             <div
-                              class="flex justify-between items-center pl-5 pr-2 py-2 bg-white group-hover/item:bg-brand-orange"
+                              class="flex justify-between items-center pl-5 pr-2 py-3 bg-white group-hover/item:bg-brand-orange"
                             >
                               <h2
-                                class="text-dark font-extrabold text-base group-hover/item:text-white"
+                                class="text-dark font-extrabold text-base lg:text-xl group-hover/item:text-white"
                               >
                                 Plissegordijnen
                               </h2>
@@ -1049,10 +1057,10 @@
                               alt="image-2"
                             />
                             <div
-                              class="flex justify-between items-center pl-5 pr-2 py-2 bg-white group-hover/item:bg-brand-orange"
+                              class="flex justify-between items-center pl-5 pr-2 py-3 bg-white group-hover/item:bg-brand-orange"
                             >
                               <h2
-                                class="text-dark font-extrabold text-base group-hover/item:text-white"
+                                class="text-dark font-extrabold text-base lg:text-xl group-hover/item:text-white"
                               >
                                 Vouwgordijnen
                               </h2>
@@ -1083,10 +1091,10 @@
                               alt="image-2"
                             />
                             <div
-                              class="flex justify-between items-center pl-5 pr-2 py-2 bg-white group-hover/item:bg-brand-orange"
+                              class="flex justify-between items-center pl-5 pr-2 py-3 bg-white group-hover/item:bg-brand-orange"
                             >
                               <h2
-                                class="text-dark font-extrabold text-base group-hover/item:text-white"
+                                class="text-dark font-extrabold text-base lg:text-xl group-hover/item:text-white"
                               >
                                 Aluminium jaloezieen
                               </h2>
@@ -1117,10 +1125,10 @@
                               alt="image-2"
                             />
                             <div
-                              class="flex justify-between items-center pl-5 pr-2 py-2 bg-white group-hover/item:bg-brand-orange"
+                              class="flex justify-between items-center pl-5 pr-2 py-3 bg-white group-hover/item:bg-brand-orange"
                             >
                               <h2
-                                class="text-dark font-extrabold text-base group-hover/item:text-white"
+                                class="text-dark font-extrabold text-base lg:text-xl group-hover/item:text-white"
                               >
                                 Rolgordijnen
                               </h2>
@@ -1151,10 +1159,10 @@
                               alt="image-2"
                             />
                             <div
-                              class="flex justify-between items-center pl-5 pr-2 py-2 bg-white group-hover/item:bg-brand-orange"
+                              class="flex justify-between items-center pl-5 pr-2 py-3 bg-white group-hover/item:bg-brand-orange"
                             >
                               <h2
-                                class="text-dark font-extrabold text-base group-hover/item:text-white"
+                                class="text-dark font-extrabold text-base lg:text-xl group-hover/item:text-white"
                               >
                                 Vouwgordijnen
                               </h2>
@@ -1185,10 +1193,10 @@
                               alt="image-2"
                             />
                             <div
-                              class="flex justify-between items-center pl-5 pr-2 py-2 bg-white group-hover/item:bg-brand-orange"
+                              class="flex justify-between items-center pl-5 pr-2 py-3 bg-white group-hover/item:bg-brand-orange"
                             >
                               <h2
-                                class="text-dark font-extrabold text-base group-hover/item:text-white"
+                                class="text-dark font-extrabold text-base lg:text-xl group-hover/item:text-white"
                               >
                                 Aluminium jaloezieen
                               </h2>
@@ -1219,10 +1227,10 @@
                               alt="image-2"
                             />
                             <div
-                              class="flex justify-between items-center pl-5 pr-2 py-2 bg-white group-hover/item:bg-brand-orange"
+                              class="flex justify-between items-center pl-5 pr-2 py-3 bg-white group-hover/item:bg-brand-orange"
                             >
                               <h2
-                                class="text-dark font-extrabold text-base group-hover/item:text-white"
+                                class="text-dark font-extrabold text-base lg:text-xl group-hover/item:text-white"
                               >
                                 Rolgordijnen
                               </h2>
@@ -1253,10 +1261,10 @@
                               alt="image-2"
                             />
                             <div
-                              class="flex justify-between items-center pl-5 pr-2 py-2 bg-white group-hover/item:bg-brand-orange"
+                              class="flex justify-between items-center pl-5 pr-2 py-3 bg-white group-hover/item:bg-brand-orange"
                             >
                               <h2
-                                class="text-dark font-extrabold text-base group-hover/item:text-white"
+                                class="text-dark font-extrabold text-base lg:text-xl group-hover/item:text-white"
                               >
                                 Rolgordijnen
                               </h2>
@@ -1355,11 +1363,11 @@
             <div class="w-full bg-dark bg-opacity-30 sm:bg-opacity-5">
               <div class="flex justify-end mr-4 sm:mr-10 lg:mr-20">
                 <div
-                  class="p-1.5 bg-brand-orange w-[150px] flex-col flex items-center"
+                  class="px-5 py-2 bg-brand-orange w-[150px] flex-col flex items-start"
                 >
                   <h3 class="text-xl font-normal text-white">Tot wel</h3>
                   <h2
-                    class="text-[72px] leading-none font-extrabold text-white"
+                    class="text-[72px] leading-none font-extrabold text-left text-white"
                   >
                     40<sub class="text-2xl">%</sub>
                   </h2>
@@ -1369,12 +1377,12 @@
               <div class="px-5 md:px-12 lg:px-16 pt-8 sm:pt-14 pb-16">
                 <div class="space-y-4 max-w-[440px]">
                   <h1
-                    class="text-[36px] font-extrabold xl:text-[50px] leading-[1.1] text-white"
+                    class="text-[36px] font-extrabold xl:text-[50px] leading-[1.2] text-white"
                   >
                     VELUX Zonwering
                   </h1>
                   <p
-                    class="text-white text-[20px] md:text-[30px] leading-[1.1]"
+                    class="text-white text-[20px] md:text-[30px] leading-[1.2]"
                   >
                     Ben jij al klaar voor de zomer? <br />
                     Zorg voor een prettig<br />
@@ -1383,7 +1391,7 @@
                   <div class="group/button pt-6 max-w-[250px]">
                     <a
                       href="#"
-                      class="px-4 lg:px-6 inline-flex gap-4 py-2.5 bg-white rounded-md font-extrabold text-base group-hover/button:bg-brand-orange group-hover/button:text-white transition-all"
+                      class="px-4 lg:px-6 inline-flex gap-4 py-2.5 bg-white rounded-md text-brand-orange font-extrabold text-base group-hover/button:bg-brand-orange group-hover/button:text-white transition-all"
                     >
                       <span>Bekijk de collectie</span>
                       <svg
@@ -1521,14 +1529,14 @@
                     Moderne showroom
                   </h1>
                   <p
-                    class="text-white text-lg lg:text-[20px] xl:text-[30px] !leading-[1.1]"
+                    class="text-white text-lg lg:text-[20px] xl:text-[30px] !leading-[1.2]"
                   >
                     Kom langs in Purmerend en bekijk meer dan 150 artikelen!
                   </p>
                   <div class="group/button pt-6 max-w-[250px]">
                     <a
                       href="#"
-                      class="px-4 lg:px-6 inline-flex gap-4 py-2.5 bg-white rounded-md font-extrabold text-base group-hover/button:bg-brand-orange group-hover/button:text-white transition-all"
+                      class="px-4 lg:px-6 inline-flex gap-4 py-2.5 bg-white rounded-md text-brand-orange font-extrabold text-base group-hover/button:bg-brand-orange group-hover/button:text-white transition-all"
                     >
                       <span>Bezoek de showroom</span>
                       <svg
@@ -1559,13 +1567,13 @@
                 >
                   VELUX restanten
                 </h1>
-                <p class="text-white text-[20px] md:text-[30px] leading-[1.1]">
+                <p class="text-white text-[20px] md:text-[30px] leading-[1.2]">
                   OP = OP
                 </p>
                 <div class="group/button pt-3 max-w-[250px]">
                   <a
                     href="#"
-                    class="px-4 lg:px-6 inline-flex gap-4 py-2.5 bg-white rounded-md font-extrabold text-base group-hover/button:bg-brand-orange group-hover/button:text-white transition-all"
+                    class="px-4 lg:px-6 inline-flex gap-4 py-2.5 text-brand-orange bg-white rounded-md font-extrabold text-base group-hover/button:bg-brand-orange group-hover/button:text-white transition-all"
                   >
                     <span>Bekijk restanten</span>
                     <svg
@@ -1602,7 +1610,7 @@
               <h2 class="font-extrabold text-dark text-2xl lg:text-[30px]">
                 Binnenzonwering
               </h2>
-              <p class="text-base text-dark">
+              <p class="text-[17px] text-dark">
                 Ontdek alle binnenzonwering die we aanbieden. Rechtstreeks van
                 de fabrikant en hoge kortingen!
               </p>
@@ -1671,10 +1679,10 @@
                           alt="image-1"
                         />
                         <div
-                          class="flex justify-between items-center pl-5 pr-2 py-2 bg-white group-hover/item:bg-brand-orange"
+                          class="flex justify-between items-center pl-5 pr-2 py-3 bg-white group-hover/item:bg-brand-orange"
                         >
                           <h2
-                            class="text-dark font-extrabold text-base group-hover/item:text-white"
+                            class="text-dark font-extrabold text-base lg:text-xl group-hover/item:text-white"
                           >
                             Binnenzonwering
                           </h2>
@@ -1705,10 +1713,10 @@
                           alt="image-1"
                         />
                         <div
-                          class="flex justify-between items-center pl-5 pr-2 py-2 bg-white group-hover/item:bg-brand-orange"
+                          class="flex justify-between items-center pl-5 pr-2 py-3 bg-white group-hover/item:bg-brand-orange"
                         >
                           <h2
-                            class="text-dark font-extrabold text-base group-hover/item:text-white"
+                            class="text-dark font-extrabold text-base lg:text-xl group-hover/item:text-white"
                           >
                             Plissegordijnen
                           </h2>
@@ -1732,15 +1740,19 @@
                   <div class="swiper-slide space-y-6 py-1">
                     <div class="group/item relative">
                       <div class="p-1.5 bg-brand-orange absolute right-5 top-0">
-                        <h3 class="text-[10px] font-extrabold text-white">
+                        <h3
+                          class="text-[10px] font-extrabold text-left text-white"
+                        >
                           Tot wel
                         </h3>
                         <h2
-                          class="text-[26px] leading-none font-extrabold text-white"
+                          class="text-[26px] leading-none font-extrabold text-left text-white"
                         >
                           40<sub class="text-base">%</sub>
                         </h2>
-                        <p class="text-[10px] font-extrabold text-white">
+                        <p
+                          class="text-[10px] font-extrabold text-left text-white"
+                        >
                           Goedkoper
                         </p>
                       </div>
@@ -1754,10 +1766,10 @@
                           alt="image-1"
                         />
                         <div
-                          class="flex justify-between items-center pl-5 pr-2 py-2 bg-white group-hover/item:bg-brand-orange"
+                          class="flex justify-between items-center pl-5 pr-2 py-3 bg-white group-hover/item:bg-brand-orange"
                         >
                           <h2
-                            class="text-dark font-extrabold text-base group-hover/item:text-white"
+                            class="text-dark font-extrabold text-base lg:text-xl group-hover/item:text-white"
                           >
                             Binnenzonwering
                           </h2>
@@ -1788,10 +1800,10 @@
                           alt="image-1"
                         />
                         <div
-                          class="flex justify-between items-center pl-5 pr-2 py-2 bg-white group-hover/item:bg-brand-orange"
+                          class="flex justify-between items-center pl-5 pr-2 py-3 bg-white group-hover/item:bg-brand-orange"
                         >
                           <h2
-                            class="text-dark font-extrabold text-base group-hover/item:text-white"
+                            class="text-dark font-extrabold text-base lg:text-xl group-hover/item:text-white"
                           >
                             Plissegordijnen
                           </h2>
@@ -1824,10 +1836,10 @@
                           alt="image-1"
                         />
                         <div
-                          class="flex justify-between items-center pl-5 pr-2 py-2 bg-white group-hover/item:bg-brand-orange"
+                          class="flex justify-between items-center pl-5 pr-2 py-3 bg-white group-hover/item:bg-brand-orange"
                         >
                           <h2
-                            class="text-dark font-extrabold text-base group-hover/item:text-white"
+                            class="text-dark font-extrabold text-base lg:text-xl group-hover/item:text-white"
                           >
                             Binnenzonwering
                           </h2>
@@ -1849,15 +1861,19 @@
                     </div>
                     <div class="group/item relative">
                       <div class="p-1.5 bg-brand-orange absolute right-5 top-0">
-                        <h3 class="text-[10px] font-extrabold text-white">
+                        <h3
+                          class="text-[10px] font-extrabold text-left text-white"
+                        >
                           Tot wel
                         </h3>
                         <h2
-                          class="text-[26px] leading-none font-extrabold text-white"
+                          class="text-[26px] leading-none font-extrabold text-left text-white"
                         >
                           30<sub class="text-base">%</sub>
                         </h2>
-                        <p class="text-[10px] font-extrabold text-white">
+                        <p
+                          class="text-[10px] font-extrabold text-left text-white"
+                        >
                           Goedkoper
                         </p>
                       </div>
@@ -1871,10 +1887,10 @@
                           alt="image-1"
                         />
                         <div
-                          class="flex justify-between items-center pl-5 pr-2 py-2 bg-white group-hover/item:bg-brand-orange"
+                          class="flex justify-between items-center pl-5 pr-2 py-3 bg-white group-hover/item:bg-brand-orange"
                         >
                           <h2
-                            class="text-dark font-extrabold text-base group-hover/item:text-white"
+                            class="text-dark font-extrabold text-base lg:text-xl group-hover/item:text-white"
                           >
                             Plissegordijnen
                           </h2>
@@ -1907,10 +1923,10 @@
                           alt="image-1"
                         />
                         <div
-                          class="flex justify-between items-center pl-5 pr-2 py-2 bg-white group-hover/item:bg-brand-orange"
+                          class="flex justify-between items-center pl-5 pr-2 py-3 bg-white group-hover/item:bg-brand-orange"
                         >
                           <h2
-                            class="text-dark font-extrabold text-base group-hover/item:text-white"
+                            class="text-dark font-extrabold text-base lg:text-xl group-hover/item:text-white"
                           >
                             Binnenzonwering
                           </h2>
@@ -1932,15 +1948,19 @@
                     </div>
                     <div class="group/item relative">
                       <div class="p-1.5 bg-brand-orange absolute right-5 top-0">
-                        <h3 class="text-[10px] font-extrabold text-white">
+                        <h3
+                          class="text-[10px] font-extrabold text-left text-white"
+                        >
                           Tot wel
                         </h3>
                         <h2
-                          class="text-[26px] leading-none font-extrabold text-white"
+                          class="text-[26px] leading-none font-extrabold text-left text-white"
                         >
                           30<sub class="text-base">%</sub>
                         </h2>
-                        <p class="text-[10px] font-extrabold text-white">
+                        <p
+                          class="text-[10px] font-extrabold text-left text-white"
+                        >
                           Goedkoper
                         </p>
                       </div>
@@ -1954,10 +1974,10 @@
                           alt="image-1"
                         />
                         <div
-                          class="flex justify-between items-center pl-5 pr-2 py-2 bg-white group-hover/item:bg-brand-orange"
+                          class="flex justify-between items-center pl-5 pr-2 py-3 bg-white group-hover/item:bg-brand-orange"
                         >
                           <h2
-                            class="text-dark font-extrabold text-base group-hover/item:text-white"
+                            class="text-dark font-extrabold text-base lg:text-xl group-hover/item:text-white"
                           >
                             Plissegordijnen
                           </h2>
@@ -1985,14 +2005,16 @@
         </div>
       </section>
       <section
-        class="relative py-10 lg:py-20 px-4"
+        class="relative px-4 overflow-x-clip"
         data-block="category-slider-two"
         id="category-slider-two"
       >
         <div
-          class="absolute top-0 bottom-0 right-0 w-[1750px] bg-brand-gray"
+          class="overflow-hidden px-4 pt-10 pb-8 sm:ml-[calc((100%-640px)/2)] sm:pt-24 sm:pb-40 md:ml-[calc((100%-768px)/2)] lg:ml-[calc((100%-1024px)/2)] lg:pt-40 xl:ml-[calc((100%-1410px)/2)] absolute inset-0 w-full bg-brand-gray"
         ></div>
-        <div class="container relative mx-auto">
+        <div
+          class="py-10 lg:py-20 container relative mx-auto before:w-20 before:h-full before:bg-brand-gray before:absolute before:-left-20 before:top-0 before:bottom-0"
+        >
           <div
             class="flex flex-col lg:flex-row-reverse lg:justify-between items-start gap-10 2xl:gap-20"
           >
@@ -2018,15 +2040,19 @@
                   <div class="swiper-slide space-y-6 py-1">
                     <div class="group/item relative">
                       <div class="p-1.5 bg-brand-orange absolute right-5 top-0">
-                        <h3 class="text-[10px] font-extrabold text-white">
+                        <h3
+                          class="text-[10px] font-extrabold text-left text-white"
+                        >
                           Tot wel
                         </h3>
                         <h2
-                          class="text-[26px] leading-none font-extrabold text-white"
+                          class="text-[26px] leading-none font-extrabold text-left text-white"
                         >
                           40<sub class="text-base">%</sub>
                         </h2>
-                        <p class="text-[10px] font-extrabold text-white">
+                        <p
+                          class="text-[10px] font-extrabold text-left text-white"
+                        >
                           Goedkoper
                         </p>
                       </div>
@@ -2040,10 +2066,10 @@
                           alt="image-5"
                         />
                         <div
-                          class="flex justify-between items-center pl-5 pr-2 py-2 bg-white group-hover/item:bg-brand-orange"
+                          class="flex justify-between items-center pl-5 pr-2 py-3 bg-white group-hover/item:bg-brand-orange"
                         >
                           <h2
-                            class="text-dark font-extrabold text-base group-hover/item:text-white"
+                            class="text-dark font-extrabold text-base lg:text-xl group-hover/item:text-white"
                           >
                             Binnenzonwering
                           </h2>
@@ -2074,10 +2100,10 @@
                           alt="image-2"
                         />
                         <div
-                          class="flex justify-between items-center pl-5 pr-2 py-2 bg-white group-hover/item:bg-brand-orange"
+                          class="flex justify-between items-center pl-5 pr-2 py-3 bg-white group-hover/item:bg-brand-orange"
                         >
                           <h2
-                            class="text-dark font-extrabold text-base group-hover/item:text-white"
+                            class="text-dark font-extrabold text-base lg:text-xl group-hover/item:text-white"
                           >
                             Plissegordijnen
                           </h2>
@@ -2110,10 +2136,10 @@
                           alt="image-1"
                         />
                         <div
-                          class="flex justify-between items-center pl-5 pr-2 py-2 bg-white group-hover/item:bg-brand-orange"
+                          class="flex justify-between items-center pl-5 pr-2 py-3 bg-white group-hover/item:bg-brand-orange"
                         >
                           <h2
-                            class="text-dark font-extrabold text-base group-hover/item:text-white"
+                            class="text-dark font-extrabold text-base lg:text-xl group-hover/item:text-white"
                           >
                             Binnenzonwering
                           </h2>
@@ -2144,10 +2170,10 @@
                           alt="image-1"
                         />
                         <div
-                          class="flex justify-between items-center pl-5 pr-2 py-2 bg-white group-hover/item:bg-brand-orange"
+                          class="flex justify-between items-center pl-5 pr-2 py-3 bg-white group-hover/item:bg-brand-orange"
                         >
                           <h2
-                            class="text-dark font-extrabold text-base group-hover/item:text-white"
+                            class="text-dark font-extrabold text-base lg:text-xl group-hover/item:text-white"
                           >
                             Plissegordijnen
                           </h2>
@@ -2180,93 +2206,10 @@
                           alt="image-1"
                         />
                         <div
-                          class="flex justify-between items-center pl-5 pr-2 py-2 bg-white group-hover/item:bg-brand-orange"
+                          class="flex justify-between items-center pl-5 pr-2 py-3 bg-white group-hover/item:bg-brand-orange"
                         >
                           <h2
-                            class="text-dark font-extrabold text-base group-hover/item:text-white"
-                          >
-                            Binnenzonwering
-                          </h2>
-                          <svg
-                            xmlns="http://www.w3.org/2000/svg"
-                            width="24"
-                            height="24"
-                            viewBox="0 0 24 24"
-                            fill="none"
-                            stroke-width="2"
-                            stroke-linecap="round"
-                            stroke-linejoin="round"
-                            class="stroke-dark group-hover/item:stroke-white"
-                          >
-                            <polyline points="9 18 15 12 9 6"></polyline>
-                          </svg>
-                        </div>
-                      </div>
-                    </div>
-                    <div class="group/item relative">
-                      <div class="p-1.5 bg-brand-orange absolute right-5 top-0">
-                        <h3 class="text-[10px] font-extrabold text-white">
-                          Tot wel
-                        </h3>
-                        <h2
-                          class="text-[26px] leading-none font-extrabold text-white"
-                        >
-                          30<sub class="text-base">%</sub>
-                        </h2>
-                        <p class="text-[10px] font-extrabold text-white">
-                          Goedkoper
-                        </p>
-                      </div>
-                      <a href="#" class="inset-0 absolute"></a>
-                      <div
-                        class="border border-brand-gray-100 group-hover/item:border-brand-orange"
-                      >
-                        <img
-                          class="w-full"
-                          src="./images/image-1.png"
-                          alt="image-1"
-                        />
-                        <div
-                          class="flex justify-between items-center pl-5 pr-2 py-2 bg-white group-hover/item:bg-brand-orange"
-                        >
-                          <h2
-                            class="text-dark font-extrabold text-base group-hover/item:text-white"
-                          >
-                            Plissegordijnen
-                          </h2>
-                          <svg
-                            xmlns="http://www.w3.org/2000/svg"
-                            width="24"
-                            height="24"
-                            viewBox="0 0 24 24"
-                            fill="none"
-                            stroke-width="2"
-                            stroke-linecap="round"
-                            stroke-linejoin="round"
-                            class="stroke-dark group-hover/item:stroke-white"
-                          >
-                            <polyline points="9 18 15 12 9 6"></polyline>
-                          </svg>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="swiper-slide space-y-6 py-1">
-                    <div class="group/item relative">
-                      <a href="#" class="inset-0 absolute"></a>
-                      <div
-                        class="border border-brand-gray-100 group-hover/item:border-brand-orange"
-                      >
-                        <img
-                          class="w-full"
-                          src="./images/image-1.png"
-                          alt="image-1"
-                        />
-                        <div
-                          class="flex justify-between items-center pl-5 pr-2 py-2 bg-white group-hover/item:bg-brand-orange"
-                        >
-                          <h2
-                            class="text-dark font-extrabold text-base group-hover/item:text-white"
+                            class="text-dark font-extrabold text-base lg:text-xl group-hover/item:text-white"
                           >
                             Binnenzonwering
                           </h2>
@@ -2288,15 +2231,19 @@
                     </div>
                     <div class="group/item relative">
                       <div class="p-1.5 bg-brand-orange absolute right-5 top-0">
-                        <h3 class="text-[10px] font-extrabold text-white">
+                        <h3
+                          class="text-[10px] font-extrabold text-left text-white"
+                        >
                           Tot wel
                         </h3>
                         <h2
-                          class="text-[26px] leading-none font-extrabold text-white"
+                          class="text-[26px] leading-none font-extrabold text-left text-white"
                         >
                           30<sub class="text-base">%</sub>
                         </h2>
-                        <p class="text-[10px] font-extrabold text-white">
+                        <p
+                          class="text-[10px] font-extrabold text-left text-white"
+                        >
                           Goedkoper
                         </p>
                       </div>
@@ -2310,10 +2257,97 @@
                           alt="image-1"
                         />
                         <div
-                          class="flex justify-between items-center pl-5 pr-2 py-2 bg-white group-hover/item:bg-brand-orange"
+                          class="flex justify-between items-center pl-5 pr-2 py-3 bg-white group-hover/item:bg-brand-orange"
                         >
                           <h2
-                            class="text-dark font-extrabold text-base group-hover/item:text-white"
+                            class="text-dark font-extrabold text-base lg:text-xl group-hover/item:text-white"
+                          >
+                            Plissegordijnen
+                          </h2>
+                          <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            width="24"
+                            height="24"
+                            viewBox="0 0 24 24"
+                            fill="none"
+                            stroke-width="2"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                            class="stroke-dark group-hover/item:stroke-white"
+                          >
+                            <polyline points="9 18 15 12 9 6"></polyline>
+                          </svg>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="swiper-slide space-y-6 py-1">
+                    <div class="group/item relative">
+                      <a href="#" class="inset-0 absolute"></a>
+                      <div
+                        class="border border-brand-gray-100 group-hover/item:border-brand-orange"
+                      >
+                        <img
+                          class="w-full"
+                          src="./images/image-1.png"
+                          alt="image-1"
+                        />
+                        <div
+                          class="flex justify-between items-center pl-5 pr-2 py-3 bg-white group-hover/item:bg-brand-orange"
+                        >
+                          <h2
+                            class="text-dark font-extrabold text-base lg:text-xl group-hover/item:text-white"
+                          >
+                            Binnenzonwering
+                          </h2>
+                          <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            width="24"
+                            height="24"
+                            viewBox="0 0 24 24"
+                            fill="none"
+                            stroke-width="2"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                            class="stroke-dark group-hover/item:stroke-white"
+                          >
+                            <polyline points="9 18 15 12 9 6"></polyline>
+                          </svg>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="group/item relative">
+                      <div class="p-1.5 bg-brand-orange absolute right-5 top-0">
+                        <h3
+                          class="text-[10px] font-extrabold text-left text-white"
+                        >
+                          Tot wel
+                        </h3>
+                        <h2
+                          class="text-[26px] leading-none font-extrabold text-left text-white"
+                        >
+                          30<sub class="text-base">%</sub>
+                        </h2>
+                        <p
+                          class="text-[10px] font-extrabold text-left text-white"
+                        >
+                          Goedkoper
+                        </p>
+                      </div>
+                      <a href="#" class="inset-0 absolute"></a>
+                      <div
+                        class="border border-brand-gray-100 group-hover/item:border-brand-orange"
+                      >
+                        <img
+                          class="w-full"
+                          src="./images/image-1.png"
+                          alt="image-1"
+                        />
+                        <div
+                          class="flex justify-between items-center pl-5 pr-2 py-3 bg-white group-hover/item:bg-brand-orange"
+                        >
+                          <h2
+                            class="text-dark font-extrabold text-base lg:text-xl group-hover/item:text-white"
                           >
                             Plissegordijnen
                           </h2>
@@ -2890,7 +2924,7 @@
             <div class="flex gap-3 items-center">
               <button
                 type="button"
-                class="swiper-prev-5 group w-[31px] h-[33px] border flex justify-center items-center bg-white border-brand-gray"
+                class="swiper-prev-4 group w-[31px] h-[33px] border flex justify-center items-center bg-white border-brand-gray"
               >
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
@@ -2929,7 +2963,7 @@
             </div>
           </div>
           <div class="w-full">
-            <div class="swiper slider-three -mr-4 xl:-mr-0">
+            <div class="swiper slider-four -mr-4 xl:-mr-0">
               <div class="swiper-wrapper">
                 <div class="swiper-slide space-y-6 py-1">
                   <div class="bg-white border border-brand-gray p-4">
@@ -3476,7 +3510,7 @@
                       alt="blog-img1"
                     />
                   </figure>
-                  <div class="p-4 lg:p-6 bg-brand-gray space-y-2">
+                  <div class="px-4 lg:px-6 py-3.5 bg-brand-gray space-y-2">
                     <h3>
                       <a
                         href="#"
@@ -3491,7 +3525,7 @@
                     <div class="flex justify-end pt-3">
                       <a
                         href="#"
-                        class="flex gap-3 items-center text-dark text-base"
+                        class="flex gap-1 items-center text-dark text-base"
                       >
                         <span>lees verder</span>
                         <svg
@@ -3520,7 +3554,7 @@
                       alt="blog-img1"
                     />
                   </figure>
-                  <div class="p-4 lg:p-6 bg-brand-gray space-y-2">
+                  <div class="px-4 lg:px-6 py-3.5 bg-brand-gray space-y-2">
                     <h3>
                       <a
                         href="#"
@@ -3535,7 +3569,7 @@
                     <div class="flex justify-end pt-3">
                       <a
                         href="#"
-                        class="flex gap-3 items-center text-dark text-base"
+                        class="flex gap-1 items-center text-dark text-base"
                       >
                         <span>lees verder</span>
                         <svg
@@ -3564,7 +3598,7 @@
                       alt="blog-img3"
                     />
                   </figure>
-                  <div class="p-4 lg:p-6 bg-brand-gray space-y-2">
+                  <div class="px-4 lg:px-6 py-3.5 bg-brand-gray space-y-2">
                     <h3>
                       <a
                         href="#"
@@ -3579,7 +3613,7 @@
                     <div class="flex justify-end pt-3">
                       <a
                         href="#"
-                        class="flex gap-3 items-center text-dark text-base"
+                        class="flex gap-1 items-center text-dark text-base"
                       >
                         <span>lees verder</span>
                         <svg
@@ -3649,9 +3683,9 @@
               <h2 class="text-dark font-extrabold text-[25px]">Showroom</h2>
               <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
                 <div class="space-y-6">
-                  <div class="flex gap-3 items-center">
+                  <div class="flex gap-3 items-start">
                     <img
-                      class="shrink-0"
+                      class="shrink-0 mt-1.5"
                       src="./images/call-img.png"
                       alt="call-img.png"
                     />
@@ -3660,9 +3694,9 @@
                       <p class="text-base text-dark">(tot 16.00u bereikbaar)</p>
                     </div>
                   </div>
-                  <div class="flex gap-3 items-center">
+                  <div class="flex gap-3 items-start">
                     <img
-                      class="shrink-0"
+                      class="shrink-0 mt-1"
                       src="./images/location-pin.png"
                       alt="location-pin.png"
                     />
@@ -3711,7 +3745,7 @@
               >
                 <div class="space-y-5">
                   <h2
-                    class="text-[25px] font-extrabold leading-[1.1] text-dark"
+                    class="text-[25px] font-extrabold leading-[1.2] text-dark"
                   >
                     Klantenservic
                   </h2>
@@ -3750,7 +3784,7 @@
                 </div>
                 <div class="space-y-5">
                   <h2
-                    class="text-[25px] font-extrabold leading-[1.1] text-dark"
+                    class="text-[25px] font-extrabold leading-[1.2] text-dark"
                   >
                     Assortiment
                   </h2>
@@ -3800,7 +3834,7 @@
                 </div>
                 <div class="space-y-5">
                   <h2
-                    class="text-[25px] font-extrabold leading-[1.1] text-dark"
+                    class="text-[25px] font-extrabold leading-[1.2] text-dark"
                   >
                     Onze voordelen
                   </h2>
